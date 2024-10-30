@@ -6,14 +6,14 @@
     <header id="header" class="header fixed-top d-flex align-items-center">
         <div class="d-flex align-items-center justify-content-between">
             <a href="" class="logo d-flex align-items-center">
-                <img src="{{ asset('images/logo.png') }}" alt="">
-                <span class="d-none d-lg-block"></span>
+                <img src="{{ asset('images/') }}" alt="">
+                <span class="d-none d-lg-block">SOFTxONE Ltd</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div>
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
-                
+
                 <li class="nav-item dropdown">
                     <a class="nav-link nav-icon" href="">
                         <i class="bi bi-qr-code-scan"></i>
@@ -31,9 +31,9 @@
                         data-bs-toggle="dropdown">
                         <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Profile"
                             class="rounded-circle">
-                            @if(auth()->check())
-                                <span class="d-none d-md-block dropdown-toggle ps-2">{{ auth()->user()->name }}</span>
-                            @endif
+                        @if (auth()->check())
+                            <span class="d-none d-md-block dropdown-toggle ps-2">{{ auth()->user()->name }}</span>
+                        @endif
 
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -65,8 +65,8 @@
                     <span>New Order</span>
                 </a>
             </li>
-            
-            
+
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="">
                     <i class="bi bi-cart3"></i>
@@ -103,9 +103,10 @@
     {{-- ------------content part-------------- --}}
 
     <!-- ======= Footer ======= -->
-    <footer id="footer" class="footer">
-        <div class="copyright">
-            &copy; Copyright <strong><span>Air Force Museum</span></strong>. All Rights Reserved <strong><a href="https://exebd.com/" target="_blank"><span>Development by Execution</span></a></strong>
+    <footer class="footer">
+        <div class="copyright text-center">
+            &copy; Copyright <strong><span>Educational Consultancy</span></strong>. All Rights Reserved <strong><a
+                    href="" target="_blank"><span>Development by SOFTxONE Limited</span></a></strong>
         </div>
     </footer>
     <!-- End Footer -->

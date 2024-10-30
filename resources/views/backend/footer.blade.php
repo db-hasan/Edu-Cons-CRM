@@ -10,10 +10,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <script>
-        $(document).ready(function () {
-          $('.js-example-basic-multiple').select2();
+        $(document).ready(function() {
+            $('.js-example-basic-multiple').select2();
         });
-      </script>
+    </script>
 
     {{-- sweetalert --}}
     <script>
@@ -46,7 +46,7 @@
             });
         });
     </script>
-    
+
 
     {{-- toastr --}}
     <script>

@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\BranchController;
 use App\Http\Controllers\VisitorDashboardController;
 use App\Http\Controllers\VendorDashboardController;
 use App\Http\Controllers\SellerDashboardController;
@@ -20,16 +20,18 @@ use App\Http\Controllers\CheckerDashboardController;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend/booking');
-});
 
-
-Route::get('/admin-login', [AuthController::class, 'login'])->name('login');
-Route::post('/admin-login', [AuthController::class, 'adminlogin'])->name('admin.login');
+Route::get('/', [AuthController::class, 'login'])->name('login');
+Route::post('/', [AuthController::class, 'adminlogin'])->name('admin.login');
 
 Route::middleware(['auth', 'role:admin,visitor'])->group(function (){
     Route::get('/admin-dashboard',[AdminDashboardController::class,'admindashboard'])->name('admin.dashboard');
+    
+    Route::get('branch-index',[BranchController::class, 'indexbranch'])->name('branch.index');
+    Route::get('branch-insert',[BranchController::class,'createbranch'])->name('branch.create');
+    Route::post('branch-insert',[BranchController::class,'storebranch'])->name('branch.store');
+    Route::get('branch-update/{id}',[BranchController::class,'editbranch'])->name('branch.edit');
+    Route::put('branch-update/{id}',[BranchController::class,'updatebranch'])->name('branch.update');
 });
 
 

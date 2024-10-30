@@ -8,10 +8,11 @@
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
-                            <div class="d-flex justify-content-center py-4">
+                            <div class="d-flex justify-content-center py-2">
                                 <a href="#" class="logo-login d-flex align-items-center w-auto">
-                                    <img src="{{ asset('images/logo.png') }}" alt="">
+                                    <img src="{{ asset('images/') }}" alt="">
                                 </a>
+                                <span class="d-none d-lg-block fs-2 fw-bold text-info">SOFTxONE Limited</span>
                             </div>
                             <div class="card mb-3">
                                 <div class="card-body">
@@ -57,7 +58,8 @@
 
     <footer class="footer">
         <div class="copyright text-center">
-            &copy; Copyright <strong><span>Air Force Museum</span></strong>. All Rights Reserved <strong><a href="https://exebd.com/" target="_blank"><span>Development by Execution</span></a></strong>
+            &copy; Copyright <strong><span>Educational Consultancy</span></strong>. All Rights Reserved <strong><a
+                    href="" target="_blank"><span>Development by SOFTxONE Limited</span></a></strong>
         </div>
     </footer>
 
