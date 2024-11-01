@@ -24,7 +24,7 @@ class RoleMiddleware
         // Retrieve authenticated user
         $user = Auth::user();
 
-        if ($user->role !== $role) {
+        if ($user->roles !== $role) {
             return redirect()->route('admin.login')->with('error', 'You do not have permission to access this page.');
         }
 

@@ -18,15 +18,17 @@
                 <div class="col-lg-8">
                     <div class="row">
 
+
+
                         <!-- Today Card -->
                         <div class="col-xxl-4 col-md-6">
                             <div class="card info-card sales-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Sales <span>| Today</span></h5>
+                                    <h5 class="card-title">Student <span>| Today</span></h5>
                                     <div class="d-flex align-items-center">
                                         <div
                                             class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-cart"></i>
+                                            <i class="bi bi-people"></i>
                                         </div>
                                         <div class="ps-3">
                                             <h6>1500</h6>
@@ -43,11 +45,11 @@
                         <div class="col-xxl-4 col-md-6">
                             <div class="card info-card revenue-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Sales <span>| This Month</span></h5>
+                                    <h5 class="card-title">Student <span>| This Month</span></h5>
                                     <div class="d-flex align-items-center">
                                         <div
                                             class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-cart"></i>
+                                            <i class="bi bi-people"></i>
                                         </div>
                                         <div class="ps-3">
                                             <h6>20000</h6>
@@ -64,11 +66,11 @@
                         <div class="col-xxl-4 col-xl-12">
                             <div class="card info-card customers-card">
                                 <div class="card-body">
-                                    <h5 class="card-title">Sales <span>| This Year</span></h5>
+                                    <h5 class="card-title">Student <span>| Total</span></h5>
                                     <div class="d-flex align-items-center">
                                         <div
                                             class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-cart"></i>
+                                            <i class="bi bi-people"></i>
                                         </div>
                                         <div class="ps-3">
                                             <h6>100000</h6>
@@ -90,222 +92,118 @@
                                 </div>
                             </div>
                         </div>
-
                         <!-- End Reports -->
-                        <div class="col-lg-12">
-
-                            <!-- Saler Activity -->
-                            <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Vendor Ride Sales<span> | Today</span></h5>
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col" class="text-uppercase">Name</th>
-                                                <th scope="col" class="text-uppercase">Ride</th>
-                                                <th scope="col" class="text-uppercase text-end">Quantity</th>
-                                                <th scope="col" class="text-uppercase text-end">Amount</th>
-                                                <th scope="col" class="text-uppercase text-end">commission</th>
-                                                <th scope="col" class="text-uppercase text-end">Profit</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="table-group-divider">
-                                            <tr>
-                                                <td class="align-middle" rowspan="2">Vendor 1</td>
-                                                <td>Ride 2</td>
-                                                <td class="text-end">10</td>
-                                                <td class="text-end">100</td>
-                                                <td class="text-end">10%</td>
-                                                <td class="text-end">10</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row" colspan="4" class="text-end">Total</th>
-                                                <th class="text-end">10</th>
-                                            </tr>
-                                            <tr>
-                                                <td class="align-middle" rowspan="2">Vendor 2</td>
-                                                <td>Ride 1</td>
-                                                <td class="text-end">10</td>
-                                                <td class="text-end">100</td>
-                                                <td class="text-end">10%</td>
-                                                <td class="text-end">10</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row" colspan="4" class="text-end">Total</th>
-                                                <th class="text-end">10</th>
-                                            </tr>
-
-                                            <tr>
-                                                <th scope="row" colspan="5" class="text-uppercase text-end">Grand
-                                                    Total</th>
-                                                <th class="text-end">20</th>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <!-- Saler Activity end -->
-
-                             <!-- Saler Activity -->
-                             <div class="card">
-                                <div class="card-body">
-                                    <h5 class="card-title">Online Ride Sales<span> | Today</span></h5>
-                                    <table class="table table-bordered">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col" class="text-uppercase">Name</th>
-                                                <th scope="col" class="text-uppercase">Ride</th>
-                                                <th scope="col" class="text-uppercase text-end">Quantity</th>
-                                                <th scope="col" class="text-uppercase text-end">Amount</th>
-                                                <th scope="col" class="text-uppercase text-end">commission</th>
-                                                <th scope="col" class="text-uppercase text-end">Amount</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="table-group-divider">
-                                            <tr>
-                                                <td class="align-middle" rowspan="2">Vendor 1</td>
-                                                <td>Ride 2</td>
-                                                <td class="text-end">5</td>
-                                                <td class="text-end">50</td>
-                                                <td class="text-end">10%</td>
-                                                <td class="text-end">5</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row" colspan="4" class="text-end">Total</th>
-                                                <th class="text-end">5</th>
-                                            </tr>
-
-                                            <tr>
-                                                <td class="align-middle" rowspan="2">Vendor 1</td>
-                                                <td>Ride 2</td>
-                                                <td class="text-end">5</td>
-                                                <td class="text-end">50</td>
-                                                <td class="text-end">10%</td>
-                                                <td class="text-end">5</td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row" colspan="4" class="text-end">Total</th>
-                                                <th class="text-end">5</th>
-                                            </tr>
-
-                                            <tr>
-                                                <th scope="row" colspan="5" class="text-uppercase text-end">Grand
-                                                    Total</th>
-                                                <th class="text-end">10</th>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            <!-- Saler Activity end -->
-
-                        </div>
-
-                        <!-- Recent Sales -->
-
-                        <!-- End Recent Sales -->
-
                     </div>
                 </div><!-- End Left side columns -->
 
 
                 <!-- Right side columns -->
                 <div class="col-lg-4">
-                    <div class="card recent-sales overflow-auto">
-                        <div class="card-body">
-                            <h5 class="card-title">Ticket Selling <span>| Today</span></h5>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Seller</th>
-                                        <th scope="col">Ride</th>
-                                        <th class="text-end">Quantity</th>
-                                        <th class="text-end">Amount</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td> 1</td>
-                                        <td>Seller 1</td>
-                                        <td>Entry</td>
-                                        <td class="text-end">10</td>
-                                        <td class="text-end">500</td>
-                                    </tr>
-                                    <tr>
-                                        <td> 2</td>
-                                        <td>Seller 1</td>
-                                        <td>Entry</td>
-                                        <td class="text-end">10</td>
-                                        <td class="text-end">500</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" colspan="4" class="text-uppercase text-end">Total</th>
-                                        <th class="text-end">Tk. 1000</th>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="3">Online Ticket Selling</td>
-                                        <td class="text-end">10</td>
-                                        <td class="text-end">500</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" colspan="4" class="text-uppercase text-end">Total</th>
-                                        <th class="text-end">Tk. 1500</th>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
 
-                    <!-- Saler Activity -->
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Seller Report<span> | Today</span></h5>
-                            <table class="table table-bordered">
-                                <thead>
-                                    <tr>
-                                        <th scope="col" class="text-uppercase">Name</th>
-                                        <th scope="col" class="text-uppercase">Ride</th>
-                                        <th scope="col" class="text-uppercase text-end">QTY</th>
-                                        <th scope="col" class="text-uppercase text-end">Amount</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="table-group-divider">
-                                    <tr>
-                                        <td class="align-middle" rowspan="2">selle 1</td>
-                                        <td>Ride 1</td>
-                                        <td class="text-end">5</td>
-                                        <td class="text-end">50</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" colspan="2" class="text-end">Total</th>
-                                        <th class="text-end">100</th>
-                                    </tr>
-                                    <tr>
-                                        <td class="align-middle" rowspan="2">selle 2</td>
-                                        <td>Ride 2</td>
-                                        <td class="text-end">5</td>
-                                        <td class="text-end">50</td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" colspan="2" class="text-end">Total</th>
-                                        <th class="text-end">100</th>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row" colspan="3" class="text-uppercase text-end">Grand Total
-                                        </th>
-                                        <th class="text-end">200</th>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <h5 class="card-title">Recent Activity <span>| Marketing</span></h5>
+                            <div class="activity">
+                                <div class="activity-item d-flex">
+                                    <div class="activite-label">32 min</div>
+                                    <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
+                                    <div class="activity-content">
+                                        Quia quae rerum <a href="#" class="fw-bold text-dark">explicabo officiis</a>
+                                        beatae
+                                    </div>
+                                </div>
+
+                                <div class="activity-item d-flex">
+                                    <div class="activite-label">56 min</div>
+                                    <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
+                                    <div class="activity-content">
+                                        Voluptatem blanditiis blanditiis eveniet
+                                    </div>
+                                </div>
+
+                                <div class="activity-item d-flex">
+                                    <div class="activite-label">2 hrs</div>
+                                    <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
+                                    <div class="activity-content">
+                                        Voluptates corrupti molestias voluptatem
+                                    </div>
+                                </div>
+
+                                <div class="activity-item d-flex">
+                                    <div class="activite-label">1 day</div>
+                                    <i class='bi bi-circle-fill activity-badge text-info align-self-start'></i>
+                                    <div class="activity-content">
+                                        Tempore autem saepe <a href="#" class="fw-bold text-dark">occaecati
+                                            voluptatem</a> tempore
+                                    </div>
+                                </div>
+
+                                <div class="activity-item d-flex">
+                                    <div class="activite-label">2 days</div>
+                                    <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
+                                    <div class="activity-content">
+                                        Est sit eum reiciendis exercitationem
+                                    </div>
+                                </div>
+
+                                <div class="activity-item d-flex">
+                                    <div class="activite-label">4 weeks</div>
+                                    <i class='bi bi-circle-fill activity-badge text-muted align-self-start'></i>
+                                    <div class="activity-content">
+                                        Dicta dolorem harum nulla eius. Ut quidem quidem sit quas
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <!-- Saler Activity end -->
+
                 </div>
                 <!-- End Right side columns -->
-
             </div>
         </section>
-
     </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Static labels for the last six months
+            const labels = ['May', 'June', 'July', 'August', 'September', 'October'];
+
+            // Static data for each month
+            const data = [500, 650, 800, 450, 700, 900];
+
+            new Chart(document.querySelector('#barChart'), {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Monthly Sales',
+                        data: data,
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(255, 159, 64, 0.2)',
+                            'rgba(255, 205, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(153, 102, 255, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgb(255, 99, 132)',
+                            'rgb(255, 159, 64)',
+                            'rgb(255, 205, 86)',
+                            'rgb(75, 192, 192)',
+                            'rgb(54, 162, 235)',
+                            'rgb(153, 102, 255)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 @endsection

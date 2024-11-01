@@ -39,6 +39,12 @@ Route::middleware(['auth', 'role:viewers'])->group(function (){
 Route::middleware(['auth', 'role:admin'])->group(function (){
     Route::get('/admin-dashboard',[AdminDashboardController::class,'admindashboard'])->name('admin.dashboard');
     
+    Route::get('user-index',[AuthController::class, 'indexuser'])->name('user.index');
+    Route::get('user-insert',[AuthController::class,'createuser'])->name('user.create');
+    Route::post('user-insert',[AuthController::class,'storeuser'])->name('user.store');
+    Route::get('user-update/{id}',[AuthController::class,'edituser'])->name('user.edit');
+    Route::put('user-update/{id}',[AuthController::class,'updateuser'])->name('user.update');
+    
     Route::get('branch-index',[BranchController::class, 'indexbranch'])->name('branch.index');
     Route::get('branch-insert',[BranchController::class,'createbranch'])->name('branch.create');
     Route::post('branch-insert',[BranchController::class,'storebranch'])->name('branch.store');
