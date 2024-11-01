@@ -24,13 +24,19 @@ class BranchController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'number' => 'required',
+            'email' => 'required|email|unique:branches,email', 
+            'number' => 'required|unique:branches,number|digits_between:11,14',
+            'address' => 'required',
+            'zip' => 'required',
         ]);
 
         try {
             $data = new Branch();
             $data->name = $request->name;
             $data->number = $request->number;
+            $data->email = $request->email;
+            $data->address = $request->address;
+            $data->zip = $request->zip;
             $data->save();
             return redirect()->route('branch.index')->with('success', 'branch created successfully.');
         } catch (\Exception $e) {
@@ -50,7 +56,10 @@ class BranchController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'number' => 'required',
+            'email' => 'required|email|unique:branches,email', 
+            'number' => 'required|unique:branches,number|digits_between:11,14',
+            'address' => 'required',
+            'zip' => 'required',
             'status' => 'required',
         ]);
         
@@ -58,6 +67,9 @@ class BranchController extends Controller
             $data = Branch::findOrFail($id);
             $data->name   = $request->input('name');
             $data->number  = $request->input('number');
+            $data->email  = $request->input('email');
+            $data->address  = $request->input('address');
+            $data->zip  = $request->input('zip');
             $data->status  = $request->input('status');
             $data->save();
 

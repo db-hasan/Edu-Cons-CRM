@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="col-md-6 pb-3">
-                    <label for="number" class="form-label">number<span class="text-danger">*</span></label>
+                    <label for="number" class="form-label">Number<span class="text-danger">*</span></label>
                     <input type="number" class="form-control" id="number" name="number" value="{{ $branch->number }}"
                         required>
                     @error('number')
@@ -41,7 +41,34 @@
                     @enderror
                 </div>
 
-                <div class="col-md-6">
+                <div class="col-md-6 pb-3">
+                    <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="email" name="email" value="{{ $branch->email }}"
+                        required>
+                    @error('email')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="col-md-6 pb-3">
+                    <label for="address" class="form-label">Address<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="address" name="address" value="{{ $branch->address }}"
+                        required>
+                    @error('address')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="col-md-3 pb-3">
+                    <label for="zip" class="form-label">Zip<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" id="zip" name="zip" value="{{ $branch->zip }}"
+                        required>
+                    @error('zip')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="col-md-3">
                     <label for="status" class="form-label">Status<span class="text-danger">*</span></label>
                     <select class="form-select" aria-label="Default select example" name="status" id="status">
                         <option value="1" {{ $branch->status == 1 ? 'selected' : '' }}>Active</option>

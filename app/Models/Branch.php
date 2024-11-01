@@ -12,6 +12,9 @@ class Branch extends Model
         'id',
         'name',
         'number',
+        'email',
+        'address',
+        'zip',
         'status',
     ];
 }

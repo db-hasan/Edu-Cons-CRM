@@ -24,6 +24,9 @@
                         <th>ID</th>
                         <th>Name</th>
                         <th>Number</th>
+                        <th>Email</th>
+                        <th>Addrss</th>
+                        <th>Zip</th>
                         <th>Status</th>
                         <th class="text-end">Action</th>
                     </tr>
@@ -34,6 +37,9 @@
                             <td>{{ $branch->id }}</td>
                             <td>{{ $branch->name }}</td>
                             <td>{{ $branch->number }}</td>
+                            <td>{{ $branch->email }}</td>
+                            <td>{{ $branch->address }}</td>
+                            <td>{{ $branch->zip }}</td>
                             <td>
                                 @if ($branch->status == 1)
                                     Active

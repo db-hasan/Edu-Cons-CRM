@@ -22,7 +22,7 @@
             <form method="post" action="{{ route('branch.store') }}" enctype="multipart/form-data" class="row g-3 p-3">
                 @csrf
 
-                <div class="col-md-12 pb-3">
+                <div class="col-md-4 pb-3">
                     <label for="name" class="form-label">Name<span class="text-danger">*</span></label>
                     <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}"
                         required>
@@ -31,11 +31,37 @@
                     @enderror
                 </div>
 
-                <div class="col-md-12 pb-3">
+                <div class="col-md-4 pb-3">
                     <label for="number" class="form-label">Number<span class="text-danger">*</span></label>
                     <input type="number" class="form-control" id="number" name="number" value="{{ old('number') }}"
                         required>
                     @error('number')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="col-md-4 pb-3">
+                    <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}"
+                        required>
+                    @error('email')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+
+                <div class="col-md-8 pb-3">
+                    <label for="address" class="form-label">Address<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="address" name="address" value="{{ old('address') }}"
+                        required>
+                    @error('address')
+                        <span class="text-danger">{{ $message }}</span>
+                    @enderror
+                </div>
+                <div class="col-md-4 pb-3">
+                    <label for="zip" class="form-label">Zip<span class="text-danger">*</span></label>
+                    <input type="number" class="form-control" id="zip" name="zip" value="{{ old('zip') }}"
+                        required>
+                    @error('zip')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
