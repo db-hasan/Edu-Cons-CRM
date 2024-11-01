@@ -2,12 +2,20 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ViewersDashboardController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\BranchController;
-use App\Http\Controllers\VisitorDashboardController;
-use App\Http\Controllers\VendorDashboardController;
-use App\Http\Controllers\SellerDashboardController;
-use App\Http\Controllers\CheckerDashboardController;
+
+
+
+use App\Http\Controllers\MarketingDashboardController;
+use App\Http\Controllers\ManagerDashboardController;
+use App\Http\Controllers\ConsultantDashboardController;
+use App\Http\Controllers\ComplianceDashboardController;
+
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +32,11 @@ use App\Http\Controllers\CheckerDashboardController;
 Route::get('/', [AuthController::class, 'login'])->name('login');
 Route::post('/', [AuthController::class, 'adminlogin'])->name('admin.login');
 
-Route::middleware(['auth', 'role:admin,visitor'])->group(function (){
+Route::middleware(['auth', 'role:viewers'])->group(function (){
+    Route::get('/viewers-dashboard',[ViwersDashboardController::class,'viewersdashboard'])->name('viewers.dashboard');
+});
+
+Route::middleware(['auth', 'role:admin'])->group(function (){
     Route::get('/admin-dashboard',[AdminDashboardController::class,'admindashboard'])->name('admin.dashboard');
     
     Route::get('branch-index',[BranchController::class, 'indexbranch'])->name('branch.index');
@@ -35,24 +47,27 @@ Route::middleware(['auth', 'role:admin,visitor'])->group(function (){
 });
 
 
-Route::middleware(['auth', 'role:visitor'])->group(function (){
-    Route::get('/visitor-dashboard',[VisitorDashboardController::class,'visitodrashboard'])->name('visitor.dashboard');
+
+
+
+Route::middleware(['auth', 'role:marketing'])->group(function (){
+    Route::get('/marketing-dashboard',[MarketingDashboardController::class,'marketingdashboard'])->name('marketing.dashboard');
 });
 
 
-Route::middleware(['auth', 'role:vendor'])->group(function (){
-    Route::get('/vendor-dashboard',[VendorDashboardController::class,'vendrodashboard'])->name('vendor.dashboard');
+Route::middleware(['auth', 'role:manager'])->group(function (){
+    Route::get('/manager-dashboard',[ManagerDashboardController::class,'managerdashboard'])->name('manager.dashboard');
 });
 
 
-Route::middleware(['auth', 'role:seller'])->group(function (){
-    Route::get('/seller-dashboard',[SellerDashboardController::class,'sellerdashboard'])->name('seller.dashboard');
+Route::middleware(['auth', 'role:consultant'])->group(function (){
+    Route::get('/consultant-dashboard',[ConsultantDashboardController::class,'consultantdashboard'])->name('consultant.dashboard');
 
 });
 
 
-Route::middleware(['auth', 'role:checker'])->group(function (){
-    Route::get('/checker-dashboard',[CheckerDashboardController::class,'checkerdashboard'])->name('checker.dashboard');
+Route::middleware(['auth', 'role:compliance'])->group(function (){
+    Route::get('/compliance-dashboard',[ComplianceDashboardController::class,'compliancedashboard'])->name('compliance.dashboard');
 });
 
 
