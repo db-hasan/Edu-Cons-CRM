@@ -13,8 +13,8 @@ class BranchController extends Controller
 {
 
     public function indexbranch() {
-        $branchs = Branch::latest()->get();
-        return view('backend.admin.branch.index',compact('branchs'));
+        $branches = Branch::orderBy('id', 'desc')->get();
+        return view('backend.admin.branch.index',compact('branches'));
     }
     
     public function createbranch() {
@@ -56,8 +56,8 @@ class BranchController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'email' => 'required|email|unique:branches,email', 
-            'number' => 'required|unique:branches,number|digits_between:11,14',
+            'email' => 'required|email|unique:branches,email,' . $id,  // Ignore current ID for unique check
+            'number' => 'required|digits_between:11,14|unique:branches,number,' . $id,  // Ignore current ID for unique check
             'address' => 'required',
             'zip' => 'required',
             'status' => 'required',

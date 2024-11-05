@@ -32,7 +32,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($branchs as $branch)
+                    @foreach ($branches as $branch)
                         <tr>
                             <td>{{ $branch->id }}</td>
                             <td>{{ $branch->name }}</td>
