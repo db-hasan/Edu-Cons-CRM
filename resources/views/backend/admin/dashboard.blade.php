@@ -120,7 +120,7 @@
                                     <div class="d-flex align-items-center">
                                         <div
                                             class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-mortarboard"></i>
+                                            <i class="bi bi-bank"></i>
                                         </div>
                                         <div class="ps-3">
                                             <h6>500</h6>
@@ -241,7 +241,7 @@
                                     <div class="d-flex align-items-center">
                                         <div
                                             class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-bank"></i>
+                                            <i class="bi bi-mortarboard"></i>
                                         </div>
                                         <div class="ps-3">
                                             <h6>150</h6>
