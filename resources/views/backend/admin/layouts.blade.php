@@ -166,14 +166,14 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="">
+                <a class="nav-link collapsed" href="{{ route('lead.index') }}">
                     <i class="bi bi-gem"></i>
                     <span>Lead</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="">
+                <a class="nav-link collapsed" href="{{ route('upload.index') }}">
                     <i class="bi bi-cloud-arrow-up"></i>
                     <span>Upload</span>
                 </a>

@@ -5,6 +5,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ViewersDashboardController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\BranchController;
+use App\Http\Controllers\LeadController;
+use App\Http\Controllers\UploadController;
 
 
 
@@ -50,6 +52,18 @@ Route::middleware(['auth', 'role:admin'])->group(function (){
     Route::post('branch-insert',[BranchController::class,'storebranch'])->name('branch.store');
     Route::get('branch-update/{id}',[BranchController::class,'editbranch'])->name('branch.edit');
     Route::put('branch-update/{id}',[BranchController::class,'updatebranch'])->name('branch.update');
+
+    Route::get('lead-index',[LeadController::class, 'indexlead'])->name('lead.index');
+    Route::get('lead-insert',[LeadController::class,'createlead'])->name('lead.create');
+    Route::post('lead-insert',[LeadController::class,'storelead'])->name('lead.store');
+    Route::get('lead-update/{id}',[LeadController::class,'editlead'])->name('lead.edit');
+    Route::put('lead-update/{id}',[LeadController::class,'updatelead'])->name('lead.update');
+
+    Route::get('upload-index',[UploadController::class, 'indexupload'])->name('upload.index');
+    Route::get('upload-insert',[UploadController::class,'createupload'])->name('upload.create');
+    Route::post('upload-insert',[UploadController::class,'storeupload'])->name('upload.store');
+    Route::get('upload-update/{id}',[UploadController::class,'editupload'])->name('upload.edit');
+    Route::put('upload-update/{id}',[UploadController::class,'updateupload'])->name('upload.update');
 });
 
 
