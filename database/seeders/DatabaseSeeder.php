@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
 
     private $roles = [
         'admin',
-        'visitor',
+        'viewers',
         'vendor',
         'seller',
         'checker',

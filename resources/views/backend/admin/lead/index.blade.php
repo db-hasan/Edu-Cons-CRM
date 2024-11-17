@@ -21,38 +21,153 @@
             <table class="table">
                 <thead>
                     <tr>
+                        <th>  
+                            <input class="form-check-input" type="checkbox" value="" id="all">
+                            <label class="form-check-label" for="all">
+                            All
+                            </label>
+                        </th>
                         <th>ID</th>
+                        <th>Marketing</th>
+                        <th>Resource</th>
                         <th>Name</th>
                         <th>Number</th>
                         <th>Email</th>
                         <th>Addrss</th>
                         <th>Zip</th>
-                        <th>Status</th>
+                        <th>Contact</th>
+                        <th>Passport</th>
+                        <th>language</th>
                         <th class="text-end">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {{-- @foreach ($branches as $branch)
                         <tr>
-                            <td>{{ $branch->id }}</td>
-                            <td>{{ $branch->name }}</td>
-                            <td>{{ $branch->number }}</td>
-                            <td>{{ $branch->email }}</td>
-                            <td>{{ $branch->address }}</td>
-                            <td>{{ $branch->zip }}</td>
+                            <td><input class="form-check-input" type="checkbox" value=""></td>
+                            <td>01</td>
+                            <td>Rony</td>
+                            <td>Linkedin</td>
+                            <td>Mim</td>
+                            <td>01723629080</td>
+                            <td>info@gmail.com</td>
+                            <td>shibonj-bogura</td>
+                            <td>5810</td>
                             <td>
-                                @if ($branch->status == 1)
-                                    Active
-                                @elseif($branch->status == 2)
-                                    Inactive
-                                @endif
+                                <select class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>No response</option>
+                                    <option>Connected</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>Yes</option>
+                                    <option>Applied</option>
+                                    <option>No</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>IELTS</option>
+                                    <option>TOEFL</option>
+                                    <option>PTE</option>
+                                </select>
                             </td>
                             <td class="d-flex justify-content-end">
-                                <a href="{{ route('branch.edit', $branch->id) }}" class="btn btn-primary mx-1"><i
+                                <a href="" class="btn btn-primary mx-1"><i
+                                        class="bi bi-pencil-square"></i></a>
+                                <a href="" class="btn btn-primary mx-1"><i
+                                        class="bi bi-pencil-square"></i></a>
+                                <a href="" class="btn btn-primary mx-1"><i
                                         class="bi bi-pencil-square"></i></a>
                             </td>
                         </tr>
-                    @endforeach --}}
+                        <tr>
+                            <td><input class="form-check-input" type="checkbox" value=""></td>
+                            <td>01</td>
+                            <td>Rony</td>
+                            <td>Linkedin</td>
+                            <td>Mim</td>
+                            <td>01723629080</td>
+                            <td>info@gmail.com</td>
+                            <td>shibonj-bogura</td>
+                            <td>5810</td>
+                            <td>
+                                <select class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>No response</option>
+                                    <option>Connected</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>Yes</option>
+                                    <option>Applied</option>
+                                    <option>No</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>IELTS</option>
+                                    <option>TOEFL</option>
+                                    <option>PTE</option>
+                                </select>
+                            </td>
+                            <td class="d-flex justify-content-end">
+                                <a href="" class="btn btn-primary mx-1"><i
+                                        class="bi bi-pencil-square"></i></a>
+                                <a href="" class="btn btn-primary mx-1"><i
+                                        class="bi bi-pencil-square"></i></a>
+                                <a href="" class="btn btn-primary mx-1"><i
+                                        class="bi bi-pencil-square"></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input class="form-check-input" type="checkbox" value=""></td>
+                            <td>01</td>
+                            <td>Rony</td>
+                            <td>Linkedin</td>
+                            <td>Mim</td>
+                            <td>01723629080</td>
+                            <td>info@gmail.com</td>
+                            <td>shibonj-bogura</td>
+                            <td>5810</td>
+                            <td>
+                                <select class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>No response</option>
+                                    <option>Connected</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>Yes</option>
+                                    <option>Applied</option>
+                                    <option>No</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select class="form-select">
+                                    <option selected>Choose...</option>
+                                    <option>IELTS</option>
+                                    <option>TOEFL</option>
+                                    <option>PTE</option>
+                                </select>
+                            </td>
+                            <td class="d-flex justify-content-end">
+                                <a href="" class="btn btn-primary mx-1"><i
+                                        class="bi bi-pencil-square"></i></a>
+                                <a href="" class="btn btn-primary mx-1"><i
+                                        class="bi bi-pencil-square"></i></a>
+                                <a href="" class="btn btn-primary mx-1"><i
+                                        class="bi bi-pencil-square"></i></a>
+                            </td>
+                        </tr>
                 </tbody>
             </table>
         </div>
