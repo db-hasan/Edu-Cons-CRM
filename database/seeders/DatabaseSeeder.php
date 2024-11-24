@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 use App\Models\Branch;
 use App\Models\Role;
+use App\Models\Degree;
+use App\Models\Subject;
+use App\Models\Country;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,6 +25,41 @@ class DatabaseSeeder extends Seeder
         'seller',
         'checker',
     ];
+    private $degrees = [
+        "SSC",
+        "HSC",
+        "Diploma",
+        "Bachelor's",
+        "Master's",
+        "B.A",
+        "B.Sc",
+        "B.S.S",
+        "B.B.A",
+        "M.A",
+        "M.Sc",
+        "M.S.S",
+        "MBA",
+        "PhD",
+    ];
+
+    private $subjects = [
+        "Arts",
+        "Science",
+        "Commerce",
+        "Bangla",
+        "English",
+        "Math",
+    ];
+
+    private $countries = [
+        'United Kingdom',
+        'United States',
+        'Australia',
+        'Canada',
+        'Malaysia',
+        'Others',
+    ];
+
     private $branches = [
         'Dhaka',
         'Rajshahi',
@@ -44,6 +82,16 @@ class DatabaseSeeder extends Seeder
         // foreach ($this->roles as $role) {
         //     Role::create(['name' => $role]);
         // };
+
+        foreach ($this->degrees as $degree) {
+            Degree::create(['name' => $degree]);
+        };
+        foreach ($this->subjects as $subject) {
+            Subject::create(['name' => $subject]);
+        };
+        foreach ($this->countries as $country) {
+            Country::create(['name' => $country]);
+        };
 
         foreach ($this->branches as $index => $branch) {
             Branch::create([

@@ -7,6 +7,14 @@ use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\BranchController;
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\UploadController;
+use App\Http\Controllers\CountryController;
+use App\Http\Controllers\StateController;
+use App\Http\Controllers\UniversityController;
+use App\Http\Controllers\CampusController;
+use App\Http\Controllers\DegreeController;
+use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\DegreeMappingController;
+use App\Http\Controllers\SubjectMappingController;
 
 
 
