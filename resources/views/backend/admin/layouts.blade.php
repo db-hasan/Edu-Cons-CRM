@@ -251,27 +251,27 @@
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="{{ route('state.index') }}">
                             <i class="bi bi-circle"></i><span>State</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="{{ route('university.index') }}">
                             <i class="bi bi-circle"></i><span>University</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="{{ route('campus.index') }}">
                             <i class="bi bi-circle"></i><span>Campus</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="{{ route('degreemapping.index') }}">
                             <i class="bi bi-circle"></i><span>Degree </span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="{{ route('subjectmapping.index') }}">
                             <i class="bi bi-circle"></i><span>Subject </span>
                         </a>
                     </li>
