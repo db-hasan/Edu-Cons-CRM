@@ -54,6 +54,59 @@ Route::middleware(['auth', 'role:admin'])->group(function (){
     Route::post('user-insert',[AuthController::class,'storeuser'])->name('user.store');
     Route::get('user-update/{id}',[AuthController::class,'edituser'])->name('user.edit');
     Route::put('user-update/{id}',[AuthController::class,'updateuser'])->name('user.update');
+
+    Route::get('degree-index',[DegreeController::class, 'indexdegree'])->name('degree.index');
+    Route::get('degree-insert',[DegreeController::class,'createdegree'])->name('degree.create');
+    Route::post('degree-insert',[DegreeController::class,'storedegree'])->name('degree.store');
+    Route::get('degree-update/{id}',[DegreeController::class,'editdegree'])->name('degree.edit');
+    Route::put('degree-update/{id}',[DegreeController::class,'updatedegree'])->name('degree.update');
+
+    Route::get('subject-index',[SubjectController::class, 'indexsubject'])->name('subject.index');
+    Route::get('subject-insert',[SubjectController::class,'createsubject'])->name('subject.create');
+    Route::post('subject-insert',[SubjectController::class,'storesubject'])->name('subject.store');
+    Route::get('subject-update/{id}',[SubjectController::class,'editsubject'])->name('subject.edit');
+    Route::put('subject-update/{id}',[SubjectController::class,'updatesubject'])->name('subject.update');
+
+    Route::get('country-index',[CountryController::class, 'indexcountry'])->name('country.index');
+    Route::get('country-insert',[CountryController::class,'createcountry'])->name('country.create');
+    Route::post('country-insert',[CountryController::class,'storecountry'])->name('country.store');
+    Route::get('country-update/{id}',[CountryController::class,'editcountry'])->name('country.edit');
+    Route::put('country-update/{id}',[CountryController::class,'updatecountry'])->name('country.update');
+
+    Route::get('state-index',[StateController::class, 'indexstate'])->name('state.index');
+    Route::get('state-insert',[StateController::class,'createstate'])->name('state.create');
+    Route::post('state-insert',[StateController::class,'storestate'])->name('state.store');
+    Route::get('state-update/{id}',[StateController::class,'editstate'])->name('state.edit');
+    Route::put('state-update/{id}',[StateController::class,'updatestate'])->name('state.update');
+    Route::get('state-view/{id}',[StateController::class,'viewstate'])->name('state.view');
+
+    Route::get('university-index',[UniversityController::class, 'indexuniversity'])->name('university.index');
+    Route::get('university-insert',[UniversityController::class,'createuniversity'])->name('university.create');
+    Route::post('university-insert',[UniversityController::class,'storeuniversity'])->name('university.store');
+    Route::get('university-update/{id}',[UniversityController::class,'edituniversity'])->name('university.edit');
+    Route::put('university-update/{id}',[UniversityController::class,'updateuniversity'])->name('university.update');
+    Route::get('university-view/{id}',[UniversityController::class,'viewuniversity'])->name('university.view');
+
+    Route::get('campus-index',[CampusController::class, 'indexcampus'])->name('campus.index');
+    Route::get('campus-insert',[CampusController::class,'createcampus'])->name('campus.create');
+    Route::post('campus-insert',[CampusController::class,'storecampus'])->name('campus.store');
+    Route::get('campus-update/{id}',[CampusController::class,'editcampus'])->name('campus.edit');
+    Route::put('campus-update/{id}',[CampusController::class,'updatecampus'])->name('campus.update');
+    Route::get('campus-view/{id}',[CampusController::class,'viewcampus'])->name('campus.view');
+
+    Route::get('degreemapping-index',[DegreeMappingController::class, 'indexdegreemapping'])->name('degreemapping.index');
+    Route::get('degreemapping-insert',[dDegreeMappingController::class,'createdegreemapping'])->name('degreemapping.create');
+    Route::post('degreemapping-insert',[DegreeMappingController::class,'storedegreemapping'])->name('degreemapping.store');
+    Route::get('degreemapping-update/{id}',[DegreeMappingController::class,'editdegreemapping'])->name('degreemapping.edit');
+    Route::put('degreemapping-update/{id}',[DegreeMappingController::class,'updatedegreemapping'])->name('degreemapping.update');
+    Route::get('degreemapping-view/{id}',[DegreeMappingController::class,'viewdegreemapping'])->name('degreemapping.view');
+
+    Route::get('subjectmapping-index',[SubjectMappingController::class, 'indexsubjectmapping'])->name('subjectmapping.index');
+    Route::get('subjectmapping-insert',[SubjectMappingController::class,'createsubjectmapping'])->name('subjectmapping.create');
+    Route::post('subjectmapping-insert',[SubjectMappingController::class,'storesubjectmapping'])->name('subjectmapping.store');
+    Route::get('subjectmapping-update/{id}',[SubjectMappingController::class,'editsubjectmapping'])->name('subjectmapping.edit');
+    Route::put('subjectmapping-update/{id}',[SubjectMappingController::class,'updatesubjectmapping'])->name('subjectmapping.update');
+    Route::get('subjectmapping-view/{id}',[SubjectMappingController::class,'viewsubjectmapping'])->name('subjectmapping.view');
     
     Route::get('branch-index',[BranchController::class, 'indexbranch'])->name('branch.index');
     Route::get('branch-insert',[BranchController::class,'createbranch'])->name('branch.create');

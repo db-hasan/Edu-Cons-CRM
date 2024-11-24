@@ -3,7 +3,7 @@
     <main id="main" class="main">
         <div class="d-flex justify-content-between">
             <div class="pagetitle">
-                <h1>File Upload</h1>
+                <h1>Country List</h1>
                 <nav>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
@@ -12,8 +12,8 @@
                 </nav>
             </div>
             <div class="text-end pt-2">
-                <a href="{{ route('upload.create') }}" class="btn btn-primary"><i class="fas fa-plus-circle"></i>
-                    Add lead</a>
+                <a href="{{ route('country.create') }}" class="btn btn-primary"><i class="fas fa-plus-circle"></i>
+                    Add Country</a>
             </div>
         </div>
         <hr>
@@ -23,36 +23,28 @@
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Number</th>
-                        <th>Email</th>
-                        <th>Addrss</th>
-                        <th>Zip</th>
                         <th>Status</th>
                         <th class="text-end">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {{-- @foreach ($branches as $branch)
+                    @foreach ($countries as $country)
                         <tr>
-                            <td>{{ $branch->id }}</td>
-                            <td>{{ $branch->name }}</td>
-                            <td>{{ $branch->number }}</td>
-                            <td>{{ $branch->email }}</td>
-                            <td>{{ $branch->address }}</td>
-                            <td>{{ $branch->zip }}</td>
+                            <td>{{ $country->id }}</td>
+                            <td>{{ $country->name }}</td>
                             <td>
-                                @if ($branch->status == 1)
+                                @if ($country->status == 1)
                                     Active
-                                @elseif($branch->status == 2)
+                                @elseif($country->status == 2)
                                     Inactive
                                 @endif
                             </td>
                             <td class="d-flex justify-content-end">
-                                <a href="{{ route('branch.edit', $branch->id) }}" class="btn btn-primary mx-1"><i
+                                <a href="{{ route('country.edit', $country->id) }}" class="btn btn-primary mx-1"><i
                                         class="bi bi-pencil-square"></i></a>
                             </td>
                         </tr>
-                    @endforeach --}}
+                    @endforeach
                 </tbody>
             </table>
         </div>
