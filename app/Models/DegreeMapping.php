@@ -12,13 +12,13 @@ class DegreeMapping extends Model
     use HasFactory;
     protected $fillable = [
         'id',
-        'compus_id',
+        'campus_id',
         'degree_id',
         'status',
     ];
     public function campus(): BelongsTo
     {
-        return $this->belongsTo(Campus::class,'compus_id');
+        return $this->belongsTo(Campus::class, 'campus_id');
     }
     public function degree(): BelongsTo
     {

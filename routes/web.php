@@ -90,10 +90,9 @@ Route::middleware(['auth', 'role:admin'])->group(function (){
     Route::post('campus-insert',[CampusController::class,'storecampus'])->name('campus.store');
     Route::get('campus-update/{id}',[CampusController::class,'editcampus'])->name('campus.edit');
     Route::put('campus-update/{id}',[CampusController::class,'updatecampus'])->name('campus.update');
-    Route::get('campus-view/{id}',[CampusController::class,'viewcampus'])->name('campus.view');
 
     Route::get('degreemapping-index',[DegreeMappingController::class, 'indexdegreemapping'])->name('degreemapping.index');
-    Route::get('degreemapping-insert',[dDegreeMappingController::class,'createdegreemapping'])->name('degreemapping.create');
+    Route::get('degreemapping-insert',[DegreeMappingController::class,'createdegreemapping'])->name('degreemapping.create');
     Route::post('degreemapping-insert',[DegreeMappingController::class,'storedegreemapping'])->name('degreemapping.store');
     Route::get('degreemapping-update/{id}',[DegreeMappingController::class,'editdegreemapping'])->name('degreemapping.edit');
     Route::put('degreemapping-update/{id}',[DegreeMappingController::class,'updatedegreemapping'])->name('degreemapping.update');

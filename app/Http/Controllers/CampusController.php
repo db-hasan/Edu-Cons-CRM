@@ -38,7 +38,7 @@ class CampusController extends Controller
     public function storecampus(Request $request): RedirectResponse
     {
         $request->validate([
-            'university_id' => 'required|exists:states,id',
+            'university_id' => 'required|exists:universities,id',
             'name' => 'required|array',
             'name.*' => 'required|string|max:255',
         ]);
