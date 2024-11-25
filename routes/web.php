@@ -84,7 +84,6 @@ Route::middleware(['auth', 'role:admin'])->group(function (){
     Route::post('university-insert',[UniversityController::class,'storeuniversity'])->name('university.store');
     Route::get('university-update/{id}',[UniversityController::class,'edituniversity'])->name('university.edit');
     Route::put('university-update/{id}',[UniversityController::class,'updateuniversity'])->name('university.update');
-    Route::get('university-view/{id}',[UniversityController::class,'viewuniversity'])->name('university.view');
 
     Route::get('campus-index',[CampusController::class, 'indexcampus'])->name('campus.index');
     Route::get('campus-insert',[CampusController::class,'createcampus'])->name('campus.create');

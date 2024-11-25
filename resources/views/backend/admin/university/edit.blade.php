@@ -24,21 +24,7 @@
                 @csrf
                 @method('PUT')
 
-                <div class="col-md-6 pb-3">
-                    <label for="country_id" class="form-label">Country <span class="text-danger">*</span></label>
-                    <select id="country_id" name="country_id" class="form-select" required>
-                        @foreach ($countries as $country)
-                            <option value="{{ $country->id }}" {{ $country->id == $university->country_id ? 'selected' : '' }}>
-                                {{ $country->name }}
-                            </option>                        
-                        @endforeach
-                    </select>
-                    @error('country_id')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
-                </div>
-
-                <div class="col-md-6 pb-3">
+                <div class="col-md-12 pb-3">
                     <label for="state_id" class="form-label">State <span class="text-danger">*</span></label>
                     <select id="state_id" name="state_id" class="form-select" required>
                         @foreach ($states as $state)

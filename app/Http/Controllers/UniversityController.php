@@ -55,9 +55,6 @@ class UniversityController extends Controller
 
 
     public function edituniversity($id){
-        $data['countries'] = Country::where('status', 1)
-                            ->orderBy('id', 'desc')
-                            ->get();
         $data['states'] = State::where('status', 1)
                             ->orderBy('id', 'desc')
                             ->get();
