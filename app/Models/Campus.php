@@ -13,7 +13,7 @@ class Campus extends Model
     protected $fillable = [
         'id',
         'university_id',
-        'address',
+        'name',
         'status',
     ];
     public function university(): BelongsTo
