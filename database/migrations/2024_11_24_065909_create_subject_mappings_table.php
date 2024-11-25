@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('subject_mappings', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('degree_id')->constrained('degrees')->onDelete('cascade');
+            $table->foreignId('campus_id')->constrained('campuses')->onDelete('cascade');
+            $table->foreignId('degree_mapping_id')->constrained('degree_mappings')->onDelete('cascade');
             $table->foreignId('subject_id')->constrained('subjects')->onDelete('cascade');
             $table->string('course_duration');
             $table->string('admission_fee');

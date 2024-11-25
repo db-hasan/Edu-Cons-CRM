@@ -12,16 +12,21 @@ class SubjectMapping extends Model
     use HasFactory;
     protected $fillable = [
         'id',
-        'degree_id',
+        'campus_id',
+        'degree_mapping_id',
         'subject_id',
         'course_duration',
         'admission_fee',
         'entry_requirment',
         'status',
     ];
-    public function degree(): BelongsTo
+    public function campus(): BelongsTo
     {
-        return $this->belongsTo(Degree::class,'degree_id');
+        return $this->belongsTo(Campus::class, 'campus_id');
+    }
+    public function degreemapping(): BelongsTo
+    {
+        return $this->belongsTo(DegreeMapping::class,'degree_mapping_id');
     }
     public function subject(): BelongsTo
     {
