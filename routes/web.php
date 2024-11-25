@@ -78,7 +78,6 @@ Route::middleware(['auth', 'role:admin'])->group(function (){
     Route::post('state-insert',[StateController::class,'storestate'])->name('state.store');
     Route::get('state-update/{id}',[StateController::class,'editstate'])->name('state.edit');
     Route::put('state-update/{id}',[StateController::class,'updatestate'])->name('state.update');
-    Route::get('state-view/{id}',[StateController::class,'viewstate'])->name('state.view');
 
     Route::get('university-index',[UniversityController::class, 'indexuniversity'])->name('university.index');
     Route::get('university-insert',[UniversityController::class,'createuniversity'])->name('university.create');

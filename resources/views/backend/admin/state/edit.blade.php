@@ -28,9 +28,9 @@
                     <label for="country_id" class="form-label">Country <span class="text-danger">*</span></label>
                     <select id="country_id" name="country_id" class="form-select" required>
                         @foreach ($countries as $country)
-                            <option value="{{ $country->id }}" {{ $country->id == $event->country_id ? 'selected' : '' }}>
+                            <option value="{{ $country->id }}" {{ $country->id == $state->country_id ? 'selected' : '' }}>
                                 {{ $country->name }}
-                            </option>
+                            </option>                        
                         @endforeach
                     </select>
                     @error('country_id')

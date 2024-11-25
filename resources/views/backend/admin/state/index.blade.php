@@ -18,37 +18,45 @@
         </div>
         <hr>
         <div class="custom-scrollbar-table">
-            <table class="table">
+            <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th>ID</th>
                         <th>Country</th>
+                        <th>Index</th>
                         <th>Name</th>
                         <th>Status</th>
                         <th class="text-end">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($states as $state)
-                        <tr>
-                            <td>{{ $state->id }}</td>
-                            <td>{{ $state->country->name }}</td>
-                            <td>{{ $state->name }}</td>
-                            <td>
-                                @if ($state->status == 1)
-                                    Active
-                                @elseif($state->status == 2)
-                                    Inactive
+                    @foreach ($states as $statesGroup)
+                        @foreach ($statesGroup as $index => $state)
+                            <tr>                             
+                                @if ($loop->first)  
+                                    <td class="align-middle" rowspan="{{ $statesGroup->count() }}">
+                                        {{ $state->country->name }}
+                                    </td>
                                 @endif
-                            </td>
-                            <td class="d-flex justify-content-end">
-                                <a href="{{ route('state.edit', $state->id) }}" class="btn btn-primary mx-1"><i
-                                        class="bi bi-pencil-square"></i></a>
-                            </td>
-                        </tr>
+                                <td>{{ $loop->index + 1 }}</td>
+                                <td>{{ $state->name }}</td>
+                                <td>
+                                    @if ($state->status == 1)
+                                        Active
+                                    @elseif($state->status == 2)
+                                        Inactive
+                                    @endif
+                                </td>
+                                <td class="d-flex justify-content-end">
+                                    <a href="{{ route('state.edit', $state->id) }}" class="btn btn-primary mx-1">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
                     @endforeach
                 </tbody>
             </table>
+                     
         </div>
     </main>
     <script src="{{ asset('backend/js/jquery-3.7.1.min.js') }} "></script>

@@ -13,7 +13,10 @@ use Illuminate\Http\Request;
 class StateController extends Controller
 {
     public function indexstate() {
-        $states = State::orderBy('id', 'desc')->get();
+        $states = State::with('country')
+                    ->orderBy('country_id', 'desc')
+                    ->get()
+                    ->groupBy('country_id');
         return view('backend.admin.state.index',compact('states'));
     }
     
@@ -23,30 +26,35 @@ class StateController extends Controller
         ->get();
         return view('backend.admin.state.create', compact('countries'));
     }
-    public function storestate(Request $request):RedirectResponse
+
+    public function storestate(Request $request): RedirectResponse
     {
         $request->validate([
-            'country_id' => 'required',
-            'name' => 'required',
+            'country_id' => 'required|exists:countries,id',
+            'name' => 'required|array',
+            'name.*' => 'required|string|max:255',
         ]);
 
         try {
-            $data = new State();
-            $data->country_id = $request->country_id;
-            $data->name = $request->name;
-            $data->save();
-            return redirect()->route('state.index')->with('success', 'state created successfully.');
+            foreach ($request->name as $stateName) {
+                State::create([
+                    'country_id' => $request->country_id,
+                    'name' => $stateName,
+                ]);
+            }
+            return redirect()->route('state.index')->with('success', 'States created successfully.');
         } catch (\Exception $e) {
             return redirect()->route('state.index')->with('error', 'An error occurred. Please try again.');
         }
     }
+
 
     public function editstate($id){
         $data['countries'] = Country::where('status', 1)
         ->orderBy('id', 'desc')
         ->get();
         $data['state'] = State::find($id);
-        if (!$states['state']) {
+        if (!$data['state']) {
             return redirect()->back();
         }     
         return view('backend.admin.state.edit', $data);
@@ -54,9 +62,10 @@ class StateController extends Controller
 
     public function updatestate(Request $request, $id): RedirectResponse
     {
+
         $request->validate([
-            'country_id' => 'required',
-            'name' => 'required',
+            'country_id' => 'required|exists:countries,id',
+            'name' => 'required|string|max:255',
             'status' => 'required',
         ]);
         
