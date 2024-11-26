@@ -24,4 +24,9 @@ class DegreeMapping extends Model
     {
         return $this->belongsTo(Degree::class,'degree_id');
     }
+
+    public function subjectmapping(): HasMany
+    {
+        return $this->hasMany(SubjectMapping::class);
+    }
 }

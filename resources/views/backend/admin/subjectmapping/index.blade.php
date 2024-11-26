@@ -3,7 +3,7 @@
     <main id="main" class="main">
         <div class="d-flex justify-content-between">
             <div class="pagetitle">
-                <h1>Degree Assign</h1>
+                <h1>Subject Assign</h1>
                 <nav>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
@@ -12,8 +12,8 @@
                 </nav>
             </div>
             <div class="text-end pt-2">
-                <a href="{{ route('degreemapping.create') }}" class="btn btn-primary"><i class="fas fa-plus-circle"></i>
-                    Degree Assign Create</a>
+                <a href="{{ route('subjectmapping.create') }}" class="btn btn-primary"><i class="fas fa-plus-circle"></i>
+                    Subject Assign Create</a>
             </div>
         </div>
         <hr>
@@ -23,7 +23,7 @@
                     <tr>
                         <th>Campus</th>
                         <th>Index</th>
-                        <th>Name</th>
+                        <th>Subject</th>
                         <th>Status</th>
                         <th class="text-end">Action</th>
                     </tr>
@@ -47,8 +47,8 @@
                                     @endif
                                 </td>
                                 <td class="d-flex justify-content-end">
-                                    <a href="{{ route('degreemapping.edit', $degreemapping->id) }}" class="btn btn-primary mx-1">
-                                        <i class="bi bi-pencil-square"></i>
+                                    <a href="{{ route('subjectmapping.view', $degreemapping->id) }}" class="btn btn-primary mx-1">
+                                        <i class="bi bi-eye"></i>
                                     </a>
                                 </td>
                             </tr>
@@ -56,6 +56,7 @@
                     @endforeach
                 </tbody>
             </table>
+            
                      
         </div>
     </main>

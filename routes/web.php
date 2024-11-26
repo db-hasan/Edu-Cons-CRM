@@ -96,7 +96,6 @@ Route::middleware(['auth', 'role:admin'])->group(function (){
     Route::post('degreemapping-insert',[DegreeMappingController::class,'storedegreemapping'])->name('degreemapping.store');
     Route::get('degreemapping-update/{id}',[DegreeMappingController::class,'editdegreemapping'])->name('degreemapping.edit');
     Route::put('degreemapping-update/{id}',[DegreeMappingController::class,'updatedegreemapping'])->name('degreemapping.update');
-    Route::get('degreemapping-view/{id}',[DegreeMappingController::class,'viewdegreemapping'])->name('degreemapping.view');
 
     Route::get('subjectmapping-index',[SubjectMappingController::class, 'indexsubjectmapping'])->name('subjectmapping.index');
     Route::get('subjectmapping-insert',[SubjectMappingController::class,'createsubjectmapping'])->name('subjectmapping.create');

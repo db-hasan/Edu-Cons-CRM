@@ -17,16 +17,22 @@ class SubjectMapping extends Model
         'subject_id',
         'course_duration',
         'admission_fee',
-        'entry_requirment',
+        'entry_requirement',
         'status',
     ];
+
     public function campus(): BelongsTo
     {
         return $this->belongsTo(Campus::class, 'campus_id');
     }
+
     public function degreemapping(): BelongsTo
     {
         return $this->belongsTo(DegreeMapping::class,'degree_mapping_id');
+    }
+    public function degree(): BelongsTo
+    {
+        return $this->belongsTo(Degree::class,'degree_id');
     }
     public function subject(): BelongsTo
     {

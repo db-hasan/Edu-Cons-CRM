@@ -7,7 +7,7 @@
         <div class="d-flex align-items-center justify-content-between">
             <a href="" class="logo d-flex align-items-center">
                 {{-- <img src="{{ asset('images/logo.png') }}" alt=""> --}}
-                <span class="d-none d-lg-block">SOFTxONE Ltd</span>
+                <span class="d-none d-lg-block">Logo Here</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div>
