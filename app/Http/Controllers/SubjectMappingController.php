@@ -103,7 +103,7 @@ class SubjectMappingController extends Controller
         $data['degrees'] = Degree::where('status', 1)
                             ->orderBy('id', 'desc')
                             ->get();
-        $data['subjectmapping'] = subjectmapping::find($id);
+        $data['subjectmapping'] = Subjectmapping::find($id);
             if (!$data['subjectmapping']) {
                 return redirect()->back();
             }     
@@ -120,7 +120,7 @@ class SubjectMappingController extends Controller
         ]);
         
         try {
-            $data = subjectmapping::findOrFail($id);
+            $data = Subjectmapping::findOrFail($id);
             $data->campus_id   = $request->input('campus_id');
             $data->degree_id   = $request->input('degree_id');
             $data->status  = $request->input('status');
