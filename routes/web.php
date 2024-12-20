@@ -142,11 +142,12 @@ Route::middleware(['auth'])->group(function (){
     Route::get('lead-update/{id}',[LeadController::class,'editlead'])->name('lead.edit');
     Route::put('lead-update/{id}',[LeadController::class,'updatelead'])->name('lead.update');
 
-    Route::get('upload-index',[UploadController::class, 'indexupload'])->name('upload.index');
-    Route::get('upload-insert',[UploadController::class,'createupload'])->name('upload.create');
-    Route::post('upload-insert',[UploadController::class,'storeupload'])->name('upload.store');
-    Route::get('upload-update/{id}',[UploadController::class,'editupload'])->name('upload.edit');
-    Route::put('upload-update/{id}',[UploadController::class,'updateupload'])->name('upload.update');
+    Route::get('upload.lead-assign-index',[UploadController::class, 'indexAssignLeadUpload'])->name('upload.lead.assign.index');
+    Route::post('upload.lead-assign-index',[UploadController::class, 'createAssignLeadUpload'])->name('upload.lead.assign.store');
+    Route::get('upload.bulk-lead-insert',[UploadController::class,'creatBulkLeadUpload'])->name('upload.lead.bulk.create');
+    Route::post('upload.bulk-lead-insert',[UploadController::class,'storeBulkLeadUpload'])->name('upload.lead.bulk..store');
+    Route::get('upload.single-lead-insert',[UploadController::class,'createSingleLeadUpload'])->name('upload.lead.single.create');
+    Route::post('upload.single-lead-insert',[UploadController::class,'storeSingleLeadUpload'])->name('upload.lead.single.store');
 
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('profle-update',[AuthController::class,'profileupdate'])->name('profle.update');

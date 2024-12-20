@@ -264,17 +264,17 @@
                 </a>
                 <ul id="upload-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="{{ route('upload.index') }}">
+                        <a href="{{ route('upload.lead.assign.index') }}">
                             <i class="bi bi-circle"></i><span>Lead Assign</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="{{ route('upload.lead.bulk.create') }}">
                             <i class="bi bi-circle"></i><span>Bulk Upload</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('branch.index') }}">
+                        <a href="{{ route('upload.lead.single.create') }}">
                             <i class="bi bi-circle"></i><span>Single Upload</span>
                         </a>
                     </li>

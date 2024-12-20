@@ -6,8 +6,14 @@ use Illuminate\Http\Request;
 
 class UploadController extends Controller
 {
-    public function indexupload() {
+    public function indexAssignLeadUpload() {
         return view('backend.admin.upload.index');
+    }
+    public function creatBulkLeadUpload() {
+        return view('backend.admin.upload.bulk');
+    }
+    public function createSingleLeadUpload() {
+        return view('backend.admin.upload.single');
     }
 }
 
