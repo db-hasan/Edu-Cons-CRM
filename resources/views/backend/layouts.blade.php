@@ -158,53 +158,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-journal-text"></i><span>Forms</span><i class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="">
-                            <i class="bi bi-circle"></i><span>Form Elements</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="bi bi-circle"></i><span>Form Layouts</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="bi bi-circle"></i><span>Form Editors</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="bi bi-circle"></i><span>Form Validation</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-                    <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i
-                        class="bi bi-chevron-down ms-auto"></i>
-                </a>
-                <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-                    <li>
-                        <a href="">
-                            <i class="bi bi-circle"></i><span>General Tables</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="bi bi-circle"></i><span>Data Tables</span>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#location-nav" data-bs-toggle="collapse"
-                    href="#">
+                <a class="nav-link collapsed" data-bs-target="#location-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-geo-alt"></i><span>Location</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="location-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
@@ -218,11 +172,15 @@
                             <i class="bi bi-circle"></i><span>State</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Zilla</span>
+                        </a>
+                    </li>
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#academic-nav" data-bs-toggle="collapse"
-                    href="#">
+                <a class="nav-link collapsed" data-bs-target="#academic-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-mortarboard-fill"></i><span>Academic</span><i
                         class="bi bi-chevron-down ms-auto"></i>
                 </a>
@@ -279,23 +237,54 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('branch.index') }}">
-                    <i class="bi bi-buildings"></i>
-                    <span>Branch </span>
+                <a class="nav-link collapsed" data-bs-target="#brnach-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-buildings"></i><span>Branch</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
+                <ul id="brnach-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Country</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Region</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('branch.index') }}">
+                            <i class="bi bi-circle"></i><span>Branch</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#upload-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-cloud-arrow-up"></i><span>Upload</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="upload-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="{{ route('upload.index') }}">
+                            <i class="bi bi-circle"></i><span>Lead Assign</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Bulk Upload</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('branch.index') }}">
+                            <i class="bi bi-circle"></i><span>Single Upload</span>
+                        </a>
+                    </li>
+                </ul>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ route('lead.index') }}">
                     <i class="bi bi-gem"></i>
                     <span>Lead</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('upload.index') }}">
-                    <i class="bi bi-cloud-arrow-up"></i>
-                    <span>Upload</span>
                 </a>
             </li>
 
