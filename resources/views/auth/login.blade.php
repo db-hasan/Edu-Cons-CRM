@@ -12,7 +12,7 @@
                                 <a href="#" class="logo-login d-flex align-items-center w-auto">
                                     <img src="{{ asset('images/') }}" alt="">
                                 </a>
-                                <span class="d-none d-lg-block fs-2 fw-bold text-info">SOFTxONE Limited</span>
+                                <span class="d-none d-lg-block fs-2 fw-bold text-info">Soft Query</span>
                             </div>
                             <div class="card mb-3">
                                 <div class="card-body">

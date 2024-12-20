@@ -1,4 +1,4 @@
-@extends('backend/admin.layouts')
+@extends('backend.layouts')
 @section('content')
     <main id="main" class="main">
         <div class="d-flex justify-content-between">
@@ -21,10 +21,10 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>  
+                        <th>
                             <input class="form-check-input" type="checkbox" value="" id="all">
                             <label class="form-check-label" for="all">
-                            All
+                                All
                             </label>
                         </th>
                         <th>ID</th>
@@ -42,132 +42,123 @@
                     </tr>
                 </thead>
                 <tbody>
-                        <tr>
-                            <td><input class="form-check-input" type="checkbox" value=""></td>
-                            <td>01</td>
-                            <td>Rony</td>
-                            <td>Linkedin</td>
-                            <td>Mim</td>
-                            <td>01723629080</td>
-                            <td>info@gmail.com</td>
-                            <td>shibonj-bogura</td>
-                            <td>5810</td>
-                            <td>
-                                <select class="form-select">
-                                    <option selected>Choose...</option>
-                                    <option>No response</option>
-                                    <option>Connected</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-select">
-                                    <option selected>Choose...</option>
-                                    <option>Yes</option>
-                                    <option>Applied</option>
-                                    <option>No</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-select">
-                                    <option selected>Choose...</option>
-                                    <option>IELTS</option>
-                                    <option>TOEFL</option>
-                                    <option>PTE</option>
-                                </select>
-                            </td>
-                            <td class="d-flex justify-content-end">
-                                <a href="" class="btn btn-primary mx-1"><i
-                                        class="bi bi-pencil-square"></i></a>
-                                <a href="" class="btn btn-primary mx-1"><i
-                                        class="bi bi-pencil-square"></i></a>
-                                <a href="" class="btn btn-primary mx-1"><i
-                                        class="bi bi-pencil-square"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input class="form-check-input" type="checkbox" value=""></td>
-                            <td>01</td>
-                            <td>Rony</td>
-                            <td>Linkedin</td>
-                            <td>Mim</td>
-                            <td>01723629080</td>
-                            <td>info@gmail.com</td>
-                            <td>shibonj-bogura</td>
-                            <td>5810</td>
-                            <td>
-                                <select class="form-select">
-                                    <option selected>Choose...</option>
-                                    <option>No response</option>
-                                    <option>Connected</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-select">
-                                    <option selected>Choose...</option>
-                                    <option>Yes</option>
-                                    <option>Applied</option>
-                                    <option>No</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-select">
-                                    <option selected>Choose...</option>
-                                    <option>IELTS</option>
-                                    <option>TOEFL</option>
-                                    <option>PTE</option>
-                                </select>
-                            </td>
-                            <td class="d-flex justify-content-end">
-                                <a href="" class="btn btn-primary mx-1"><i
-                                        class="bi bi-pencil-square"></i></a>
-                                <a href="" class="btn btn-primary mx-1"><i
-                                        class="bi bi-pencil-square"></i></a>
-                                <a href="" class="btn btn-primary mx-1"><i
-                                        class="bi bi-pencil-square"></i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><input class="form-check-input" type="checkbox" value=""></td>
-                            <td>01</td>
-                            <td>Rony</td>
-                            <td>Linkedin</td>
-                            <td>Mim</td>
-                            <td>01723629080</td>
-                            <td>info@gmail.com</td>
-                            <td>shibonj-bogura</td>
-                            <td>5810</td>
-                            <td>
-                                <select class="form-select">
-                                    <option selected>Choose...</option>
-                                    <option>No response</option>
-                                    <option>Connected</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-select">
-                                    <option selected>Choose...</option>
-                                    <option>Yes</option>
-                                    <option>Applied</option>
-                                    <option>No</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select class="form-select">
-                                    <option selected>Choose...</option>
-                                    <option>IELTS</option>
-                                    <option>TOEFL</option>
-                                    <option>PTE</option>
-                                </select>
-                            </td>
-                            <td class="d-flex justify-content-end">
-                                <a href="" class="btn btn-primary mx-1"><i
-                                        class="bi bi-pencil-square"></i></a>
-                                <a href="" class="btn btn-primary mx-1"><i
-                                        class="bi bi-pencil-square"></i></a>
-                                <a href="" class="btn btn-primary mx-1"><i
-                                        class="bi bi-pencil-square"></i></a>
-                            </td>
-                        </tr>
+                    <tr>
+                        <td><input class="form-check-input" type="checkbox" value=""></td>
+                        <td>01</td>
+                        <td>Rony</td>
+                        <td>Linkedin</td>
+                        <td>Mim</td>
+                        <td>01723629080</td>
+                        <td>info@gmail.com</td>
+                        <td>shibonj-bogura</td>
+                        <td>5810</td>
+                        <td>
+                            <select class="form-select">
+                                <option selected>Choose...</option>
+                                <option>No response</option>
+                                <option>Connected</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select">
+                                <option selected>Choose...</option>
+                                <option>Yes</option>
+                                <option>Applied</option>
+                                <option>No</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select">
+                                <option selected>Choose...</option>
+                                <option>IELTS</option>
+                                <option>TOEFL</option>
+                                <option>PTE</option>
+                            </select>
+                        </td>
+                        <td class="d-flex justify-content-end">
+                            <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
+                            <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
+                            <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input class="form-check-input" type="checkbox" value=""></td>
+                        <td>01</td>
+                        <td>Rony</td>
+                        <td>Linkedin</td>
+                        <td>Mim</td>
+                        <td>01723629080</td>
+                        <td>info@gmail.com</td>
+                        <td>shibonj-bogura</td>
+                        <td>5810</td>
+                        <td>
+                            <select class="form-select">
+                                <option selected>Choose...</option>
+                                <option>No response</option>
+                                <option>Connected</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select">
+                                <option selected>Choose...</option>
+                                <option>Yes</option>
+                                <option>Applied</option>
+                                <option>No</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select">
+                                <option selected>Choose...</option>
+                                <option>IELTS</option>
+                                <option>TOEFL</option>
+                                <option>PTE</option>
+                            </select>
+                        </td>
+                        <td class="d-flex justify-content-end">
+                            <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
+                            <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
+                            <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input class="form-check-input" type="checkbox" value=""></td>
+                        <td>01</td>
+                        <td>Rony</td>
+                        <td>Linkedin</td>
+                        <td>Mim</td>
+                        <td>01723629080</td>
+                        <td>info@gmail.com</td>
+                        <td>shibonj-bogura</td>
+                        <td>5810</td>
+                        <td>
+                            <select class="form-select">
+                                <option selected>Choose...</option>
+                                <option>No response</option>
+                                <option>Connected</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select">
+                                <option selected>Choose...</option>
+                                <option>Yes</option>
+                                <option>Applied</option>
+                                <option>No</option>
+                            </select>
+                        </td>
+                        <td>
+                            <select class="form-select">
+                                <option selected>Choose...</option>
+                                <option>IELTS</option>
+                                <option>TOEFL</option>
+                                <option>PTE</option>
+                            </select>
+                        </td>
+                        <td class="d-flex justify-content-end">
+                            <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
+                            <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
+                            <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
         </div>

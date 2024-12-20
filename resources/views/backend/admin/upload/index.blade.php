@@ -1,4 +1,4 @@
-@extends('backend/admin.layouts')
+@extends('backend.layouts')
 @section('content')
     <main id="main" class="main">
         <div class="d-flex justify-content-between">

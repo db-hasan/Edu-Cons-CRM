@@ -18,47 +18,26 @@ class AuthController extends Controller
     public function login() {
         return view('auth.login');
     }
-    
+
     public function adminlogin(Request $request) {
         $request->validate([
             'email' => 'required|email',
             'password' => 'required',
         ]);
 
-        $user = User::where('email', $request->email)->first();
-        if ($user && Hash::check($request->password, $user->password)) {
-            // Store user session data
-            $request->session()->put('LoginId', $user->id);
-            Auth::login($user);
+        $credentials = [
+            'email' => $request->input('email'),
+            'password' => $request->input('password'),
+        ];
 
-            // if (in_array($user->role, ['superadmin', 'admin', 'visitor'])) {
-            //     return redirect()->route('admin.dashboard'); 
-            // }
-
-            if ($user->roles === 'admin') {
-                return redirect()->route('admin.dashboard'); 
-            }
-            elseif ($user->roles === 'viewers') {
-                return redirect()->route('viewers.dashboard');
-            }
-            elseif ($user->roles === 'marketing') {
-                return redirect()->route('marketing.dashboard');
-            }
-            elseif ($user->roles === 'manager') {
-                return redirect()->route('manager.dashboard');
-            }
-            elseif ($user->roles === 'consultant') {
-                return redirect()->route('consultant.dashboard');
-            }
-            elseif ($user->roles === 'compliance') {
-                return redirect()->route('compliance.dashboard');
-            } else {
-                return redirect()->route('admin.login');
-            }
+        if(Auth::attempt($credentials)) {
+            return redirect()->route('admin.dashboard');
         } else {
-            return back()->with('fail', 'Invalid email or password!');
+            return redirect()->route('login')->with('error', 'Invalid credentials. Please try again.');
         }
     }
+    
+
     
     // Display the logout
     public function logout() {

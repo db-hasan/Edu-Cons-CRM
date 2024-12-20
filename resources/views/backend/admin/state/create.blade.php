@@ -1,4 +1,4 @@
-@extends('backend/admin.layouts')
+@extends('backend.layouts')
 @section('content')
     <main id="main" class="main">
         <div class="d-flex justify-content-between">
@@ -38,11 +38,13 @@
                 <div class="col-md-12 pb-3" id="rowWrapper">
                     <label for="name" class="form-label">State Name<span class="text-danger">*</span></label>
                     <div class="d-flex mb-3 rowItem">
-                        <input type="text" class="form-control me-2" name="name[]" placeholder="State Name" value="{{ old('name') }}" required>
+                        <input type="text" class="form-control me-2" name="name[]" placeholder="State Name"
+                            value="{{ old('name') }}" required>
                         @error('name')
                             <span class="text-danger">{{ $message }}</span>
                         @enderror
-                        <a href="javascript:void(0)" class="btn btn-primary mx-2" id="addRow"><i class="bi bi-plus-square"></i></a>
+                        <a href="javascript:void(0)" class="btn btn-primary mx-2" id="addRow"><i
+                                class="bi bi-plus-square"></i></a>
                     </div>
                 </div>
 
@@ -53,31 +55,33 @@
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-            <script>
-                $(document).ready(function() {
-                    // Add new row
-                    $('#addRow').click(function(e) {
-                        e.preventDefault();
-                        // Clone the first rowItem div
-                        let newRow = $('.rowItem').first().clone();
-                        // Clear the input fields of the cloned row
-                        newRow.find('input').val('');
-                        // Remove the addRow button from the cloned row
-                        newRow.find('#addRow').remove();
-                        // Add a delete button to the cloned row
-                        newRow.append('<a href="javascript:void(0)" class="btn btn-danger mx-2 deleteRow"><i class="bi bi-trash"></i></a>');
-                        // Append the cloned row to the wrapper
-                        $('#rowWrapper').append(newRow);
-                    });
-            
-                    // Delete a row
-                    $(document).on('click', '.deleteRow', function(e) {
-                        e.preventDefault();
-                        // Only remove the row if there is more than one
-                        if ($('.rowItem').length > 1) {
-                            $(this).closest('.rowItem').remove();
-                        }
-                    });
-                });
-            </script> 
+    <script>
+        $(document).ready(function() {
+            // Add new row
+            $('#addRow').click(function(e) {
+                e.preventDefault();
+                // Clone the first rowItem div
+                let newRow = $('.rowItem').first().clone();
+                // Clear the input fields of the cloned row
+                newRow.find('input').val('');
+                // Remove the addRow button from the cloned row
+                newRow.find('#addRow').remove();
+                // Add a delete button to the cloned row
+                newRow.append(
+                    '<a href="javascript:void(0)" class="btn btn-danger mx-2 deleteRow"><i class="bi bi-trash"></i></a>'
+                );
+                // Append the cloned row to the wrapper
+                $('#rowWrapper').append(newRow);
+            });
+
+            // Delete a row
+            $(document).on('click', '.deleteRow', function(e) {
+                e.preventDefault();
+                // Only remove the row if there is more than one
+                if ($('.rowItem').length > 1) {
+                    $(this).closest('.rowItem').remove();
+                }
+            });
+        });
+    </script>
 @endsection

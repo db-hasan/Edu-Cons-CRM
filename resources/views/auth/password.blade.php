@@ -1,19 +1,6 @@
-@include('backend.header');
-<style>
-    .web-visit-button a {
-        background-color: #1c1c52;
-        color: #fff;
-        font-size: 22px;
-        padding: 10px 15px;
-    }
-
-    .web-visit-button a:hover {
-        background-color: #c72027;
-    }
-</style>
-
-<body style="background-image: url({{ asset('images/bg-content-03.jpg') }}); background-size: cover;">
-    <main class="main container mt-5">
+@extends('backend.layouts')
+@section('content')
+    <main id="main" class="main">
 
         <div class="d-flex justify-content-between align-items-top">
             <div class="pagetitle mb-0">
@@ -26,27 +13,6 @@
                     </ol>
                 </nav>
             </div>
-            <div class="web-visit-button">
-                @if (Auth::check())
-                    @php
-                        $role = Auth::user()->roles;
-                    @endphp
-                    @if ($role === 'admin')
-                        <a href="{{ route('admin.dashboard') }}">Visit Dashboard</a>
-                    @elseif ($role === 'viewers')
-                        <a href="{{ route('viewers.dashboard') }}">Visit Dashboard</a>
-                    @elseif ($role === 'vendor')
-                        <a href="{{ route('vendor.dashboard') }}">Visit Dashboard</a>
-                    @elseif ($role === 'seller')
-                        <a href="{{ route('seller.dashboard') }}">Visit Dashboard</a>
-                    @elseif ($role === 'checker')
-                        <a href="{{ route('checker.dashboard') }}">Visit Dashboard</a>
-                    @else
-                        <a href="">Visit Dashboard</a>
-                    @endif
-                @endif
-            </div>
-
         </div>
 
 
@@ -133,8 +99,7 @@
 
                                 <div class="tab-pane fade pt-3" id="profile-change-password">
                                     <!-- Change Password Form -->
-                                    <form method="post" action="" enctype="multipart/form-data"
-                                        class="row g-3 p-3">
+                                    <form method="post" action="" enctype="multipart/form-data" class="row g-3 p-3">
                                         @csrf
 
                                         <div class="row mb-3">
@@ -166,9 +131,8 @@
                                                 class="col-md-4 col-lg-3 col-form-label">Confirm Password<span
                                                     class="text-danger">*</span></label>
                                             <div class="col-md-8 col-lg-9">
-                                                <input type="password" class="form-control"
-                                                    id="new_password_confirmation" name="new_password_confirmation"
-                                                    value="">
+                                                <input type="password" class="form-control" id="new_password_confirmation"
+                                                    name="new_password_confirmation" value="">
                                                 @error('new_password_confirmation')
                                                     <span class="text-danger">{{ $message }}</span>
                                                 @enderror
@@ -191,7 +155,4 @@
             </div>
         </section>
     </main>
-    @include('backend.footer');
-</body>
-
-</html>
+@endsection

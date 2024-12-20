@@ -1,4 +1,4 @@
-@extends('backend/admin.layouts')
+@extends('backend.layouts')
 @section('content')
     <main id="main" class="main">
         <div class="d-flex justify-content-between">
@@ -19,8 +19,8 @@
         </div>
         <hr>
         <div class="card">
-            <form method="post" action="{{ route('subjectmapping.update', $subjectmapping->id) }}" enctype="multipart/form-data"
-                class="row g-3 p-3">
+            <form method="post" action="{{ route('subjectmapping.update', $subjectmapping->id) }}"
+                enctype="multipart/form-data" class="row g-3 p-3">
                 @csrf
                 @method('PUT')
 
@@ -28,9 +28,10 @@
                     <label for="campus_id" class="form-label">University <span class="text-danger">*</span></label>
                     <select id="campus_id" name="campus_id" class="form-select" required>
                         @foreach ($campuses as $campus)
-                            <option value="{{ $campus->id }}" {{ $campus->id == $subjectmapping->campus_id ? 'selected' : '' }}>
+                            <option value="{{ $campus->id }}"
+                                {{ $campus->id == $subjectmapping->campus_id ? 'selected' : '' }}>
                                 {{ $campus->name }}
-                            </option>                        
+                            </option>
                         @endforeach
                     </select>
                     @error('campus_id')
@@ -41,9 +42,10 @@
                     <label for="degree_id" class="form-label">Degree <span class="text-danger">*</span></label>
                     <select id="degree_id" name="degree_id" class="form-select" required>
                         @foreach ($degrees as $degree)
-                            <option value="{{ $degree->id }}" {{ $degree->id == $subjectmapping->degree_id ? 'selected' : '' }}>
+                            <option value="{{ $degree->id }}"
+                                {{ $degree->id == $subjectmapping->degree_id ? 'selected' : '' }}>
                                 {{ $degree->name }}
-                            </option>                        
+                            </option>
                         @endforeach
                     </select>
                     @error('campus_id')

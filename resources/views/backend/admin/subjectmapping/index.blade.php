@@ -1,4 +1,4 @@
-@extends('backend/admin.layouts')
+@extends('backend.layouts')
 @section('content')
     <main id="main" class="main">
         <div class="d-flex justify-content-between">
@@ -31,8 +31,8 @@
                 <tbody>
                     @foreach ($degreemappinges as $degreemappingesGroup)
                         @foreach ($degreemappingesGroup as $index => $degreemapping)
-                            <tr>                             
-                                @if ($loop->first)  
+                            <tr>
+                                @if ($loop->first)
                                     <td class="align-middle" rowspan="{{ $degreemappingesGroup->count() }}">
                                         {{ $degreemapping->campus->name }}
                                     </td>
@@ -47,7 +47,8 @@
                                     @endif
                                 </td>
                                 <td class="d-flex justify-content-end">
-                                    <a href="{{ route('subjectmapping.view', $degreemapping->id) }}" class="btn btn-primary mx-1">
+                                    <a href="{{ route('subjectmapping.view', $degreemapping->id) }}"
+                                        class="btn btn-primary mx-1">
                                         <i class="bi bi-eye"></i>
                                     </a>
                                 </td>
@@ -56,8 +57,8 @@
                     @endforeach
                 </tbody>
             </table>
-            
-                     
+
+
         </div>
     </main>
     <script src="{{ asset('backend/js/jquery-3.7.1.min.js') }} "></script>

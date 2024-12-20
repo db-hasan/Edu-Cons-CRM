@@ -1,4 +1,4 @@
-@extends('backend/admin.layouts')
+@extends('backend.layouts')
 @section('content')
     <main id="main" class="main">
         <div class="d-flex justify-content-between">
@@ -28,9 +28,10 @@
                     <label for="university_id" class="form-label">University <span class="text-danger">*</span></label>
                     <select id="university_id" name="university_id" class="form-select" required>
                         @foreach ($universities as $university)
-                            <option value="{{ $university->id }}" {{ $university->id == $campus->state_id ? 'selected' : '' }}>
+                            <option value="{{ $university->id }}"
+                                {{ $university->id == $campus->state_id ? 'selected' : '' }}>
                                 {{ $university->name }}
-                            </option>                        
+                            </option>
                         @endforeach
                     </select>
                     @error('university_id')

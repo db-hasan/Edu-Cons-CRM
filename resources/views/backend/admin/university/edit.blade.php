@@ -1,4 +1,4 @@
-@extends('backend/admin.layouts')
+@extends('backend.layouts')
 @section('content')
     <main id="main" class="main">
         <div class="d-flex justify-content-between">
@@ -30,7 +30,7 @@
                         @foreach ($states as $state)
                             <option value="{{ $state->id }}" {{ $state->id == $university->state_id ? 'selected' : '' }}>
                                 {{ $state->name }}
-                            </option>                        
+                            </option>
                         @endforeach
                     </select>
                     @error('country_id')

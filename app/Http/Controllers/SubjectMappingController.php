@@ -120,7 +120,7 @@ class SubjectMappingController extends Controller
         ]);
         
         try {
-            $data = Subjectmapping::findOrFail($id);
+            $data = ubjectmapping::findOrFail($id);
             $data->campus_id   = $request->input('campus_id');
             $data->degree_id   = $request->input('degree_id');
             $data->status  = $request->input('status');

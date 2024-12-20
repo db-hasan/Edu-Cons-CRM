@@ -1,4 +1,4 @@
-@extends('backend/admin.layouts')
+@extends('backend.layouts')
 @section('content')
     <main id="main" class="main">
         <div class="d-flex justify-content-between">
@@ -19,7 +19,8 @@
         </div>
         <hr>
         <div class="card">
-            <form method="post" action="{{ route('subjectmapping.store') }}" enctype="multipart/form-data" class="row g-3 p-3">
+            <form method="post" action="{{ route('subjectmapping.store') }}" enctype="multipart/form-data"
+                class="row g-3 p-3">
                 @csrf
 
                 <div class="col-md-2 pb-3">
@@ -116,24 +117,28 @@
                             @enderror
                         </div>
                         <div class="col-md-2 me-2">
-                            <input type="number" class="form-control me-2" name="course_duration[]" placeholder="Course duration" value="" required>
+                            <input type="number" class="form-control me-2" name="course_duration[]"
+                                placeholder="Course duration" value="" required>
                             @error('course_duration')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="col-md-2 me-2">
-                            <input type="number" class="form-control me-2" name="admission_fee[]" placeholder="Admission Fee" value="" required>
+                            <input type="number" class="form-control me-2" name="admission_fee[]"
+                                placeholder="Admission Fee" value="" required>
                             @error('admission_fee')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
                         <div class="col-md-5 me-2">
-                            <input type="text" class="form-control me-2" name="entry_requirement[]" placeholder="Entry Requirment" value="" required>
+                            <input type="text" class="form-control me-2" name="entry_requirement[]"
+                                placeholder="Entry Requirment" value="" required>
                             @error('entry_requirement')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
                         </div>
-                        <a href="javascript:void(0)" class="btn btn-primary mx-2" id="addRow"><i class="bi bi-plus-square"></i></a>
+                        <a href="javascript:void(0)" class="btn btn-primary mx-2" id="addRow"><i
+                                class="bi bi-plus-square"></i></a>
                     </div>
                 </div>
 
@@ -144,31 +149,33 @@
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-            <script>
-                $(document).ready(function() {
-                    // Add new row
-                    $('#addRow').click(function(e) {
-                        e.preventDefault();
-                        // Clone the first rowItem div
-                        let newRow = $('.rowItem').first().clone();
-                        // Clear the input fields of the cloned row
-                        newRow.find('input').val('');
-                        // Remove the addRow button from the cloned row
-                        newRow.find('#addRow').remove();
-                        // Add a delete button to the cloned row
-                        newRow.append('<a href="javascript:void(0)" class="btn btn-danger mx-2 deleteRow"><i class="bi bi-trash"></i></a>');
-                        // Append the cloned row to the wrapper
-                        $('#rowWrapper').append(newRow);
-                    });
-            
-                    // Delete a row
-                    $(document).on('click', '.deleteRow', function(e) {
-                        e.preventDefault();
-                        // Only remove the row if there is more than one
-                        if ($('.rowItem').length > 1) {
-                            $(this).closest('.rowItem').remove();
-                        }
-                    });
-                });
-            </script> 
+    <script>
+        $(document).ready(function() {
+            // Add new row
+            $('#addRow').click(function(e) {
+                e.preventDefault();
+                // Clone the first rowItem div
+                let newRow = $('.rowItem').first().clone();
+                // Clear the input fields of the cloned row
+                newRow.find('input').val('');
+                // Remove the addRow button from the cloned row
+                newRow.find('#addRow').remove();
+                // Add a delete button to the cloned row
+                newRow.append(
+                    '<a href="javascript:void(0)" class="btn btn-danger mx-2 deleteRow"><i class="bi bi-trash"></i></a>'
+                    );
+                // Append the cloned row to the wrapper
+                $('#rowWrapper').append(newRow);
+            });
+
+            // Delete a row
+            $(document).on('click', '.deleteRow', function(e) {
+                e.preventDefault();
+                // Only remove the row if there is more than one
+                if ($('.rowItem').length > 1) {
+                    $(this).closest('.rowItem').remove();
+                }
+            });
+        });
+    </script>
 @endsection

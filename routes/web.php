@@ -18,12 +18,6 @@ use App\Http\Controllers\SubjectMappingController;
 
 
 
-use App\Http\Controllers\MarketingDashboardController;
-use App\Http\Controllers\ManagerDashboardController;
-use App\Http\Controllers\ConsultantDashboardController;
-use App\Http\Controllers\ComplianceDashboardController;
-
-
 
 
 
@@ -46,7 +40,7 @@ Route::middleware(['auth', 'role:viewers'])->group(function (){
     Route::get('/viewers-dashboard',[ViwersDashboardController::class,'viewersdashboard'])->name('viewers.dashboard');
 });
 
-Route::middleware(['auth', 'role:admin'])->group(function (){
+Route::middleware(['auth'])->group(function (){
     Route::get('/admin-dashboard',[AdminDashboardController::class,'admindashboard'])->name('admin.dashboard');
     
     Route::get('user-index',[AuthController::class, 'indexuser'])->name('user.index');
@@ -121,73 +115,8 @@ Route::middleware(['auth', 'role:admin'])->group(function (){
     Route::post('upload-insert',[UploadController::class,'storeupload'])->name('upload.store');
     Route::get('upload-update/{id}',[UploadController::class,'editupload'])->name('upload.edit');
     Route::put('upload-update/{id}',[UploadController::class,'updateupload'])->name('upload.update');
-});
 
-
-
-
-
-Route::middleware(['auth', 'role:marketing'])->group(function (){
-    Route::get('/marketing-dashboard',[MarketingDashboardController::class,'marketingdashboard'])->name('marketing.dashboard');
-});
-
-
-Route::middleware(['auth', 'role:manager'])->group(function (){
-    Route::get('/manager-dashboard',[ManagerDashboardController::class,'managerdashboard'])->name('manager.dashboard');
-});
-
-
-Route::middleware(['auth', 'role:consultant'])->group(function (){
-    Route::get('/consultant-dashboard',[ConsultantDashboardController::class,'consultantdashboard'])->name('consultant.dashboard');
-
-});
-
-
-Route::middleware(['auth', 'role:compliance'])->group(function (){
-    Route::get('/compliance-dashboard',[ComplianceDashboardController::class,'compliancedashboard'])->name('compliance.dashboard');
-});
-
-
-Route::middleware(['auth'])->group(function (){   
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::get('profle-update',[AuthController::class,'profileupdate'])->name('profle.update');
     Route::post('profle-update',[AuthController::class,'passwordupdate'])->name('password.update');
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Route::group(['middleware'=>'auth'],function(){
-//     Route::get('/admin-dashboard',[AdminDashboardController::class,'admindashboard'])->name('admin.dashboard');
-//     Route::get('/vendor-dashboard',[VendorDashboardController::class,'vendrodashboard'])->name('vendor.dashboard');
-//     Route::get('/seller-dashboard',[SellerDashboardController::class,'sellerdashboard'])->name('seller.dashboard');
-//     Route::get('/checker-dashboard',[CheckerDashboardController::class,'checkerdashboard'])->name('checker.dashboard');
-    
-//     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-//     Route::get('profle-update',[AuthController::class,'profileupdate'])->name('profle.update');
-//     Route::post('profle-update',[AuthController::class,'passwordupdate'])->name('password.update');
-// });

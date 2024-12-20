@@ -7,7 +7,7 @@
         <div class="d-flex align-items-center justify-content-between">
             <a href="" class="logo d-flex align-items-center">
                 {{-- <img src="{{ asset('images/logo.png') }}" alt=""> --}}
-                <span class="d-none d-lg-block">Logo Here</span>
+                <span class="d-none d-lg-block">Soft Query</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div>
@@ -200,7 +200,7 @@
                             <i class="bi bi-circle"></i><span>Data Tables</span>
                         </a>
                     </li>
-                </ul> 
+                </ul>
             </li>
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#location-nav" data-bs-toggle="collapse"
@@ -360,7 +360,7 @@
     <footer class="footer">
         <div class="copyright text-center">
             &copy; Copyright <strong><span>Educational Consultancy</span></strong>. All Rights Reserved <strong><a
-                    href="" target="_blank"><span>Development by SOFTxONE Limited</span></a></strong>
+                    href="" target="_blank"><span>Development by Soft Query</span></a></strong>
         </div>
     </footer>
     <!-- End Footer -->

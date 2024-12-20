@@ -1,4 +1,4 @@
-@extends('backend/admin.layouts')
+@extends('backend.layouts')
 @section('content')
     <main id="main" class="main">
         <div class="d-flex justify-content-between">
@@ -31,8 +31,8 @@
                 <tbody>
                     @foreach ($states as $statesGroup)
                         @foreach ($statesGroup as $index => $state)
-                            <tr>                             
-                                @if ($loop->first)  
+                            <tr>
+                                @if ($loop->first)
                                     <td class="align-middle" rowspan="{{ $statesGroup->count() }}">
                                         {{ $state->country->name }}
                                     </td>
@@ -56,7 +56,7 @@
                     @endforeach
                 </tbody>
             </table>
-                     
+
         </div>
     </main>
     <script src="{{ asset('backend/js/jquery-3.7.1.min.js') }} "></script>
