@@ -2,8 +2,6 @@
 @section('content')
     <style>
         .nav-tabs-bordered .nav-link.active {
-            background-color: #121010d9 !important;
-            color: #fff;
             border-bottom: 4px solid #19c745;
         }
     </style>
@@ -25,8 +23,8 @@
             <div class="card">
                 <div class="card-body pt-3">
                     <!-- Bordered Tabs -->
-                    {{-- <ul class="nav nav-tabs nav-tabs-bordered"> --}}
-                    <ul class="nav nav-tabs">
+                    <ul class="nav nav-tabs nav-tabs-bordered">
+                        {{-- <ul class="nav nav-tabs"> --}}
                         <li class="nav-item ">
                             <button class="nav-link px-4 card-title active" data-bs-toggle="tab"
                                 data-bs-target="#personal">Personal
