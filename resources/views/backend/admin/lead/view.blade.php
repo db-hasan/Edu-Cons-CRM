@@ -96,8 +96,8 @@
                             <th>Degree</th>
                             <th>Intake</th>
                             <th>Duration</th>
-                            <th>Apply Date</th>
                             <th>Status</th>
+                            <th>Date</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -108,8 +108,8 @@
                             <td>CSC</td>
                             <td>Jan-01-2025</td>
                             <td>4</td>
-                            <td>Dec-20-2024</td>
                             <td>Pending</td>
+                            <td>Dec-20-2024</td>
                         </tr>
                     </tbody>
                 </table>
