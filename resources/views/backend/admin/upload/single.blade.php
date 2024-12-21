@@ -12,7 +12,7 @@
                 </nav>
             </div>
             <div class="text-end pt-2">
-                <a href="{{ route('upload.lead.assign.index') }}" class="btn btn-primary"><i class="fa-regular fa-eye"></i>
+                <a href="{{ route('lead.index') }}" class="btn btn-primary"><i class="fa-regular fa-eye"></i>
                     View lead</a>
             </div>
         </div>

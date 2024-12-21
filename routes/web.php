@@ -139,8 +139,9 @@ Route::middleware(['auth'])->group(function (){
     Route::get('lead-index',[LeadController::class, 'indexlead'])->name('lead.index');
     Route::get('lead-insert',[LeadController::class,'createlead'])->name('lead.create');
     Route::post('lead-insert',[LeadController::class,'storelead'])->name('lead.store');
-    Route::get('lead-update/{id}',[LeadController::class,'editlead'])->name('lead.edit');
+    Route::get('lead-update/',[LeadController::class,'editlead'])->name('lead.edit');
     Route::put('lead-update/{id}',[LeadController::class,'updatelead'])->name('lead.update');
+    Route::get('lead-view/',[LeadController::class,'viewlead'])->name('lead.view');
 
     Route::get('upload.lead-assign-index',[UploadController::class, 'indexAssignLeadUpload'])->name('upload.lead.assign.index');
     Route::post('upload.lead-assign-index',[UploadController::class, 'createAssignLeadUpload'])->name('upload.lead.assign.store');

@@ -12,7 +12,7 @@
                 </nav>
             </div>
             <div class="text-end pt-2">
-                <a href="{{ route('upload.lead.single.create') }}" class="btn btn-primary"><i class="fas fa-plus-circle"></i>
+                <a href="{{ route('lead.create') }}" class="btn btn-primary"><i class="fas fa-plus-circle"></i>
                     Add lead</a>
             </div>
         </div>
@@ -21,7 +21,8 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>ID</th>                        
+                        <th>ID</th>
+                        <th>Marketing</th>
                         <th>Resource</th>
                         <th>Name</th>
                         <th>Number</th>
@@ -34,6 +35,7 @@
                 <tbody>
                     <tr>
                         <td>01</td>
+                        <td>Rony</td>
                         <td>Linkedin</td>
                         <td>Mim</td>
                         <td>01723629080</td>
@@ -41,10 +43,10 @@
                         <td>shibonj-bogura</td>
                         <td>5810</td>
                         <td class="d-flex justify-content-end">
-                            <a href="{{route('lead.view')}}" class="btn btn-success mx-1">
+                            <a href="" class="btn btn-primary mx-1">
                                 <i class="bi bi-eye"></i>
                             </a>
-                            <a href="{{route('lead.edit')}}" class="btn btn-primary mx-1">
+                            <a href="" class="btn btn-primary mx-1">
                                 <i class="bi bi-pencil-square"></i>
                             </a>
                             <form class="deleteForm" action="" method="POST">
