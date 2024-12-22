@@ -275,15 +275,22 @@
                             <td class="fw-bold" style="width: 2%">:</td>
                             <td>Dec-30-2011</td>
                           </tr>
+                        
                         <tr>
-                          <td style="width: 15%">Document Deposit</td>
-                          <td class="fw-bold" style="width: 2%">:</td>
-                          <td>Pasport</td>
-                        </tr>
-                        <tr>
-                          <td style="width: 15%">Amount Deposit</td>
+                          <td style="width: 15%">Amount</td>
                           <td class="fw-bold" style="width: 2%">:</td>
                           <td>Tk. 10000</td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 15%">Document</td>
+                            <td class="fw-bold" style="width: 2%">:</td>
+                            <td>Pasport</td>
+                        </tr>
+                        <tr>
+                            <td style="width: 15%">View File</td>
+                            <td class="fw-bold" style="width: 2%">:</td>
+                            <td>View</td>
                         </tr>
                         
                     </table>

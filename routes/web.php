@@ -137,8 +137,8 @@ Route::middleware(['auth'])->group(function (){
     Route::put('branch-update/{id}',[BranchController::class,'updatebranch'])->name('branch.update');
 
     Route::get('lead-index',[LeadController::class, 'indexlead'])->name('lead.index');
-    Route::get('lead-insert',[LeadController::class,'createlead'])->name('lead.create');
-    Route::post('lead-insert',[LeadController::class,'storelead'])->name('lead.store');
+    // Route::get('lead-insert',[LeadController::class,'createlead'])->name('lead.create');
+    // Route::post('lead-insert',[LeadController::class,'storelead'])->name('lead.store');
     Route::get('lead-update/',[LeadController::class,'editlead'])->name('lead.edit');
     Route::put('lead-update/{id}',[LeadController::class,'updatelead'])->name('lead.update');
     Route::get('lead-view/',[LeadController::class,'viewlead'])->name('lead.view');

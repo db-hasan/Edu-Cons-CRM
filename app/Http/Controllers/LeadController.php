@@ -10,9 +10,9 @@ class LeadController extends Controller
         return view('backend.admin.lead.index');
     }
 
-    public function createlead() {
-        return view('backend.admin.lead.create');
-    }
+    // public function createlead() {
+    //     return view('backend.admin.lead.create');
+    // }
 
     public function editlead() {
         return view('backend.admin.lead.edit');
