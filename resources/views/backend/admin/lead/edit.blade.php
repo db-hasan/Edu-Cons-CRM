@@ -6,7 +6,7 @@
         }
     </style>
     <main id="main" class="main pt-0">
-        
+
         <div class="col-xl-12">
 
             <div class="card">
@@ -21,10 +21,10 @@
                         </nav>
                     </div>
                 </div>
-                
+
                 <div class="card-body pt-3">
 
-                    
+
                     <!-- Bordered Tabs -->
                     <ul class="nav nav-tabs nav-tabs-bordered">
                         {{-- <ul class="nav nav-tabs"> --}}
@@ -141,9 +141,411 @@
                         </div>
                         <div class="tab-pane fade pt-3" id="education">
                             <h5 class="card-title"></h5>
-                            <div class="row">
-                                <div class="col-lg-3 col-md-4 label">Address education</div>
-                                <div class="col-lg-9 col-md-8">Dhaka Bangladesh</div>
+                            <div class="accordion" id="accordionExample">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                            data-bs-target="#academic" aria-expanded="true" aria-controls="academic">
+                                            <h5 class="card-title py-0">Academic Qualification</h5>
+                                        </button>
+                                    </h2>
+                                    <div id="academic" class="accordion-collapse collapse show"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <form method="post" action="" enctype="multipart/form-data"
+                                                class="row g-3">
+                                                @csrf
+
+                                                <div class="col-12">
+                                                    <label for="address" class="form-label">Institute Name<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="address"
+                                                        placeholder="">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="country" class="form-label">Concentration/
+                                                        Major/Group<span class="text-danger">*</span></label>
+                                                    <select id="country" class="form-select">
+                                                        <option selected>Choose...</option>
+                                                        <option>Science</option>
+                                                        <option>CSC</option>
+                                                        <option>Humanities</option>
+                                                    </select>
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="country" class="form-label">Level of Education<span
+                                                            class="text-danger">*</span></label>
+                                                    <select id="country" class="form-select">
+                                                        <option selected>Choose...</option>
+                                                        <option>HSC</option>
+                                                    </select>
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+
+
+                                                <div class="col-md-4">
+                                                    <label for="number" class="form-label">CGPA<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="number" class="form-control" id="number">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="number" class="form-label">Out of Scale<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="number" class="form-control" id="number">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="number" class="form-label">Course Duration<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="number" class="form-control" id="number">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="number" class="form-label">Passing Year<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="number" class="form-control" id="number">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label for="email" class="form-label">Course Start Date<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="date" class="form-control" id="email">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label for="email" class="form-label">Course End Date<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="date" class="form-control" id="email">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                        <label class="form-check-label" for="gridCheck">Currently
+                                                            Studying</label>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-12">
+                                                    <button type="submit" class="btn btn-primary px-4">Save</button>
+                                                    <button type="submit"
+                                                        class="btn btn-outline-secondary px-4">Close</button>
+                                                </div>
+                                                <div class="col-12">
+                                                    <a href="javascript:void(0)" class="btn text-light fs-5 fw-semibold"
+                                                        style="background: #19c745;padding-top: 0px;padding-bottom: 0px;"
+                                                        id="addRow">
+                                                        <div class="d-flex align-items-center">
+                                                            <i class="bi bi-node-plus fs-2 me-1"></i>
+                                                            <span> Add Education</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#training" aria-expanded="false"
+                                            aria-controls="training">
+                                            <h5 class="card-title py-0">Training Summary</h5>
+                                        </button>
+                                    </h2>
+                                    <div id="training" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <form method="post" action="" enctype="multipart/form-data"
+                                                class="row g-3">
+                                                @csrf
+
+                                                <div class="col-12">
+                                                    <label for="address" class="form-label">Institute Name<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="address"
+                                                        placeholder="">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="country" class="form-label">Concentration/
+                                                        Major/Group<span class="text-danger">*</span></label>
+                                                    <select id="country" class="form-select">
+                                                        <option selected>Choose...</option>
+                                                        <option>Science</option>
+                                                        <option>CSC</option>
+                                                        <option>Humanities</option>
+                                                    </select>
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="country" class="form-label">Level of Education<span
+                                                            class="text-danger">*</span></label>
+                                                    <select id="country" class="form-select">
+                                                        <option selected>Choose...</option>
+                                                        <option>HSC</option>
+                                                    </select>
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+
+
+                                                <div class="col-md-4">
+                                                    <label for="number" class="form-label">CGPA<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="number" class="form-control" id="number">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="number" class="form-label">Out of Scale<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="number" class="form-control" id="number">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="number" class="form-label">Course Duration<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="number" class="form-control" id="number">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="number" class="form-label">Passing Year<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="number" class="form-control" id="number">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label for="email" class="form-label">Course Start Date<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="date" class="form-control" id="email">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label for="email" class="form-label">Course End Date<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="date" class="form-control" id="email">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                        <label class="form-check-label" for="gridCheck">Currently
+                                                            Studying</label>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-12">
+                                                    <button type="submit" class="btn btn-primary px-4">Save</button>
+                                                    <button type="submit"
+                                                        class="btn btn-outline-secondary px-4">Close</button>
+                                                </div>
+                                                <div class="col-12">
+                                                    <a href="javascript:void(0)" class="btn text-light fs-5 fw-semibold"
+                                                        style="background: #19c745;padding-top: 0px;padding-bottom: 0px;"
+                                                        id="addRow">
+                                                        <div class="d-flex align-items-center">
+                                                            <i class="bi bi-node-plus fs-2 me-1"></i>
+                                                            <span> Add Education</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#language" aria-expanded="false"
+                                            aria-controls="language">
+                                            <h5 class="card-title py-0">Language Proficiency Qualification</h5>
+                                        </button>
+                                    </h2>
+                                    <div id="language" class="accordion-collapse collapse"
+                                        data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <form method="post" action="" enctype="multipart/form-data"
+                                                class="row g-3">
+                                                @csrf
+
+                                                <div class="col-12">
+                                                    <label for="address" class="form-label">Institute Name<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" id="address"
+                                                        placeholder="">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="country" class="form-label">Concentration/
+                                                        Major/Group<span class="text-danger">*</span></label>
+                                                    <select id="country" class="form-select">
+                                                        <option selected>Choose...</option>
+                                                        <option>Science</option>
+                                                        <option>CSC</option>
+                                                        <option>Humanities</option>
+                                                    </select>
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="country" class="form-label">Level of Education<span
+                                                            class="text-danger">*</span></label>
+                                                    <select id="country" class="form-select">
+                                                        <option selected>Choose...</option>
+                                                        <option>HSC</option>
+                                                    </select>
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+
+
+                                                <div class="col-md-4">
+                                                    <label for="number" class="form-label">CGPA<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="number" class="form-control" id="number">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="number" class="form-label">Out of Scale<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="number" class="form-control" id="number">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="number" class="form-label">Course Duration<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="number" class="form-control" id="number">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    <label for="number" class="form-label">Passing Year<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="number" class="form-control" id="number">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label for="email" class="form-label">Course Start Date<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="date" class="form-control" id="email">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label for="email" class="form-label">Course End Date<span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="date" class="form-control" id="email">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
+                                                </div>
+
+                                                <div class="col-12">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                        <label class="form-check-label" for="gridCheck">Currently
+                                                            Studying</label>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="col-12">
+                                                    <button type="submit" class="btn btn-primary px-4">Save</button>
+                                                    <button type="submit"
+                                                        class="btn btn-outline-secondary px-4">Close</button>
+                                                </div>
+                                                <div class="col-12">
+                                                    <a href="javascript:void(0)" class="btn text-light fs-5 fw-semibold"
+                                                        style="background: #19c745;padding-top: 0px;padding-bottom: 0px;"
+                                                        id="addRow">
+                                                        <div class="d-flex align-items-center">
+                                                            <i class="bi bi-node-plus fs-2 me-1"></i>
+                                                            <span> Add Education</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="tab-pane fade pt-3" id="experience">
@@ -183,7 +585,7 @@
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
-                                <div class="col-md-4">
+                                <div class="col-md-6">
                                     <label for="email" class="form-label">Joining Date<span
                                             class="text-danger">*</span></label>
                                     <input type="date" class="form-control" id="email">
@@ -207,10 +609,123 @@
                         </div>
                         <div class="tab-pane fade pt-3" id="application">
                             <h5 class="card-title"></h5>
-                            <div class="row">
-                                <div class="col-lg-3 col-md-4 label">Address experience</div>
-                                <div class="col-lg-9 col-md-8">Dhaka Bangladesh</div>
-                            </div>
+                            <form method="post" action="" enctype="multipart/form-data" class="row g-3">
+                                @csrf
+
+                                <div class="col-12">
+                                    <label for="address" class="form-label">Institute Name<span
+                                            class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="address" placeholder="">
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="country" class="form-label">Concentration/
+                                        Major/Group<span class="text-danger">*</span></label>
+                                    <select id="country" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>Science</option>
+                                        <option>CSC</option>
+                                        <option>Humanities</option>
+                                    </select>
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="country" class="form-label">Level of Education<span
+                                            class="text-danger">*</span></label>
+                                    <select id="country" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>HSC</option>
+                                    </select>
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+
+
+                                <div class="col-md-4">
+                                    <label for="number" class="form-label">CGPA<span
+                                            class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="number">
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="number" class="form-label">Out of Scale<span
+                                            class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="number">
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="number" class="form-label">Course Duration<span
+                                            class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="number">
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label for="number" class="form-label">Passing Year<span
+                                            class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="number">
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Course Start Date<span
+                                            class="text-danger">*</span></label>
+                                    <input type="date" class="form-control" id="email">
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Course End Date<span
+                                            class="text-danger">*</span></label>
+                                    <input type="date" class="form-control" id="email">
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="gridCheck">
+                                        <label class="form-check-label" for="gridCheck">Currently
+                                            Studying</label>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary px-4">Save</button>
+                                    <button type="submit" class="btn btn-outline-secondary px-4">Close</button>
+                                </div>
+                                <div class="col-12">
+                                    <a href="javascript:void(0)" class="btn text-light fs-5 fw-semibold"
+                                        style="background: #19c745;padding-top: 0px;padding-bottom: 0px;" id="addRow">
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-node-plus fs-2 me-1"></i>
+                                            <span> Add Education</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </form>
                         </div>
                         <div class="tab-pane fade pt-3" id="security-deposit">
                             <h5 class="card-title"></h5>
@@ -218,30 +733,23 @@
                                 @csrf
 
                                 <div class="row mb-3">
-                                    <label for="old_password" class="col-md-4 col-lg-3 col-form-label">Deposit Date<span class="text-danger">*</span></label>
+                                    <label for="old_password" class="col-md-4 col-lg-3 col-form-label">Deposit Date<span
+                                            class="text-danger">*</span></label>
                                     <div class="col-md-8 col-lg-9">
-                                        <input type="date" class="form-control" id="old_password" name="old_password" value="">
+                                        <input type="date" class="form-control" id="old_password" name="old_password"
+                                            value="">
                                         @error('old_password')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
                                 </div>
 
-                                
-                                <div class="row mb-3">
-                                    <label for="old_password" class="col-md-4 col-lg-3 col-form-label">Amount<span class="text-danger">*</span></label>
-                                    <div class="col-md-8 col-lg-9">
-                                        <input type="number" class="form-control" id="old_password" name="old_password" value="">
-                                        @error('old_password')
-                                            <span class="text-danger">{{ $message }}</span>
-                                        @enderror
-                                    </div>
-                                </div>
 
                                 <div class="row mb-3">
-                                    <label for="old_password" class="col-md-4 col-lg-3 col-form-label">Document<span class="text-danger">*</span></label>
+                                    <label for="old_password" class="col-md-4 col-lg-3 col-form-label">Amount</label>
                                     <div class="col-md-8 col-lg-9">
-                                        <input type="text" class="form-control" id="old_password" name="old_password" value="">
+                                        <input type="number" class="form-control" id="old_password" name="old_password"
+                                            value="">
                                         @error('old_password')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
@@ -249,16 +757,29 @@
                                 </div>
 
                                 <div class="row mb-3">
-                                    <label for="old_password" class="col-md-4 col-lg-3 col-form-label">Document File<span class="text-danger">*</span></label>
+                                    <label for="old_password" class="col-md-4 col-lg-3 col-form-label">Document</label>
                                     <div class="col-md-8 col-lg-9">
-                                        <input type="file" class="form-control" id="old_password" name="old_password" value="">
+                                        <input type="text" class="form-control" id="old_password" name="old_password"
+                                            value="">
                                         @error('old_password')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
                                 </div>
 
-                                
+                                <div class="row mb-3">
+                                    <label for="old_password" class="col-md-4 col-lg-3 col-form-label">Document
+                                        File</label>
+                                    <div class="col-md-8 col-lg-9">
+                                        <input type="file" class="form-control" id="old_password" name="old_password"
+                                            value="">
+                                        @error('old_password')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+
 
 
                                 <div class="text-center">

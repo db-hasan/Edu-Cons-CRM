@@ -1,7 +1,7 @@
 @extends('backend.layouts')
 @section('content')
     <main id="main" class="main">
-        
+
         <div class="pagetitle card p-4">
             <h1 class="mb-3">Reference:</h1>
             <div class="custom-scrollbar-table">
@@ -65,12 +65,12 @@
                                     <th class="align-top">Institute</th>
                                     <th class="align-top">Degree</th>
                                     <th class="align-top">Subject/Group</th>
-                                    <th class="align-top text-end">GPA/CGPA</th>
+                                    <th class="align-top text-end">CGPA</th>
                                     <th class="align-top text-end">Out of <br> Scale</th>
                                     <th class="align-top text-end">Course <br> Duration</th>
                                     <th class="align-top text-end">Passing <br> Year</th>
-                                    <th class="align-top text-end">Course <br> Date</th>
-                                    <th class="align-top text-end">Course <br> Date</th>
+                                    <th class="align-top text-end">Course Start <br> Date</th>
+                                    <th class="align-top text-end">Course End<br> Date</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -83,15 +83,15 @@
                                     <td>4 Years</td>
                                     <td>2012</td>
                                     <td>Jan-01-2007</td>
-                                    <td>Dec-30-2011</td> 
+                                    <td>Dec-30-2011</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
             </div>
-    
-           <div class="col-md-12">
+
+            <div class="col-md-12">
                 <div class="pagetitle card p-4">
                     <h1 class="mb-3">Language Proficiency Qualification:</h1>
                     <div class="custom-scrollbar-table">
@@ -119,14 +119,14 @@
                                     <td>4.00</td>
                                     <td>4.00</td>
                                     <td>Jan-01-2007</td>
-                                    <td>Dec-30-2011</td> 
+                                    <td>Dec-30-2011</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-           </div>
-    
+            </div>
+
             <div class="col-md-12">
                 <div class="pagetitle card p-4">
                     <h1 class="mb-3">Training Summary:</h1>
@@ -145,7 +145,7 @@
                                 <tr>
                                     <td>IT Scholarship Programme - IsDB-BISEW</td>
                                     <td>Web Application Development with PHP and Framework</td>
-                                    <td>IsDB-BISEW	</td>
+                                    <td>IsDB-BISEW </td>
                                     <td>2023</td>
                                     <td>900hours</td>
                                 </tr>
@@ -226,7 +226,7 @@
             <div class="col-md-12">
                 <div class="pagetitle card p-4">
                     <h1 class="mb-3">Service Charge:</h1>
-    
+
                     <div class="custom-scrollbar-table">
                         <table class="table table-bordered">
                             <thead>
@@ -259,7 +259,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="col-md-12">
                 <div class="pagetitle card p-4">
                     <h1 class="mb-3">Security Deposit:</h1>
@@ -268,18 +268,18 @@
                             Security Deposit Return Able. Required Document or Amount for Agency Security purpase.
                         </span>
                     </label>
-    
+
                     <table>
                         <tr>
                             <td style="width: 20%">Deposit Date</td>
                             <td class="fw-bold" style="width: 2%">:</td>
                             <td>Dec-30-2011</td>
-                          </tr>
-                        
+                        </tr>
+
                         <tr>
-                          <td style="width: 15%">Amount</td>
-                          <td class="fw-bold" style="width: 2%">:</td>
-                          <td>Tk. 10000</td>
+                            <td style="width: 15%">Amount</td>
+                            <td class="fw-bold" style="width: 2%">:</td>
+                            <td>Tk. 10000</td>
                         </tr>
 
                         <tr>
@@ -292,12 +292,12 @@
                             <td class="fw-bold" style="width: 2%">:</td>
                             <td>View</td>
                         </tr>
-                        
+
                     </table>
                 </div>
             </div>
-    
-            
+
+
         </div>
 
     </main>
