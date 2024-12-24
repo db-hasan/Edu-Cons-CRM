@@ -33,21 +33,12 @@
 
                 <div class="col-md-6">
                     <label for="roles" class="form-label">Role<span class="text-danger">*</span></label>
-                    {{-- <select class="form-select multiple" multiple name="roles[]"> --}}
-                    {{-- <select class="form-select" name="roles[]">
+                    {{-- <select class="form-control multiple" multiple name="roles[]"> --}}
+                    <select class="form-select" name="roles[]">
                         <option selected disabled>Select Role</option>
                         @foreach ($roles as $role)
                             <option value="{{ $role }}">{{ $role }}</option>
                         @endforeach
-                    </select> --}}
-                    <select class="form-select" name="roles">
-                        <option selected disabled>Select Role</option>
-                        <option value="admin">Admin</option>
-                        <option value="viewers">Viewers</option>
-                        <option value="marketing">Marketing</option>
-                        <option value="manager">Manager</option>
-                        <option value="consultant">Consultant</option>
-                        <option value="compliance">Compliance</option>
                     </select>
                     @error('roles')
                         <span class="text-danger">{{ $message }}</span>

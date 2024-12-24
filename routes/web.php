@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RoleController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\BranchController;
@@ -36,7 +37,7 @@ use App\Http\Controllers\SubjectMappingController;
 Route::get('/', [AuthController::class, 'login'])->name('login');
 Route::post('/', [AuthController::class, 'adminlogin'])->name('admin.login');
 
-Route::middleware(['auth'])->group(function (){
+Route::group(['middleware'=>'isAdmin'],function(){
     Route::get('/admin-dashboard',[AdminDashboardController::class,'admindashboard'])->name('admin.dashboard');
     
     Route::get('user-index',[AuthController::class, 'indexuser'])->name('user.index');
@@ -44,6 +45,12 @@ Route::middleware(['auth'])->group(function (){
     Route::post('user-insert',[AuthController::class,'storeuser'])->name('user.store');
     Route::get('user-update/{id}',[AuthController::class,'edituser'])->name('user.edit');
     Route::put('user-update/{id}',[AuthController::class,'updateuser'])->name('user.update');
+
+    Route::get('role-index',[RoleController::class, 'indexrole'])->name('role.index');
+    Route::get('role-insert',[RoleController::class,'createrole'])->name('role.create');
+    Route::post('role-insert',[RoleController::class,'storerole'])->name('role.store');
+    Route::get('role-update/{id}',[RoleController::class,'editrole'])->name('role.edit');
+    Route::put('role-update/{id}',[RoleController::class,'updaterole'])->name('role.update');
 
     Route::get('studentcountry-index',[LocationController::class, 'indexstudentcountry'])->name('studentcountry.index');
     Route::get('studentcountry-insert',[LocationController::class,'createstudentcountry'])->name('studentcountry.create');

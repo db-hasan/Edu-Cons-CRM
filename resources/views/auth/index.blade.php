@@ -35,14 +35,13 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $user->name }}</td>
-                            {{-- <td>
+                            <td>
                                 @if (!empty($user->getRoleNames()))
                                   @foreach ($user->getRoleNames() as $name)
                                      <label class="badge rounded-pill text-bg-primary">{{ $name }}</label>
                                   @endforeach
                                 @endif
-                              </td> --}}
-                            <td>{{ $user->roles }}</td>
+                              </td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->number }}</td>
                             <td>

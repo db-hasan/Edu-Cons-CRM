@@ -11,6 +11,10 @@ use Session;
 
 class BranchController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware(['permission:branch-permission'], ['only' => ['indexbranch', 'createbranch', 'storebranch', 'editbranch', 'updatebranch']]);
+    }
 
     public function indexbranch() {
         $branches = Branch::orderBy('id', 'desc')->get();

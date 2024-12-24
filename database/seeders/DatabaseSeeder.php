@@ -5,9 +5,10 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 use App\Models\User;
 use App\Models\Branch;
-use App\Models\Role;
 use App\Models\Degree;
 use App\Models\Subject;
 use App\Models\Country;
@@ -18,13 +19,17 @@ class DatabaseSeeder extends Seeder
      * Seed the application's database.
      */
 
-    private $roles = [
-        'admin',
-        'viewers',
-        'vendor',
-        'seller',
-        'checker',
+    private $permissions = [
+        'user-permission',
+        'role-permission',
+        'password-update',
+        'admin-dashboard',
+        
+        'branch-permission',
+        'upload-permission',
+        'single-permission',
     ];
+
     private $degrees = [
         "SSC",
         "HSC",
@@ -79,9 +84,9 @@ class DatabaseSeeder extends Seeder
 
     public function run(): void
     {
-        // foreach ($this->roles as $role) {
-        //     Role::create(['name' => $role]);
-        // };
+        foreach ($this->permissions as $permission) {
+            Permission::create(['name' => $permission]);
+        };
 
         foreach ($this->degrees as $degree) {
             Degree::create(['name' => $degree]);
@@ -111,8 +116,15 @@ class DatabaseSeeder extends Seeder
             'email' => 'ahasan.jobs@gmail.com',
             'number' => '01723629080',
             'password' => Hash::make('12345678'),
-            'roles' => "admin",
             'status' => "1",
         ]);
+
+        $role = Role::create(['name' => 'superadmin']);
+
+        $permissions = Permission::pluck('id', 'id')->all();
+
+        $role->syncPermissions($permissions);
+
+        $user->syncRoles([$role->id]);
     }
 }

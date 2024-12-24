@@ -8,12 +8,22 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\DB;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 use App\Models\User;
 use Exception;
 use Session;
 
 class AuthController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware(['permission:user-permission'], ['only' => ['indexuser', 'createuser', 'storeuser', 'edituser', 'updateuser']]);
+        $this->middleware(['permission:password-update'], ['only' => ['profileupdate', 'passwordupdate']]);
+    }
+    
+    
     // Display the login form
     public function login() {
         return view('auth.login');
@@ -53,9 +63,9 @@ class AuthController extends Controller
     }
 
     public function createuser() {
-        // $roles = Role::pluck('name','name')->all();
+        $roles = Role::pluck('name','name')->all();
         // $roles = Role::where('id', '!=', 1)->pluck('name', 'name')->all();
-        return view('auth.create');
+        return view('auth.create',compact('roles'));
     }
     public function storeuser(Request $request):RedirectResponse
     {
@@ -90,7 +100,7 @@ class AuthController extends Controller
             $user->password = Hash::make($request->new_password);
             $user->save();
 
-            // $user->syncRoles($request->input('roles'));
+            $user->syncRoles($request->input('roles'));
 
             return redirect()->route('user.index')->with('success', 'user created successfully.');
         // } catch (\Exception $e) {
@@ -100,11 +110,11 @@ class AuthController extends Controller
 
     public function edituser($id){
         $user = User::find($id);
-        // $roles = Role::pluck('name','name')->all();
+        $roles = Role::pluck('name','name')->all();
         // $roles = Role::where('id', '!=', 1)->pluck('name', 'name')->all();
-        // $userRole = $user->roles->pluck('name','name')->all();
+        $userRole = $user->roles->pluck('name','name')->all();
     
-        return view('auth.edit',compact('user'));
+        return view('auth.edit',compact('user','roles','userRole'));
     }
 
     public function updateuser(Request $request, $id): RedirectResponse
@@ -143,7 +153,6 @@ class AuthController extends Controller
                 $user->name = $request->input('name');
                 $user->email = $request->input('email');    
                 $user->number = $request->input('number');    
-                $user->roles = $request->input('roles');    
                 $user->status = $request->input('status');  
 
                 // Only hash and set the new password if it is provided
@@ -153,9 +162,9 @@ class AuthController extends Controller
 
                 $user->save();
 
-                // DB::table('model_has_roles')->where('model_id',$id)->delete();
+                DB::table('model_has_roles')->where('model_id',$id)->delete();
     
-                // $user->syncRoles($request->input('roles'));
+                $user->syncRoles($request->input('roles'));
 
                 return redirect()->route('user.index')->with('success', 'Data update successfully.');
             } catch (\Exception $e) {

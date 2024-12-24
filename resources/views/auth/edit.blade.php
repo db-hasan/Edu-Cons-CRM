@@ -50,27 +50,19 @@
                     @enderror
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-6">
                     <label for="roles" class="form-label">Role<span class="text-danger">*</span></label>
-                    {{-- <select class="form-select multiple" multiple name="roles[]"> --}}
-                    {{-- <select class="form-control"  name="roles[]">
+                    {{-- <select class="form-control multiple" multiple name="roles[]"> --}}
+                    <select class="form-select"  name="roles[]">
                         @foreach ($roles as $role)
                             <option value="{{ $role }}" {{ in_array($role, $userRole) ? 'selected':'' }}>{{ $role }}</option>
                         @endforeach
-                    </select> --}}
-                    <select class="form-select" name="roles">
-                        <option value="admin" {{ $user->roles == 'admin' ? 'selected' : '' }}>Admin</option>
-                        <option value="viewers" {{ $user->roles == 'viewers' ? 'selected' : '' }}>Viewers</option>
-                        <option value="marketing" {{ $user->roles == 'marketing' ? 'selected' : '' }}>Marketing</option>
-                        <option value="manager" {{ $user->roles == 'manager' ? 'selected' : '' }}>Manager</option>
-                        <option value="consultant" {{ $user->roles == 'consultant' ? 'selected' : '' }}>Consultant</option>
-                        <option value="compliance" {{ $user->roles == 'compliance' ? 'selected' : '' }}>Compliance</option>
                     </select>
-
                     @error('roles')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
+
                 <div class="col-md-3">
                     <label for="status" class="form-label">Status<span class="text-danger">*</span></label>
                     <select class="form-select" aria-label="Default select example" name="status" id="status">
