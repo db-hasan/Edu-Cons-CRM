@@ -71,6 +71,7 @@
                                     <th class="align-top text-end">Passing <br> Year</th>
                                     <th class="align-top text-end">Course Start <br> Date</th>
                                     <th class="align-top text-end">Course End<br> Date</th>
+                                    <th class="align-top text-end">Document<br> View</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -84,6 +85,11 @@
                                     <td>2012</td>
                                     <td>Jan-01-2007</td>
                                     <td>Dec-30-2011</td>
+                                    <td class="text-end">
+                                        <a href="" class="btn btn-success mx-1">
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -107,6 +113,7 @@
                                     <th class="align-top text-end">Speaking <br> Score</th>
                                     <th class="align-top text-end">Examination <br> Date</th>
                                     <th class="align-top text-end">Expiry <br> Date</th>
+                                    <th class="align-top text-end">Document<br> View</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -120,6 +127,11 @@
                                     <td>4.00</td>
                                     <td>Jan-01-2007</td>
                                     <td>Dec-30-2011</td>
+                                    <td class="text-end">
+                                        <a href="" class="btn btn-success mx-1">
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+                                    </td> 
                                 </tr>
                             </tbody>
                         </table>
@@ -139,6 +151,7 @@
                                     <th>Institute</th>
                                     <th>Year</th>
                                     <th>Duration</th>
+                                    <th >Document</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -148,6 +161,11 @@
                                     <td>IsDB-BISEW </td>
                                     <td>2023</td>
                                     <td>900hours</td>
+                                    <td class="text-end">
+                                        <a href="" class="btn btn-success mx-1">
+                                            <i class="bi bi-eye"></i>
+                                        </a>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -196,8 +214,9 @@
                                 <tr>
                                     <th>Location</th>
                                     <th>Institute</th>
-                                    <th>Subject</th>
+                                    <th>Campus</th>
                                     <th>Degree</th>
+                                    <th>Subject</th>
                                     <th>Intake</th>
                                     <th>Duration</th>
                                     <th>Fee</th>
@@ -209,8 +228,9 @@
                                 <tr>
                                     <td>177 Benedict Rd, Staten Island, NY 10304</td>
                                     <td>State University of New York</td>
-                                    <td>Software</td>
+                                    <td>New York Campus</td>
                                     <td>CSC</td>
+                                    <td>Software Engineering</td>
                                     <td>Jan-01-2025</td>
                                     <td>4 Years</td>
                                     <td>Accepted</td>
