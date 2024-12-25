@@ -770,6 +770,18 @@
                                     @enderror
                                 </div>
 
+                                <div class="col-md-6">
+                                    <label for="country" class="form-label">Admitted University <span
+                                            class="text-danger">*</span></label>
+                                    <select id="country" class="form-select">
+                                        <option>Pending</option>
+                                        <option>Admitted</option>
+                                    </select>
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
                                 <div class="col-12 pt-2">
                                     <button type="submit" class="btn btn-primary px-4">Save</button>
                                     <button type="submit" class="btn btn-outline-secondary px-4">Close</button>
