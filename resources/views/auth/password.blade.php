@@ -64,7 +64,11 @@
 
                                     <div class="row">
                                         <div class="col-lg-3 col-md-4 label">Job Title</div>
-                                        <div class="col-lg-9 col-md-8">{{ $users->roles }}</div>
+                                        @if (!empty($users->getRoleNames()))
+                                            @foreach ($users->getRoleNames() as $name)
+                                            <div class="col-lg-9 col-md-8">{{ $name }}</div>
+                                            @endforeach
+                                        @endif
                                     </div>
 
                                     <div class="row">
