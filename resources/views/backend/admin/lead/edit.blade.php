@@ -77,6 +77,13 @@
                                     @enderror
                                 </div>
                                 <div class="col-md-6">
+                                    <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email">
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                                <div class="col-md-6">
                                     <label for="number" class="form-label">Phone<span class="text-danger">*</span></label>
                                     <input type="number" class="form-control" id="number">
                                     @error('name')
@@ -84,13 +91,85 @@
                                     @enderror
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
-                                    <input type="email" class="form-control" id="email">
+                                    <label for="number" class="form-label">Alternate Phone<span
+                                            class="text-danger">*</span></label>
+                                    <input type="number" class="form-control" id="number">
                                     @error('name')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
 
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Date of Birth<span
+                                            class="text-danger">*</span></label>
+                                    <input type="date" class="form-control" id="email">
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="country" class="form-label">Gender<span
+                                            class="text-danger">*</span></label>
+                                    <select id="country" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Others</option>
+                                    </select>
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="country" class="form-label">Religion<span
+                                            class="text-danger">*</span></label>
+                                    <select id="country" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Others</option>
+                                    </select>
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="country" class="form-label">Marital Status<span
+                                            class="text-danger">*</span></label>
+                                    <select id="country" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Others</option>
+                                    </select>
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="country" class="form-label">Blood Group<span
+                                            class="text-danger">*</span></label>
+                                    <select id="country" class="form-select">
+                                        <option selected>Choose...</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Others</option>
+                                    </select>
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="address" class="form-label">Images</label>
+                                    <input type="file" class="form-control" id="address" placeholder="">
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-12"></div>
 
                                 <div class="col-md-6">
                                     <label for="country" class="form-label">Country<span
@@ -104,7 +183,8 @@
                                     @enderror
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="state" class="form-label">State<span class="text-danger">*</span></label>
+                                    <label for="state" class="form-label">State<span
+                                            class="text-danger">*</span></label>
                                     <select id="state" class="form-select">
                                         <option selected>Choose...</option>
                                         <option>...</option>
@@ -114,7 +194,8 @@
                                     @enderror
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="city" class="form-label">City<span class="text-danger">*</span></label>
+                                    <label for="city" class="form-label">City<span
+                                            class="text-danger">*</span></label>
                                     <select id="city" class="form-select">
                                         <option selected>Choose...</option>
                                         <option>...</option>
@@ -132,6 +213,35 @@
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
+
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Nationality<span
+                                            class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email">
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">National Id<span
+                                            class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email">
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="address" class="form-label">National Id</label>
+                                    <input type="file" class="form-control" id="address"
+                                        placeholder="Apartment, studio, or floor">
+                                    @error('name')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                                <div class="col-md-12"></div>
+
+
                                 <div class="col-md-6">
                                     <label for="city" class="form-label">Passport<span
                                             class="text-danger">*</span></label>
@@ -163,6 +273,7 @@
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </div>
                             </form>
+
                         </div>
                         <div class="tab-pane fade pt-3" id="education">
                             <h5 class="card-title"></h5>
