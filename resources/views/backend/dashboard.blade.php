@@ -19,7 +19,7 @@
                     <div class="row">
 
                         <!-- Sales Card -->
-                        <div class="col-xxl-4 col-md-6">
+                        <div class="col-md-4">
                             <div class="card info-card sales-card">
 
                                 <div class="filter">
@@ -57,7 +57,7 @@
                         <!-- End Sales Card -->
 
                         <!-- Revenue Card -->
-                        <div class="col-xxl-4 col-md-6">
+                        <div class="col-md-4">
                             <div class="card info-card revenue-card">
 
                                 <div class="filter">
@@ -96,7 +96,7 @@
                         <!-- End Revenue Card -->
 
                         <!-- Customers Card -->
-                        <div class="col-xxl-4 col-md-6">
+                        <div class="col-md-4">
 
                             <div class="card info-card customers-card">
 
@@ -137,7 +137,7 @@
                         <!-- End Customers Card -->
 
                         <!-- Sales Card -->
-                        <div class="col-xxl-4 col-md-6">
+                        <div class="col-md-4">
                             <div class="card info-card sales-card">
 
                                 <div class="filter">
@@ -176,7 +176,7 @@
                         <!-- End Sales Card -->
 
                         <!-- Customers Card -->
-                        <div class="col-xxl-4 col-md-6">
+                        <div class="col-md-4">
 
                             <div class="card info-card customers-card">
 
@@ -218,7 +218,7 @@
                         <!-- End Customers Card -->
 
                         <!-- Revenue Card -->
-                        <div class="col-xxl-4 col-md-6">
+                        <div class="col-md-4">
                             <div class="card info-card revenue-card">
 
                                 <div class="filter">
@@ -255,7 +255,6 @@
                             </div>
                         </div>
                         <!-- End Revenue Card -->
-
 
                     </div>
                 </div><!-- End Left side columns -->
