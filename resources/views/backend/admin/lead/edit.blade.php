@@ -68,22 +68,20 @@
 
                     <div class="tab-content pt-2">
                         <div class="tab-pane fade show active p-3" id="personal">
-                            <h5 class="card-title"></h5>
-
-                            <div class="">
-                                <div class="">
+                            <div class="personal-info">
+                                <div class="personal-details mb-4">
                                     <div class="d-flex align-items-center justify-content-between">
                                         <h5 class="card-title">Personal Details</h5>
-                                        <div class="">
-                                            <a href="" class="btn btn-primary" id="edit">
+                                        <div>
+                                            <a href="" class="btn btn-primary edit-btn" id="edit-personal">
                                                 <i class="bi bi-pencil-square"></i> Edit
                                             </a>
-                                            <a href="" class="btn btn-success" id="show">
+                                            <a href="" class="btn btn-success view-btn" id="view-personal">
                                                 <i class="bi bi-eye-slash"></i> View
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="row g-3 pb-3" id="view">
+                                    <div class="row g-3 show-section" id="show-personal">
                                         <div class="col-md-6">
                                             <label class="form-label">First Name</label>
                                             <div class="">Ali</div>
@@ -133,8 +131,7 @@
                                             <div class="">View</div>
                                         </div>
                                     </div>
-                                    <form method="post" action="" id="update" class="row g-3 d-none"
-                                        enctype="multipart/form-data">
+                                    <form method="post" action="" id="update-personal" class="row g-3 d-none" enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
 
@@ -277,20 +274,20 @@
                                         </div>
                                     </form>
                                 </div>
-
-                                <div class="">
+                                <hr>
+                                <div class="emergency-contact mb-4">
                                     <div class="d-flex align-items-center justify-content-between">
                                         <h5 class="card-title">Emergency Contact</h5>
-                                        <div class="">
-                                            <a href="" class="btn btn-primary" id="edit">
+                                        <div>
+                                            <a href="" class="btn btn-primary edit-btn" id="edit-emergency">
                                                 <i class="bi bi-pencil-square"></i> Edit
                                             </a>
-                                            <a href="" class="btn btn-success" id="show">
+                                            <a href="" class="btn btn-success view-btn" id="view-emergency">
                                                 <i class="bi bi-eye-slash"></i> View
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="row g-3 pb-3" id="view">
+                                    <div class="row g-3 show-section" id="show-emergency">
                                         <div class="col-md-6">
                                             <label class="form-label">Relation</label>
                                             <div class="">Father</div>
@@ -304,8 +301,7 @@
                                             <div class="">01723629080</div>
                                         </div>
                                     </div>
-                                    <form method="post" action="" id="update" class="row g-3 d-none"
-                                        enctype="multipart/form-data">
+                                    <form method="post" action="" id="update-emergency" class="row g-3 d-none" enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
 
@@ -357,20 +353,20 @@
                                         </div>
                                     </form>
                                 </div>
-
-                                <div class="">
+                                <hr>
+                                <div class="address-details mb-4">
                                     <div class="d-flex align-items-center justify-content-between">
                                         <h5 class="card-title">Address Details</h5>
-                                        <div class="">
-                                            <a href="" class="btn btn-primary" id="edit">
+                                        <div>
+                                            <a href="" class="btn btn-primary edit-btn" id="edit-address">
                                                 <i class="bi bi-pencil-square"></i> Edit
                                             </a>
-                                            <a href="" class="btn btn-success" id="show">
+                                            <a href="" class="btn btn-success view-btn" id="view-address">
                                                 <i class="bi bi-eye-slash"></i> View
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="row g-3 pb-3" id="view">
+                                    <div class="row g-3 show-section" id="show-address">
                                         <div class="col-md-12">
                                             <label class="form-label">Address</label>
                                             <div class="">Vill- Behar prochim para, P.O- Behar Hat,, Shibganj,
@@ -391,8 +387,7 @@
                                             <div class="">View</div>
                                         </div>
                                     </div>
-                                    <form method="post" action="" id="update" class="row g-3 d-none"
-                                        enctype="multipart/form-data">
+                                    <form method="post" action="" id="update-address" class="row g-3 d-none" enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
 
@@ -469,20 +464,20 @@
                                         </div>
                                     </form>
                                 </div>
-
-                                <div class="">
+                                <hr>
+                                <div class="passport-details mb-4">
                                     <div class="d-flex align-items-center justify-content-between">
                                         <h5 class="card-title">Passport Details</h5>
-                                        <div class="">
-                                            <a href="" class="btn btn-primary" id="edit">
+                                        <div>
+                                            <a href="" class="btn btn-primary edit-btn" id="edit-passport">
                                                 <i class="bi bi-pencil-square"></i> Edit
                                             </a>
-                                            <a href="" class="btn btn-success" id="show">
+                                            <a href="" class="btn btn-success view-btn" id="view-passport">
                                                 <i class="bi bi-eye-slash"></i> View
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="row g-3 pb-3" id="view">
+                                    <div class="row g-3 show-section" id="show-passport">
                                         <div class="col-md-6">
                                             <label class="form-label">Passport Number</label>
                                             <div class="">120 251 2728</div>
@@ -500,8 +495,7 @@
                                             <div class="">10/08/2030</div>
                                         </div>
                                     </div>
-                                    <form method="post" action="" id="update" class="row g-3 d-none"
-                                        enctype="multipart/form-data">
+                                    <form method="post" action="" id="update-passport" class="row g-3 d-none" enctype="multipart/form-data">
                                         @csrf
                                         @method('PUT')
 
@@ -919,67 +913,111 @@
                         </div>
 
                         <div class="tab-pane fade pt-3" id="experience">
-                            <h5 class="card-title"></h5>
-                            <form method="post" action="" enctype="multipart/form-data" class="row g-3">
-                                @csrf
-
-                                <div class="col-md-6">
-                                    <label for="name" class="form-label">Company Name<span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="name">
-                                    @error('name')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
+                            <div class="working-exe mb-5">
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <h5 class="card-title">Working Experience</h5>
+                                    <div>
+                                        <a href="" class="btn btn-primary edit-btn" id="edit-passport">
+                                            <i class="bi bi-pencil-square"></i> Edit
+                                        </a>
+                                        <a href="" class="btn btn-success view-btn" id="view-passport">
+                                            <i class="bi bi-eye-slash"></i> View
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <label for="number" class="form-label">Designation<span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="number">
-                                    @error('name')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="email" class="form-label">Job Location<span
-                                            class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" id="email">
-                                    @error('name')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                </div>
-
-                                <div class="col-md-6"></div>
-
-                                <div class="col-md-6">
-                                    <label for="email" class="form-label">Joining Date<span
-                                            class="text-danger">*</span></label>
-                                    <input type="date" class="form-control" id="email">
-                                    @error('name')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                </div>
-                                <div class="col-md-6">
-                                    <label for="email" class="form-label">Joining Date<span
-                                            class="text-danger">*</span></label>
-                                    <input type="date" class="form-control" id="email">
-                                    @error('name')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                </div>
-
-                                <div class="col-12">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" id="gridCheck">
-                                        <label class="form-check-label" for="gridCheck">Currently Working</label>
+                                <div class="row g-3 show-section" id="show-passport">
+                                    <div class="col-md-6">
+                                        <label class="form-label">Company Name</label>
+                                        <div class="">Soft Query</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Designation</label>
+                                        <div class="">Software Engineer</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Location</label>
+                                        <div class="">Dhaka Bangladesh</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Document</label>
+                                        <div class="">View</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="form-label">Employment Period</label>
+                                        <div class=""><span>10/08/2020</span>To <span>Continuing</span></div>
                                     </div>
                                 </div>
 
+                                <form method="post" action="" id="update-passport" class="row g-3 d-none" enctype="multipart/form-data">
+                                    @csrf
+    
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Company Name<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="name">
+                                        @error('name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="number" class="form-label">Designation<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="number">
+                                        @error('name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Job Location<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="email">
+                                        @error('name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+    
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Document<span
+                                                class="text-danger">*</span></label>
+                                        <input type="file" class="form-control" id="email">
+                                        @error('name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="number" class="form-label">Employment Period<span
+                                                class="text-danger">*</span></label>
+                                        <div class="row g-4">
+                                            <div class="col-md-6">
+                                                <input type="date" class="form-control" id="email">
+                                                @error('name')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div>
 
-                                <div class="col-12 pt-2">
-                                    <button type="submit" class="btn btn-primary px-4">Save</button>
-                                    <button type="submit" class="btn btn-outline-secondary px-4">Close</button>
-                                </div>
-                                <div class="col-12">
+                                            <div class="col-md-6">
+                                                <input type="date" class="form-control" id="email">
+                                                @error('name')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                    <label class="form-check-label" for="gridCheck">Currently Working</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="col-12 pt-2">
+                                        <button type="submit" class="btn btn-primary px-4">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="">
+                                <div class="col-12 mb-4">
                                     <a href="javascript:void(0)" class="btn text-light fs-5 fw-semibold"
                                         style="background: #19c745;padding-top: 0px;padding-bottom: 0px;" id="addRow">
                                         <div class="d-flex align-items-center">
@@ -988,7 +1026,74 @@
                                         </div>
                                     </a>
                                 </div>
-                            </form>
+                                
+                                <form method="post" action="" class="row g-3 " enctype="multipart/form-data">
+                                    @csrf
+    
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Company Name<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="name">
+                                        @error('name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="number" class="form-label">Designation<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="number">
+                                        @error('name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Job Location<span
+                                                class="text-danger">*</span></label>
+                                        <input type="text" class="form-control" id="email">
+                                        @error('name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+    
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Document<span
+                                                class="text-danger">*</span></label>
+                                        <input type="file" class="form-control" id="email">
+                                        @error('name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="col-md-12">
+                                        <label for="number" class="form-label">Employment Period<span
+                                                class="text-danger">*</span></label>
+                                        <div class="row g-4">
+                                            <div class="col-md-6">
+                                                <input type="date" class="form-control" id="email">
+                                                @error('name')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+    
+                                            <div class="col-md-6">
+                                                <input type="date" class="form-control" id="email">
+                                                @error('name')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                                                    <label class="form-check-label" for="gridCheck">Currently Working</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="col-12 pt-2">
+                                        <button type="submit" class="btn btn-primary px-4">Save</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
 
                         <div class="tab-pane fade pt-3" id="application">
@@ -1301,19 +1406,21 @@
     </main>
     <script src="{{ asset('backend/js/jquery-3.7.1.min.js') }} "></script>
     <script>
-        $(document).ready(function() {
-            // When the "Edit" button is clicked
-            $('#edit').on('click', function(e) {
-                e.preventDefault(); // Prevent default anchor behavior
-                $('#view').addClass('d-none'); // Hide the view section
-                $('#update').removeClass('d-none'); // Show the update form
+        $(document).ready(function () {
+            // Handle "Edit" button click
+            $('.edit-btn').on('click', function (e) {
+                e.preventDefault();
+                const section = $(this).attr('id').split('-')[1];
+                $(`#show-${section}`).addClass('d-none');
+                $(`#update-${section}`).removeClass('d-none');
             });
 
-            // When the "View" button is clicked
-            $('#show').on('click', function(e) {
-                e.preventDefault(); // Prevent default anchor behavior
-                $('#update').addClass('d-none'); // Hide the update form
-                $('#view').removeClass('d-none'); // Show the view section
+            // Handle "View" button click
+            $('.view-btn').on('click', function (e) {
+                e.preventDefault();
+                const section = $(this).attr('id').split('-')[1];
+                $(`#update-${section}`).addClass('d-none');
+                $(`#show-${section}`).removeClass('d-none');
             });
         });
     </script>
