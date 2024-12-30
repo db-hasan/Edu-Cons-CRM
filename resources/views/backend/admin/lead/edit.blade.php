@@ -693,7 +693,7 @@
                                                         style="background: #19c745;padding-top: 0px;padding-bottom: 0px;">
                                                         <div class="d-flex align-items-center">
                                                             <i class="bi bi-node-plus fs-2 me-1"></i>
-                                                            <span> Add Experience</span>
+                                                            <span> Add Qualification</span>
                                                         </div>
                                                     </a>
                                                 </div>
@@ -843,7 +843,7 @@
                                         <div class="accordion-body">
                                             <div class="edit-training-sum mb-5">
                                                 <div class="d-flex align-items-center justify-content-between">
-                                                    <h5 class="card-title">Working Experience</h5>
+                                                    <h5 class="card-title">Training Details</h5>
                                                     <div>
                                                         <a href="" class="btn btn-primary edit-btn"
                                                             id="edit-training">
@@ -1081,7 +1081,6 @@
 
                                                 <form method="post" action="" id="update-language"
                                                     class="row g-3 d-none" enctype="multipart/form-data">
-                                                    @csrf>
                                                     @csrf
 
                                                     <div class="col-md-6">
