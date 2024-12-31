@@ -18,45 +18,32 @@
         </div>
         <hr>
         <div class="custom-scrollbar-table">
-            <table class="table table-striped">
+            <table id="myTable" class="display" style="width:100%">
                 <thead>
                     <tr>
-                        <th>State</th>
-                        <th>Index</th>
+                        <th>ID</th>
                         <th>Name</th>
                         <th>Status</th>
-                        <th class="text-end">Action</th>
+                        <th class="text-end">Acction</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <table id="myTable" class="display" style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                                <th>Status</th>
-                                <th class="text-end">Acction</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>01</td>
-                                <td>Malaysia</td>
-                                <td>Active</td>
-                                <td class="d-flex justify-content-end">
-                                    <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>01</td>
-                                <td>Malaysia</td>
-                                <td>Active</td>
-                                <td class="d-flex justify-content-end">
-                                    <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <tr>
+                        <td>01</td>
+                        <td>Malaysia</td>
+                        <td>Active</td>
+                        <td class="d-flex justify-content-end">
+                            <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>Malaysia</td>
+                        <td>Active</td>
+                        <td class="d-flex justify-content-end">
+                            <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
 
