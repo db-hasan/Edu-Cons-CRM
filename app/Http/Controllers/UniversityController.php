@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use App\Models\Country;
-use App\Models\State;
 use App\Models\University;
 use Exception;
 use Session;
@@ -14,10 +13,6 @@ use Illuminate\Http\Request;
 class UniversityController extends Controller
 {
     public function indexuniversity() {
-        $universities = University::with('state')
-                    ->orderBy('state_id', 'desc')
-                    ->get()
-                    ->groupBy('state_id');
         return view('backend.admin.university.index',compact('universities'));
     }
     

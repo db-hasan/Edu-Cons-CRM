@@ -29,31 +29,34 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($universities as $universitiesGroup)
-                        @foreach ($universitiesGroup as $index => $university)
+                    <table id="myTable" class="display" style="width:100%">
+                        <thead>
                             <tr>
-                                @if ($loop->first)
-                                    <td class="align-middle" rowspan="{{ $universitiesGroup->count() }}">
-                                        {{ $university->state->name }}
-                                    </td>
-                                @endif
-                                <td>{{ $loop->index + 1 }}</td>
-                                <td>{{ $university->name }}</td>
-                                <td>
-                                    @if ($university->status == 1)
-                                        Active
-                                    @elseif($university->status == 2)
-                                        Inactive
-                                    @endif
-                                </td>
+                                <th>ID</th>
+                                <th>Name</th>
+                                <th>Status</th>
+                                <th class="text-end">Acction</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>Malaysia</td>
+                                <td>Active</td>
                                 <td class="d-flex justify-content-end">
-                                    <a href="{{ route('university.edit', $university->id) }}" class="btn btn-primary mx-1">
-                                        <i class="bi bi-pencil-square"></i>
-                                    </a>
+                                    <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
                                 </td>
                             </tr>
-                        @endforeach
-                    @endforeach
+                            <tr>
+                                <td>01</td>
+                                <td>Malaysia</td>
+                                <td>Active</td>
+                                <td class="d-flex justify-content-end">
+                                    <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </tbody>
             </table>
 
