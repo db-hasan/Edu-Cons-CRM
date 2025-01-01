@@ -22,8 +22,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Country</th>
-                        <th>University</th>
+                        <th>Name</th>
                         <th>Status</th>
                         <th class="text-end">Acction</th>
                     </tr>
@@ -32,7 +31,14 @@
                     <tr>
                         <td>01</td>
                         <td>Malaysia</td>
-                        <td>Malaysia University</td>
+                        <td>Active</td>
+                        <td class="d-flex justify-content-end">
+                            <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>Malaysia</td>
                         <td>Active</td>
                         <td class="d-flex justify-content-end">
                             <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
@@ -40,6 +46,7 @@
                     </tr>
                 </tbody>
             </table>
+
         </div>
     </main>
     <script src="{{ asset('backend/js/jquery-3.7.1.min.js') }} "></script>
