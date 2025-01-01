@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Response;
 use App\Models\Country;
-use App\Models\State;
 use App\Models\University;
 use App\Models\Campus;
 use Exception;
@@ -14,25 +13,13 @@ use Illuminate\Http\Request;
 
 class CampusController extends Controller
 {
-    public function indexcampus() {
-        $campuses = Campus::with('university')
-                    ->orderBy('university_id', 'desc')
-                    ->get()
-                    ->groupBy('university_id');
-        return view('backend.admin.campus.index',compact('campuses'));
+    public function indexCampus() {
+        return view('backend.admin.campus.index');
     }
     
-    public function createcampus() {
-        $countries = Country::where('status', 1)
-                    ->orderBy('id', 'desc')
-                    ->get();
-        $states = State::where('status', 1)
-                    ->orderBy('id', 'desc')
-                    ->get();
-        $universities = University::where('status', 1)
-                    ->orderBy('id', 'desc')
-                    ->get();
-        return view('backend.admin.campus.create', compact('countries', 'states', 'universities'));
+    public function createCampus() {
+        $countries = Country::all();
+        return view('backend.admin.campus.create', compact('countries'));
     }
 
     public function storecampus(Request $request): RedirectResponse

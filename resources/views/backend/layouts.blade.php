@@ -181,17 +181,12 @@
                 </a>
                 <ul id="university-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="">
-                            <i class="bi bi-circle"></i><span>Country</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
+                        <a href="{{ route('university.index') }}">
                             <i class="bi bi-circle"></i><span>University</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="{{ route('campus.index') }}">
                             <i class="bi bi-circle"></i><span>Campus</span>
                         </a>
                     </li>

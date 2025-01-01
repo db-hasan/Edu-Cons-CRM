@@ -52,17 +52,20 @@ Route::group(['middleware'=>'isAdmin'],function(){
     Route::get('role-update/{id}',[RoleController::class,'editrole'])->name('role.edit');
     Route::put('role-update/{id}',[RoleController::class,'updaterole'])->name('role.update');
 
-    Route::get('location-index',[BranchController::class, 'indexLocation'])->name('location.index');
-    Route::get('location-insert',[BranchController::class, 'createLocation'])->name('location.create');
+    Route::get('country-index',[CountryController::class, 'indexCountry'])->name('country.index');
+    Route::get('country-insert',[CountryController::class, 'createCountry'])->name('country.create');
 
     Route::get('region-index',[BranchController::class, 'indexRegion'])->name('region.index');
     Route::get('region-insert',[BranchController::class, 'createRegion'])->name('region.create');
 
-    Route::get('country-index',[UniversityController::class, 'indexCountry'])->name('country.index');
-    Route::get('country-insert',[UniversityController::class, 'createCountry'])->name('country.create');
+    Route::get('region-index',[BranchController::class, 'indexRegion'])->name('region.index');
+    Route::get('region-insert',[BranchController::class, 'createRegion'])->name('region.create');
 
     Route::get('university-index',[UniversityController::class, 'indexUniversity'])->name('university.index');
     Route::get('university-insert',[UniversityController::class, 'createUniversity'])->name('university.create');
+
+    Route::get('campus-index',[CampusController::class, 'indexCampus'])->name('campus.index');
+    Route::get('campus-insert',[CampusController::class, 'createCampus'])->name('campus.create');
 
 
 

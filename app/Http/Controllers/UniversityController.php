@@ -12,18 +12,13 @@ use Illuminate\Http\Request;
 
 class UniversityController extends Controller
 {
-    public function indexuniversity() {
-        return view('backend.admin.university.index',compact('universities'));
+    public function indexUniversity() {
+        return view('backend.admin.university.index');
     }
     
-    public function createuniversity() {
-        $countries = Country::where('status', 1)
-                    ->orderBy('id', 'desc')
-                    ->get();
-        $states = State::where('status', 1)
-                    ->orderBy('id', 'desc')
-                    ->get();
-        return view('backend.admin.university.create', compact('countries', 'states'));
+    public function createUniversity() {
+        $countries = Country::all();
+        return view('backend.admin.university.create', compact('countries'));
     }
 
     public function storeuniversity(Request $request): RedirectResponse

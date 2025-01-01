@@ -9,7 +9,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
         $(document).ready(function() {
             $('.js-example-basic-multiple').select2();
@@ -88,5 +88,12 @@
     <script>
         $(document).ready(function() {
             $('#myTable').DataTable();
+        });
+    </script>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.js-example-basic-single').select2();
         });
     </script>
