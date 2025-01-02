@@ -46,7 +46,7 @@
                     @enderror
                     <div class="invalid-feedback"></div>
                 </div>
-                
+
                 <div class="col-md-6 pb-3">
                     <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
                     <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}"
@@ -115,4 +115,5 @@
             });
         });
     </script>
+
 @endsection
