@@ -19,7 +19,7 @@
         </div>
         <hr>
         <div class="card">
-            <form method="post" action="{{ route('user.store') }}" enctype="multipart/form-data" class="row g-3 p-3">
+            <form method="post" action="{{ route('user.store') }}" enctype="multipart/form-data" class="row g-3 p-3 needs-validation" novalidate>
                 @csrf
 
                 <div class="col-md-6 pb-3">
@@ -29,13 +29,14 @@
                     @error('name')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-md-6">
                     <label for="roles" class="form-label">Role<span class="text-danger">*</span></label>
                     {{-- <select class="form-control multiple" multiple name="roles[]"> --}}
-                    <select class="form-select" name="roles[]">
-                        <option selected disabled>Select Role</option>
+                    <select class="form-select" name="roles[]" required>
+                        <option selected disabled value="">Select Role</option>
                         @foreach ($roles as $role)
                             <option value="{{ $role }}">{{ $role }}</option>
                         @endforeach
@@ -43,8 +44,9 @@
                     @error('roles')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
-
+                
                 <div class="col-md-6 pb-3">
                     <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
                     <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}"
@@ -52,6 +54,7 @@
                     @error('email')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="col-md-6 pb-3">
                     <label for="number" class="form-label">Number<span class="text-danger">*</span></label>
@@ -60,26 +63,29 @@
                     @error('number')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-md-6 pb-3">
                     <label for="new_password" class="form-label">New Password<span class="text-danger">*</span></label>
-                    <input type="password" class="form-control" id="new_password" name="new_password" value=""
+                    <input type="password" class="form-control" id="new_password" name="new_password" value="" required
                         placeholder="Uppercase lowercase number with special character">
                     <span class="text-danger" id="password_suggestion"></span>
                     @error('new_password')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-md-6 pb-3">
                     <label for="new_password_confirmation" class="form-label">Confirm Password<span
                             class="text-danger">*</span></label>
                     <input type="password" class="form-control" id="new_password_confirmation"
-                        name="new_password_confirmation" value="" placeholder="Type confirm Password">
+                        name="new_password_confirmation" value="" placeholder="Type confirm Password" required>
                     @error('new_password_confirmation')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-12">
