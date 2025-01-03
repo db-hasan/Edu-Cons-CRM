@@ -3,7 +3,7 @@
     <main id="main" class="main">
         <div class="d-flex justify-content-between">
             <div class="pagetitle">
-                <h1>Campus List</h1>
+                <h1>University List</h1>
                 <nav>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
@@ -12,8 +12,8 @@
                 </nav>
             </div>
             <div class="text-end pt-2">
-                <a href="{{ route('campus.create') }}" class="btn btn-primary"><i class="fas fa-plus-circle"></i>
-                    Add Campus</a>
+                <a href="{{ route('university.details.create') }}" class="btn btn-primary"><i class="fas fa-plus-circle"></i>
+                    Add University</a>
             </div>
         </div>
         <hr>
@@ -22,11 +22,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>University</th>
-                        <th>Academic Entry Requirements</th>
-                        <th>English Language Requirements</th>
-                        <th>USP/ Ranking</th>
-                        <th>Campus</th>
+                        <th>Name</th>
                         <th>Status</th>
                         <th class="text-end">Acction</th>
                     </tr>
@@ -34,8 +30,15 @@
                 <tbody>
                     <tr>
                         <td>01</td>
-                        <td>Malaysia University</td>
-                        <td>Malaysia University Campus 2</td>
+                        <td>Malaysia</td>
+                        <td>Active</td>
+                        <td class="d-flex justify-content-end">
+                            <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>Malaysia</td>
                         <td>Active</td>
                         <td class="d-flex justify-content-end">
                             <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
@@ -43,6 +46,7 @@
                     </tr>
                 </tbody>
             </table>
+
         </div>
     </main>
     <script src="{{ asset('backend/js/jquery-3.7.1.min.js') }} "></script>

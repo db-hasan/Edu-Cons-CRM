@@ -158,6 +158,28 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#location-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-crosshair"></i><span>Location</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="location-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Country</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>State</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>City </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#academic-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-mortarboard-fill"></i><span>Academic</span><i
                         class="bi bi-chevron-down ms-auto"></i>
@@ -176,7 +198,8 @@
                 </ul>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#university-nav" data-bs-toggle="collapse" href="#">
+                <a class="nav-link collapsed" data-bs-target="#university-nav" data-bs-toggle="collapse"
+                    href="#">
                     <i class="bi bi-bank2"></i><span>University</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
                 <ul id="university-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
@@ -186,18 +209,13 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('campus.index') }}">
-                            <i class="bi bi-circle"></i><span>Campus</span>
+                        <a href="{{ route('university.details.index') }}">
+                            <i class="bi bi-circle"></i><span>Details</span>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <i class="bi bi-circle"></i><span>Degree </span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
-                            <i class="bi bi-circle"></i><span>Subject </span>
+                            <i class="bi bi-circle"></i><span>Course Details </span>
                         </a>
                     </li>
                 </ul>

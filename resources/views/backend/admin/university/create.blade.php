@@ -26,8 +26,8 @@
                     <label for="country_id" class="form-label">Country <span class="text-danger">*</span></label>
                     <select class="js-example-basic-single form-select" name="country_id" id="country_id">
                         <option selected disabled>Select Country</option>
-                        @foreach($countries as $key => $country)
-                        <option value="{{ $country->id}}">{{ $country->name}}</option>
+                        @foreach ($countries as $key => $country)
+                            <option value="{{ $country->id }}">{{ $country->name }}</option>
                         @endforeach
                     </select>
                     @error('country_id')
@@ -39,11 +39,6 @@
                     <label for="name" class="form-label">University<span class="text-danger">*</span></label>
                     <div class="d-flex mb-3 rowItem">
                         <input type="text" class="form-control me-2" name="name[]" placeholder="University Name"
-                            value="{{ old('name') }}" required>
-                        @error('name')
-                            <span class="text-danger">{{ $message }}</span>
-                        @enderror
-                        <input type="text" class="form-control me-2" name="address[]" placeholder="University Address"
                             value="{{ old('name') }}" required>
                         @error('name')
                             <span class="text-danger">{{ $message }}</span>
@@ -74,7 +69,7 @@
                 // Add a delete button to the cloned row
                 newRow.append(
                     '<a href="javascript:void(0)" class="btn btn-danger mx-2 deleteRow"><i class="bi bi-trash"></i></a>'
-                    );
+                );
                 // Append the cloned row to the wrapper
                 $('#rowWrapper').append(newRow);
             });

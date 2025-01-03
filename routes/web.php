@@ -11,6 +11,7 @@ use App\Http\Controllers\UploadController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\StateController;
 use App\Http\Controllers\UniversityController;
+use App\Http\Controllers\UniversityDetailsController;
 use App\Http\Controllers\CampusController;
 use App\Http\Controllers\DegreeController;
 use App\Http\Controllers\SubjectController;
@@ -55,17 +56,23 @@ Route::group(['middleware'=>'isAdmin'],function(){
     Route::get('country-index',[CountryController::class, 'indexCountry'])->name('country.index');
     Route::get('country-insert',[CountryController::class, 'createCountry'])->name('country.create');
 
-    Route::get('region-index',[BranchController::class, 'indexRegion'])->name('region.index');
-    Route::get('region-insert',[BranchController::class, 'createRegion'])->name('region.create');
+    Route::get('state-index',[LocationController::class, 'indexState'])->name('state.index');
+    Route::get('state-insert',[LocationController::class, 'createState'])->name('state.create');
+
+    Route::get('city-index',[LocationController::class, 'indexCity'])->name('city.index');
+    Route::get('city-insert',[LocationController::class, 'createCity'])->name('city.create');
 
     Route::get('region-index',[BranchController::class, 'indexRegion'])->name('region.index');
     Route::get('region-insert',[BranchController::class, 'createRegion'])->name('region.create');
+
+    Route::get('branch-index',[BranchController::class, 'indexBranch'])->name('branch.index');
+    Route::get('branch-insert',[BranchController::class, 'createBranch'])->name('branch.create');
 
     Route::get('university-index',[UniversityController::class, 'indexUniversity'])->name('university.index');
     Route::get('university-insert',[UniversityController::class, 'createUniversity'])->name('university.create');
 
-    Route::get('campus-index',[CampusController::class, 'indexCampus'])->name('campus.index');
-    Route::get('campus-insert',[CampusController::class, 'createCampus'])->name('campus.create');
+    Route::get('university-details-index',[UniversityDetailsController::class, 'indexUniversityDetails'])->name('university.details.index');
+    Route::get('university-details-insert',[UniversityDetailsController::class, 'createUniversityiDetails'])->name('university.details.create');
 
 
 
