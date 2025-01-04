@@ -11,12 +11,14 @@ use Session;
 
 class UniversityDetailsController extends Controller
 {
-    public function indexUniversityDetails() {
-        return view('backend.admin.universitydetails.index');
-    }
-    
+
     public function createUniversityiDetails() {
         $countries = Country::all();
-        return view('backend.admin.universitydetails.create', compact('countries'));
+        return view('backend.admin.universitydetails.create_university_details', compact('countries'));
+    }
+
+    public function createCourseiDetails() {
+        $countries = Country::all();
+        return view('backend.admin.universitydetails.create_course_details', compact('countries'));
     }
 }

@@ -209,12 +209,12 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('university.details.index') }}">
+                        <a href="{{ route('university.details.create') }}">
                             <i class="bi bi-circle"></i><span>Details</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="{{ route('course.details.create') }}">
                             <i class="bi bi-circle"></i><span>Course Details </span>
                         </a>
                     </li>

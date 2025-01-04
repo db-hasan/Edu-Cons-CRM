@@ -71,8 +71,8 @@ Route::group(['middleware'=>'isAdmin'],function(){
     Route::get('university-index',[UniversityController::class, 'indexUniversity'])->name('university.index');
     Route::get('university-insert',[UniversityController::class, 'createUniversity'])->name('university.create');
 
-    Route::get('university-details-index',[UniversityDetailsController::class, 'indexUniversityDetails'])->name('university.details.index');
     Route::get('university-details-insert',[UniversityDetailsController::class, 'createUniversityiDetails'])->name('university.details.create');
+    Route::get('course-details-insert',[UniversityDetailsController::class, 'createCourseiDetails'])->name('course.details.create');
 
 
 
