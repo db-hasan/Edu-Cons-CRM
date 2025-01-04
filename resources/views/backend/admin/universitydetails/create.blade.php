@@ -164,6 +164,9 @@
                     </div>
                 </div>
 
+                {{-- when not use this code then multi select not working --}}
+                <div class="d-none"><select class="js-example-basic-single form-select" id="language_id"></select></div>
+                
 
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -233,4 +236,5 @@
             });
         });
     </script>
+</script>
 @endsection
