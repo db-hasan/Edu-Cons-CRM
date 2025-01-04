@@ -33,7 +33,8 @@
                         <td>Malaysia</td>
                         <td>Active</td>
                         <td class="d-flex justify-content-end">
-                            <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
+                            <a href="{{ route('university.edit') }}" class="btn btn-primary mx-1"><i
+                                    class="bi bi-pencil-square"></i></a>
                         </td>
                     </tr>
                     <tr>
@@ -41,7 +42,8 @@
                         <td>Malaysia</td>
                         <td>Active</td>
                         <td class="d-flex justify-content-end">
-                            <a href="" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
+                            <a href="{{ route('university.edit') }}" class="btn btn-primary mx-1"><i
+                                    class="bi bi-pencil-square"></i></a>
                         </td>
                     </tr>
                 </tbody>

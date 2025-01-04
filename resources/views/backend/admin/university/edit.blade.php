@@ -1,70 +1,59 @@
 @extends('backend.layouts')
 @section('content')
-    <main id="main" class="main">
-        <div class="d-flex justify-content-between">
-            <div class="pagetitle">
-                <h1>Update University</h1>
-                <nav>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Edit</li>
-                    </ol>
-                </nav>
-            </div>
-            <div class="text-end pt-2">
-                <a href="{{ route('university.index') }}" class="btn btn-primary"><i class="fa-regular fa-eye"></i>
-                    View
-                    University</a>
-            </div>
-        </div>
-        <hr>
+    <main id="main" class="main pt-0">
         <div class="card">
-            <form method="post" action="{{ route('university.update', $university->id) }}" enctype="multipart/form-data"
-                class="row g-3 p-3">
-                @csrf
-                @method('PUT')
-
-                <div class="col-md-12 pb-3">
-                    <label for="state_id" class="form-label">State <span class="text-danger">*</span></label>
-                    <select id="state_id" name="state_id" class="form-select" required>
-                        @foreach ($states as $state)
-                            <option value="{{ $state->id }}" {{ $state->id == $university->state_id ? 'selected' : '' }}>
-                                {{ $state->name }}
-                            </option>
-                        @endforeach
-                    </select>
-                    @error('country_id')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
+            <div class="d-flex justify-content-between  bg-primary-subtle px-4 pt-3">
+                <div class="pagetitle">
+                    <h1>University Details</h1>
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
+                            <li class="breadcrumb-item active">Edit</li>
+                        </ol>
+                    </nav>
                 </div>
-
-                <div class="col-md-8 pb-3">
-                    <label for="name" class="form-label">Name<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="name" name="name" value="{{ $university->name }}"
-                        required>
-                    @error('name')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
+                <div class="text-end pt-2">
+                    <a href="{{ route('university.index') }}" class="btn btn-primary"><i class="fa-regular fa-eye"></i>
+                        View
+                        University</a>
                 </div>
+            </div>
 
-
-                <div class="col-md-4">
-                    <label for="status" class="form-label">Status<span class="text-danger">*</span></label>
-                    <select class="form-select" aria-label="Default select example" name="status" id="status">
-                        <option value="1" {{ $university->status == 1 ? 'selected' : '' }}>Active</option>
-                        <option value="2" {{ $university->status == 2 ? 'selected' : '' }}>Inactive</option>
-                    </select>
-                    @error('status')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
+            <div class="p-4">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="card-title">Address Details</h5>
+                    <div>
+                        <a href="" class="btn btn-primary edit-btn" id="edit-address">
+                            <i class="bi bi-pencil-square"></i> Edit
+                        </a>
+                        <a href="" class="btn btn-success view-btn" id="view-address">
+                            <i class="bi bi-eye-slash"></i> View
+                        </a>
+                    </div>
                 </div>
+                <div class="row g-3 show-section" id="show-address">
+                    <div class="col-md-12">
+                        <label class="form-label">Address</label>
+                        <div class="">Vill- Behar prochim para, P.O- Behar Hat,, Shibganj,
+                            Shibganj,
+                            Bogura 5810</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Nationality</label>
+                        <div class="">Bangladesh</div>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">National Id</label>
+                        <div class="">120 251 2728</div>
+                    </div>
 
-
-                <div class="col-12">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="col-md-12">
+                        <label class="form-label">Document</label>
+                        <div class="">View</div>
+                    </div>
                 </div>
-            </form>
+            </div>
         </div>
-
     </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 @endsection

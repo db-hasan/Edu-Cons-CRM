@@ -1,24 +1,23 @@
 @extends('backend.layouts')
 @section('content')
-    <main id="main" class="main">
-        <div class="d-flex justify-content-between">
-            <div class="pagetitle">
-                <h1>University Course Details</h1>
-                <nav>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Create</li>
-                    </ol>
-                </nav>
-            </div>
-            <div class="text-end pt-2">
-                <a href="{{ route('university.index') }}" class="btn btn-primary"><i class="fa-regular fa-eye"></i>
-                    View
-                    University</a>
-            </div>
-        </div>
-        <hr>
+    <main id="main" class="main pt-0">
         <div class="card">
+            <div class="d-flex justify-content-between bg-primary-subtle px-4 pt-3">
+                <div class="pagetitle">
+                    <h1>University Course Details</h1>
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
+                            <li class="breadcrumb-item active">Create</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="text-end pt-2">
+                    <a href="{{ route('university.index') }}" class="btn btn-primary"><i class="fa-regular fa-eye"></i>
+                        View
+                        University</a>
+                </div>
+            </div>
             <form method="post" action="" enctype="multipart/form-data" class="row g-3 p-3">
                 @csrf
 
@@ -63,18 +62,16 @@
                 </div>
 
                 <div class="col-md-6 pb-3">
-                    <label for="subject" class="form-label">Subject<span
-                            class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="subject" name="subject"
-                        value="{{ old('subject') }}" required>
+                    <label for="subject" class="form-label">Subject<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="subject" name="subject" value="{{ old('subject') }}"
+                        required>
                     @error('subject')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
 
                 <div class="col-md-6 pb-3">
-                    <label for="course_fees" class="form-label">Course Fees<span
-                            class="text-danger">*</span></label>
+                    <label for="course_fees" class="form-label">Course Fees<span class="text-danger">*</span></label>
                     <input type="number" class="form-control" id="course_fees" name="course_fees"
                         value="{{ old('course_fees') }}" required>
                     @error('course_fees')
@@ -83,16 +80,18 @@
                 </div>
 
                 <div class="col-md-6 pb-3">
-                    <label for="course_duration" class="form-label">Course Duration<span class="text-danger">*</span></label>
-                    <input type="number" class="form-control" id="course_duration" name="course_duration" value="{{ old('course_duration') }}"
-                        required>
+                    <label for="course_duration" class="form-label">Course Duration<span
+                            class="text-danger">*</span></label>
+                    <input type="number" class="form-control" id="course_duration" name="course_duration"
+                        value="{{ old('course_duration') }}" required>
                     @error('course_duration')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
                 </div>
 
                 <div class="col-md-12 pb-3">
-                    <label for="subject_entry_eequirement" class="form-label">Subject Entry Rrequirement <small class="text-info">(optional)</small></label>
+                    <label for="subject_entry_eequirement" class="form-label">Subject Entry Rrequirement <small
+                            class="text-info">(optional)</small></label>
                     <textarea class="form-control" id="subject_entry_eequirement" name="subject_entry_eequirement" rows="3"></textarea>
                     @error('subject_entry_eequirement')
                         <span class="text-danger">{{ $message }}</span>
@@ -133,7 +132,8 @@
 
                 <div class="col-md-12" id="languageWrapper">
                     <div class="d-flex justify-content-between align-items-center">
-                        <label class="form-label">Language Proficiency Required <small class="text-info">(optional)</small></label>
+                        <label class="form-label">Language Proficiency Required <small
+                                class="text-info">(optional)</small></label>
                         <a href="javascript:void(0)" class="btn btn-primary" id="addLanguageRow"><i
                                 class="bi bi-plus-square"></i></a>
                     </div>
@@ -192,7 +192,7 @@
                 {{-- when not use this code then multi select not working --}}
                 <div class="d-none"><select class="js-example-basic-single form-select" id="language_id"></select></div>
                 <div class="d-none"><select class="js-example-basic-single form-select" id="campus_id"></select></div>
-                
+
 
                 <div class="col-12">
                     <button type="submit" class="btn btn-primary">Submit</button>
@@ -292,5 +292,5 @@
             });
         });
     </script>
-</script>
+    </script>
 @endsection

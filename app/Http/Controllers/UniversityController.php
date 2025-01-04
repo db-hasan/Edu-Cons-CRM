@@ -21,6 +21,12 @@ class UniversityController extends Controller
         return view('backend.admin.university.create', compact('countries'));
     }
 
+    public function editUniversity() {
+        $countries = Country::all();
+        return view('backend.admin.university.edit', compact('countries'));
+    }
+
+
     public function storeuniversity(Request $request): RedirectResponse
     {
         $request->validate([
@@ -44,16 +50,16 @@ class UniversityController extends Controller
     
 
 
-    public function edituniversity($id){
-        $data['states'] = State::where('status', 1)
-                            ->orderBy('id', 'desc')
-                            ->get();
-        $data['university'] = University::find($id);
-        if (!$data['university']) {
-            return redirect()->back();
-        }     
-        return view('backend.admin.university.edit', $data);
-    }
+    // public function edituniversity($id){
+    //     $data['states'] = State::where('status', 1)
+    //                         ->orderBy('id', 'desc')
+    //                         ->get();
+    //     $data['university'] = University::find($id);
+    //     if (!$data['university']) {
+    //         return redirect()->back();
+    //     }     
+    //     return view('backend.admin.university.edit', $data);
+    // }
 
     public function updateuniversity(Request $request, $id): RedirectResponse
     {
