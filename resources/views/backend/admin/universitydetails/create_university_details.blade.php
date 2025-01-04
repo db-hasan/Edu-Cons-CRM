@@ -2,7 +2,7 @@
 @section('content')
     <main id="main" class="main pt-0">
         <div class="card">
-            <div class="d-flex justify-content-between  bg-primary-subtle px-4 pt-3">
+            <div class="d-flex justify-content-between  bg-success-subtle px-4 pt-3">
                 <div class="pagetitle">
                     <h1>University Details</h1>
                     <nav>

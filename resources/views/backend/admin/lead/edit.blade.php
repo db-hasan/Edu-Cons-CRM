@@ -15,7 +15,7 @@
         <div class="col-xl-12">
 
             <div class="card">
-                <div class="d-flex justify-content-between  bg-primary-subtle px-4 pt-3">
+                <div class="d-flex justify-content-between  bg-success-subtle px-4 pt-3">
                     <div class="pagetitle">
                         <h1>Student Profile</h1>
                         <nav>

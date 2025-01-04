@@ -131,7 +131,7 @@
                                         <a href="" class="btn btn-success mx-1">
                                             <i class="bi bi-eye"></i>
                                         </a>
-                                    </td> 
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -151,7 +151,7 @@
                                     <th>Institute</th>
                                     <th>Year</th>
                                     <th>Duration</th>
-                                    <th >Document</th>
+                                    <th>Document</th>
                                 </tr>
                             </thead>
                             <tbody>

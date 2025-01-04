@@ -2,7 +2,7 @@
 @section('content')
     <main id="main" class="main pt-0">
         <div class="card">
-            <div class="d-flex justify-content-between  bg-primary-subtle px-4 pt-3">
+            <div class="d-flex justify-content-between  bg-success-subtle px-4 pt-3">
                 <div class="pagetitle">
                     <h1>University Details</h1>
                     <nav>
@@ -47,56 +47,29 @@
                                 style="width: 100px; height: auto;">
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-6 pagetitle py-4">
-                            <h1 class="mb-2">University Degree:</h1>
-                            <div class="row g-3 ps-1">
-                                <div class="col-lg-6">
-                                    <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
-                                </div>
+                    <div class="col-md-12 pagetitle py-4">
+                        <h1 class="mb-2">University Campus:</h1>
+                        <div class="row g-3 ps-1">
+                            <div class="col-md-6">
+                                <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
                             </div>
-                        </div>
-                        <div class="col-md-6 pagetitle py-4">
-                            <h1 class="mb-2">University Campus:</h1>
-                            <div class="row g-3 ps-1">
-                                <div class="col-lg-6">
-                                    <div class="bg-info-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="bg-info-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="bg-info-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="bg-info-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="bg-info-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="bg-info-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
-                                </div>
+                            <div class="col-md-6">
+                                <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
 
                 <div class="col-md-12">
@@ -153,6 +126,76 @@
                         <div class="">Vill- Behar prochim para, P.O- Behar Hat,, Shibganj,
                             Shibganj,
                             Bogura 5810</div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 pagetitle py-4">
+                    <h1 class="mb-2">University Degree:</h1>
+                    <div class="row g-3 ps-1">
+                        <div class="col-md-6">
+                            <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 pagetitle py-4">
+                    <h1 class="mb-2">University Subject:</h1>
+                    <div class="row g-3 ps-1">
+                        <div class="col-md-6">
+                            <div class="p-2">
+                                <label for="">Malaysia, Dhaka-Bangladesh</label>
+                                <a href="{{ route('university.edit') }}" class="text-danger px-1"><i
+                                        class="bi bi-pencil-square"></i> Edit</a>
+                                <a href="{{ route('university.edit') }}" class="text-primary px-1"><i
+                                        class="bi bi-eye"></i>
+                                    View</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-2">
+                                <label for="">Malaysia, Dhaka-Bangladesh</label>
+                                <a href="{{ route('university.edit') }}" class="text-danger px-1"><i
+                                        class="bi bi-pencil-square"></i> Edit</a>
+                                <a href="{{ route('university.edit') }}" class="text-primary px-1"><i
+                                        class="bi bi-eye"></i>
+                                    View</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-2">
+                                <label for="">Malaysia, Dhaka-Bangladesh</label>
+                                <a href="{{ route('university.edit') }}" class="text-danger px-1"><i
+                                        class="bi bi-pencil-square"></i> Edit</a>
+                                <a href="{{ route('university.edit') }}" class="text-primary px-1"><i
+                                        class="bi bi-eye"></i>
+                                    View</a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-2">
+                                <label for="">Malaysia, Dhaka-Bangladesh</label>
+                                <a href="{{ route('university.edit') }}" class="text-danger px-1"><i
+                                        class="bi bi-pencil-square"></i> Edit</a>
+                                <a href="{{ route('university.edit') }}" class="text-primary px-1"><i
+                                        class="bi bi-eye"></i>
+                                    View</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

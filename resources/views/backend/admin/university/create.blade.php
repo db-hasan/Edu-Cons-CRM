@@ -1,24 +1,23 @@
 @extends('backend.layouts')
 @section('content')
     <main id="main" class="main">
-        <div class="d-flex justify-content-between">
-            <div class="pagetitle">
-                <h1>New University</h1>
-                <nav>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Create</li>
-                    </ol>
-                </nav>
-            </div>
-            <div class="text-end pt-2">
-                <a href="{{ route('university.index') }}" class="btn btn-primary"><i class="fa-regular fa-eye"></i>
-                    View
-                    University</a>
-            </div>
-        </div>
-        <hr>
         <div class="card">
+            <div class="d-flex justify-content-between bg-success-subtle px-4 pt-3">
+                <div class="pagetitle">
+                    <h1>New University</h1>
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
+                            <li class="breadcrumb-item active">Create</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="text-end pt-2">
+                    <a href="{{ route('university.index') }}" class="btn btn-primary"><i class="fa-regular fa-eye"></i>
+                        View
+                        University</a>
+                </div>
+            </div>
             <form method="post" action="" enctype="multipart/form-data" class="row g-3 p-3">
                 @csrf
 

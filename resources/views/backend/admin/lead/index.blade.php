@@ -21,7 +21,7 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th>ID</th>                        
+                        <th>ID</th>
                         <th>Resource</th>
                         <th>Name</th>
                         <th>Number</th>
@@ -41,19 +41,18 @@
                         <td>shibonj-bogura</td>
                         <td>5810</td>
                         <td class="d-flex justify-content-end">
-                            <a href="{{route('lead.view')}}" class="btn btn-success mx-1">
+                            <a href="{{ route('lead.view') }}" class="btn btn-success mx-1">
                                 <i class="bi bi-eye"></i>
                             </a>
-                            <a href="{{route('lead.edit')}}" class="btn btn-primary mx-1">
+                            <a href="{{ route('lead.edit') }}" class="btn btn-primary mx-1">
                                 <i class="bi bi-pencil-square"></i>
                             </a>
                             <form class="deleteForm" action="" method="POST">
                                 @csrf
                                 @method('DELETE')
-                                <button type="button" class="btn btn-danger btnDelete"><i
-                                        class="bi bi-trash"></i></button>
+                                <button type="button" class="btn btn-danger btnDelete"><i class="bi bi-trash"></i></button>
                             </form>
-                            
+
                         </td>
                     </tr>
                 </tbody>
