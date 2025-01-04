@@ -20,8 +20,8 @@
             </div>
 
             <div class="p-4">
-                <div class="d-flex align-items-center justify-content-between">
-                    <h5 class="card-title">Address Details</h5>
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <h5 class="card-title"></h5>
                     <div>
                         <a href="" class="btn btn-primary edit-btn" id="edit-address">
                             <i class="bi bi-pencil-square"></i> Edit
@@ -31,25 +31,128 @@
                         </a>
                     </div>
                 </div>
-                <div class="row g-3 show-section" id="show-address">
-                    <div class="col-md-12">
-                        <label class="form-label">Address</label>
+                <div class="row show-section" id="show-address">
+                    <div class="d-flex justify-content-between">
+                        <div class="">
+                            <h2 class="mb-0">Malaysia University</h2>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-crosshair px-2"></i><strong>Country:</strong> Malaysia, Dhaka-Bangladesh
+                                </li>
+                                <li><i class="bi bi-bar-chart px-2"></i><strong>Ranking:</strong> 10</li>
+                                <li><i class="bi bi-coin px-2"></i><strong>Application Fees: </strong> 1000</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img src="{{ asset('images/hasan.jpg') }}" alt="Profile Picture"
+                                style="width: 100px; height: auto;">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 pagetitle py-4">
+                            <h1 class="mb-2">University Degree:</h1>
+                            <div class="row g-3 ps-1">
+                                <div class="col-lg-6">
+                                    <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="bg-success-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 pagetitle py-4">
+                            <h1 class="mb-2">University Campus:</h1>
+                            <div class="row g-3 ps-1">
+                                <div class="col-lg-6">
+                                    <div class="bg-info-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="bg-info-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="bg-info-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="bg-info-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="bg-info-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="bg-info-subtle p-2">Malaysia, Dhaka-Bangladesh</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-md-12">
+                    <div class="pagetitle card p-4">
+                        <h1 class="mb-3">Language Proficiency Qualification:</h1>
+                        <div class="custom-scrollbar-table">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th class="align-top">Proficiency Test</th>
+                                        <th class="align-top text-end">Overall <br> Score</th>
+                                        <th class="align-top text-end">Listening <br> Score</th>
+                                        <th class="align-top text-end">Reading <br> Score</th>
+                                        <th class="align-top text-end">Writing <br> Score</th>
+                                        <th class="align-top text-end">Speaking <br> Score</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>IELTS</td>
+                                        <td>4.00</td>
+                                        <td>2.00</td>
+                                        <td>3.00</td>
+                                        <td>4.00</td>
+                                        <td>4.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="card p-4">
+                        <label class="form-label"><strong>Scholarship:</strong></label>
                         <div class="">Vill- Behar prochim para, P.O- Behar Hat,, Shibganj,
                             Shibganj,
                             Bogura 5810</div>
                     </div>
-                    <div class="col-md-6">
-                        <label class="form-label">Nationality</label>
-                        <div class="">Bangladesh</div>
-                    </div>
-                    <div class="col-md-6">
-                        <label class="form-label">National Id</label>
-                        <div class="">120 251 2728</div>
-                    </div>
+                </div>
 
-                    <div class="col-md-12">
-                        <label class="form-label">Document</label>
-                        <div class="">View</div>
+                <div class="col-md-12">
+                    <div class="card p-4">
+                        <label class="form-label"><strong>USP:</strong></label>
+                        <div class="">Vill- Behar prochim para, P.O- Behar Hat,, Shibganj,
+                            Shibganj,
+                            Bogura 5810</div>
+                    </div>
+                </div>
+
+                <div class="col-md-12">
+                    <div class="card p-4">
+                        <label class="form-label"><strong>Academic Entry Rrequirement:</strong></label>
+                        <div class="">Vill- Behar prochim para, P.O- Behar Hat,, Shibganj,
+                            Shibganj,
+                            Bogura 5810</div>
                     </div>
                 </div>
             </div>
