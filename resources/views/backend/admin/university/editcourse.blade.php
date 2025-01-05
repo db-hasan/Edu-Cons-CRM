@@ -202,4 +202,94 @@
         </div>
     </main>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Add new row
+            $('#addCampusRow').click(function(e) {
+                e.preventDefault();
+                // Clone the first createCampusRow div
+                let newRow = $('.createCampusRow').first().clone();
+                // Clear the input fields of the cloned row
+                newRow.find('input').val('');
+                // Remove the addCampusRow button from the cloned row
+                newRow.find('#addCampusRow').remove();
+                // Add a delete button to the cloned row
+                newRow.append(
+                    '<a href="javascript:void(0)" class="btn btn-danger deleteCampusRow"><i class="bi bi-trash"></i></a>'
+                );
+                // Append the cloned row to the wrapper
+                $('#campusWrapper').append(newRow);
+            });
+
+            // Delete a row
+            $(document).on('click', '.deleteCampusRow', function(e) {
+                e.preventDefault();
+                // Only remove the row if there is more than one
+                if ($('.createCampusRow').length > 1) {
+                    $(this).closest('.createCampusRow').remove();
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            // Add new row
+            $('#addIntakeRow').click(function(e) {
+                e.preventDefault();
+                // Clone the first createCampusRow div
+                let newRow = $('.createIntakeRow').first().clone();
+                // Clear the input fields of the cloned row
+                newRow.find('input').val('');
+                // Remove the addCampusRow button from the cloned row
+                newRow.find('#addIntakeRow').remove();
+                // Add a delete button to the cloned row
+                newRow.append(
+                    '<a href="javascript:void(0)" class="btn btn-danger deleteIntakeRow"><i class="bi bi-trash"></i></a>'
+                );
+                // Append the cloned row to the wrapper
+                $('#intakeWrapper').append(newRow);
+            });
+
+            // Delete a row
+            $(document).on('click', '.deleteIntakeRow', function(e) {
+                e.preventDefault();
+                // Only remove the row if there is more than one
+                if ($('.createIntakeRow').length > 1) {
+                    $(this).closest('.createIntakeRow').remove();
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            // Add new row
+            $('#addLanguageRow').click(function(e) {
+                e.preventDefault();
+
+                // Clone the first row
+                let newRow = $('.createLanguageRow').first().clone();
+
+                // Clear input values
+                newRow.find('input').val('');
+                newRow.find('select').val('');
+
+                // Remove the 'd-none' class from the delete button for the new row
+                newRow.find('.deleteLanguageRow').removeClass('d-none');
+
+                // Append the new row to the wrapper
+                $('#languageWrapper').append(newRow);
+            });
+
+            // Delete row
+            $(document).on('click', '.deleteLanguageRow', function(e) {
+                e.preventDefault();
+
+                // Remove the row only if there are more than one
+                if ($('.createLanguageRow').length > 1) {
+                    $(this).closest('.createLanguageRow').remove();
+                }
+            });
+        });
+    </script>
 @endsection
