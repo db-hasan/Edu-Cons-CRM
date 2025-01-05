@@ -8,15 +8,8 @@ use App\Http\Controllers\LocationController;
 use App\Http\Controllers\BranchController;
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\UploadController;
-use App\Http\Controllers\CountryController;
-use App\Http\Controllers\StateController;
 use App\Http\Controllers\UniversityController;
 use App\Http\Controllers\UniversityDetailsController;
-use App\Http\Controllers\CampusController;
-use App\Http\Controllers\DegreeController;
-use App\Http\Controllers\SubjectController;
-use App\Http\Controllers\DegreeMappingController;
-use App\Http\Controllers\SubjectMappingController;
 
 
 
@@ -70,7 +63,14 @@ Route::group(['middleware'=>'isAdmin'],function(){
 
     Route::get('university-index',[UniversityController::class, 'indexUniversity'])->name('university.index');
     Route::get('university-insert',[UniversityController::class, 'createUniversity'])->name('university.create');
+    Route::post('university-insert',[UniversityController::class, 'storeUniversity'])->name('university.store');
     Route::get('university-update',[UniversityController::class, 'editUniversity'])->name('university.edit');
+    Route::put('university-update',[UniversityController::class, 'updateUniversity'])->name('university.update');
+    Route::get('university-view',[UniversityController::class, 'viewUniversity'])->name('university.view');
+
+    Route::get('university-course-view',[UniversityController::class, 'viewUniversityCourse'])->name('university.course.view');
+    Route::get('university-course-edit',[UniversityController::class, 'editUniversityCourse'])->name('university.course.edit');
+    Route::put('university-course-update',[UniversityController::class, 'updateUniversityCourse'])->name('university.course.update');
 
     Route::get('university-details-insert',[UniversityDetailsController::class, 'createUniversityiDetails'])->name('university.details.create');
     Route::get('course-details-insert',[UniversityDetailsController::class, 'createCourseiDetails'])->name('course.details.create');
