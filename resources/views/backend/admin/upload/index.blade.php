@@ -50,7 +50,7 @@
         </div>
         <hr>
         <div class="custom-scrollbar-table">
-            <table class="table">
+            <table id="myTable" class="display" style="width:100%">
                 <thead>
                     <tr>
                         <th>

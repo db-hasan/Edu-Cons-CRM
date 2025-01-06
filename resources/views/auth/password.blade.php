@@ -1,20 +1,20 @@
 @extends('backend.layouts')
 @section('content')
-    <main id="main" class="main">
-
-        <div class="d-flex justify-content-between align-items-top">
-            <div class="pagetitle mb-0">
-                <h1>Profile</h1>
-                <nav>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                        <li class="breadcrumb-item">Users</li>
-                        <li class="breadcrumb-item active">Profile</li>
-                    </ol>
-                </nav>
+    <main id="main" class="main pt-0">
+        <div class="bg-success-subtle px-4 pt-3">
+            <div class="d-flex justify-content-between align-items-top">
+                <div class="pagetitle mb-0">
+                    <h1>Profile</h1>
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item">Users</li>
+                            <li class="breadcrumb-item active">Profile</li>
+                        </ol>
+                    </nav>
+                </div>
             </div>
         </div>
-
 
         <section class="section profile">
             <div class="row">
@@ -34,7 +34,6 @@
                 </div>
 
                 <div class="col-xl-8">
-
                     <div class="card">
                         <div class="card-body pt-3">
                             <!-- Bordered Tabs -->
@@ -52,11 +51,8 @@
                             </ul>
 
                             <div class="tab-content pt-2">
-
                                 <div class="tab-pane fade show active profile-overview" id="profile-overview">
-
                                     <h5 class="card-title"></h5>
-
                                     <div class="row">
                                         <div class="col-lg-3 col-md-4 label ">Full Name</div>
                                         <div class="col-lg-9 col-md-8">{{ $users->name }}</div>
@@ -66,7 +62,7 @@
                                         <div class="col-lg-3 col-md-4 label">Job Title</div>
                                         @if (!empty($users->getRoleNames()))
                                             @foreach ($users->getRoleNames() as $name)
-                                            <div class="col-lg-9 col-md-8">{{ $name }}</div>
+                                                <div class="col-lg-9 col-md-8">{{ $name }}</div>
                                             @endforeach
                                         @endif
                                     </div>
@@ -75,8 +71,6 @@
                                         <div class="col-lg-3 col-md-4 label">Email</div>
                                         <div class="col-lg-9 col-md-8">{{ $users->email }}</div>
                                     </div>
-
-
 
                                     <div class="row">
                                         <div class="col-lg-3 col-md-4 label">Phone</div>
@@ -97,9 +91,7 @@
                                             @endif
                                         </div>
                                     </div>
-
                                 </div>
-
 
                                 <div class="tab-pane fade pt-3" id="profile-change-password">
                                     <!-- Change Password Form -->

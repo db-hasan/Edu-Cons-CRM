@@ -12,13 +12,13 @@
                 </nav>
             </div>
             <div class="text-end pt-2">
-                <a href="{{ route('role.create')}}" class="btn btn-primary"><i class="fas fa-plus-circle"></i>
+                <a href="{{ route('role.create') }}" class="btn btn-primary"><i class="fas fa-plus-circle"></i>
                     Add Role</a>
             </div>
         </div>
         <hr>
         <div class="custom-scrollbar-table">
-            <table class="table table-striped">
+            <table id="myTable" class="display" style="width:100%">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -30,17 +30,18 @@
                 <tbody>
                     @foreach ($roles as $role)
                         <tr>
-                            <td>{{$loop->iteration}}</td>
-                            <td>{{ $role->name}}</td>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $role->name }}</td>
                             <td>
-                                @if(!empty($role->getPermissionNames()))
-                                    @foreach($role->getPermissionNames() as $name)
-                                    <label class="badge rounded-pill text-bg-success">{{ $name }}</label>
+                                @if (!empty($role->getPermissionNames()))
+                                    @foreach ($role->getPermissionNames() as $name)
+                                        <label class="badge rounded-pill text-bg-success">{{ $name }}</label>
                                     @endforeach
                                 @endif
                             </td>
                             <td class="d-flex justify-content-end">
-                                <a href="{{ route('role.edit', $role->id) }}" class="btn btn-primary mx-1"><i class="bi bi-pencil-square"></i></a>
+                                <a href="{{ route('role.edit', $role->id) }}" class="btn btn-primary mx-1"><i
+                                        class="bi bi-pencil-square"></i></a>
                             </td>
                         </tr>
                     @endforeach

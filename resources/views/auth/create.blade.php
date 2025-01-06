@@ -1,25 +1,25 @@
 @extends('backend.layouts')
 @section('content')
-    <main id="main" class="main">
-        <div class="d-flex justify-content-between">
-            <div class="pagetitle">
-                <h1>Create User</h1>
-                <nav>
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ url('/dashboard') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Create</li>
-                    </ol>
-                </nav>
-            </div>
-            <div class="text-end pt-2">
-                <a href="{{ route('user.index') }}" class="btn btn-primary"><i class="fa-regular fa-eye"></i>
-                    View
-                    User</a>
-            </div>
-        </div>
-        <hr>
+    <main id="main" class="main pt-0">
         <div class="card">
-            <form method="post" action="{{ route('user.store') }}" enctype="multipart/form-data" class="row g-3 p-3 needs-validation" novalidate>
+            <div class="d-flex justify-content-between bg-success-subtle px-4 pt-3">
+                <div class="pagetitle">
+                    <h1>Create User</h1>
+                    <nav>
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{{ url('/dashboard') }}">Home</a></li>
+                            <li class="breadcrumb-item active">Create</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="text-end pt-2">
+                    <a href="{{ route('user.index') }}" class="btn btn-primary"><i class="fa-regular fa-eye"></i>
+                        View
+                        User</a>
+                </div>
+            </div>
+            <form method="post" action="{{ route('user.store') }}" enctype="multipart/form-data"
+                class="row g-3 p-3 needs-validation" novalidate>
                 @csrf
 
                 <div class="col-md-6 pb-3">
@@ -68,8 +68,8 @@
 
                 <div class="col-md-6 pb-3">
                     <label for="new_password" class="form-label">New Password<span class="text-danger">*</span></label>
-                    <input type="password" class="form-control" id="new_password" name="new_password" value="" required
-                        placeholder="Uppercase lowercase number with special character">
+                    <input type="password" class="form-control" id="new_password" name="new_password" value=""
+                        required placeholder="Uppercase lowercase number with special character">
                     <span class="text-danger" id="password_suggestion"></span>
                     @error('new_password')
                         <span class="text-danger">{{ $message }}</span>
@@ -115,5 +115,4 @@
             });
         });
     </script>
-
 @endsection

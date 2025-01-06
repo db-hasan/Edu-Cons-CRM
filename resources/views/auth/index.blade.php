@@ -18,7 +18,7 @@
         </div>
         <hr>
         <div class="custom-scrollbar-table">
-            <table class="table">
+            <table id="myTable" class="display" style="width:100%">
                 <thead>
                     <tr>
                         <th>ID</th>
@@ -37,11 +37,11 @@
                             <td>{{ $user->name }}</td>
                             <td>
                                 @if (!empty($user->getRoleNames()))
-                                  @foreach ($user->getRoleNames() as $name)
-                                     <label class="badge rounded-pill text-bg-primary">{{ $name }}</label>
-                                  @endforeach
+                                    @foreach ($user->getRoleNames() as $name)
+                                        <label class="badge rounded-pill text-bg-primary">{{ $name }}</label>
+                                    @endforeach
                                 @endif
-                              </td>
+                            </td>
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->number }}</td>
                             <td>
