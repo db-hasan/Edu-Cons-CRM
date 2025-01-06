@@ -40,7 +40,7 @@
                         <td>info@gmail.com</td>
                         <td>shibonj-bogura</td>
                         <td>5810</td>
-                        <td class="d-flex justify-content-end">
+                        <td class="d-flex justify-content-end align-items-center">
                             <a href="{{ route('lead.view') }}" class="btn btn-success mx-1">
                                 <i class="bi bi-eye"></i>
                             </a>
