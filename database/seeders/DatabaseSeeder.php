@@ -10,6 +10,9 @@ use Spatie\Permission\Models\Role;
 use App\Models\User;
 use App\Models\Branch;
 use App\Models\Country;
+use App\Models\Degree;
+use App\Models\Language;
+use App\Models\Intake;
 
 class DatabaseSeeder extends Seeder
 {
@@ -70,42 +73,21 @@ class DatabaseSeeder extends Seeder
         'Venezuela', 'Vietnam', 'Yemen', 'Zambia', 'Zimbabwe'
     ];
 
-    
+    private $intakes = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ];
 
-    // private $degrees = [
-    //     "SSC",
-    //     "HSC",
-    //     "Diploma",
-    //     "Bachelor's",
-    //     "Master's",
-    //     "B.A",
-    //     "B.Sc",
-    //     "B.S.S",
-    //     "B.B.A",
-    //     "M.A",
-    //     "M.Sc",
-    //     "M.S.S",
-    //     "MBA",
-    //     "PhD",
-    // ];
-
-    // private $subjects = [
-    //     "Arts",
-    //     "Science",
-    //     "Commerce",
-    //     "Bangla",
-    //     "English",
-    //     "Math",
-    // ];
-
-    // private $countries = [
-    //     'United Kingdom',
-    //     'United States',
-    //     'Australia',
-    //     'Canada',
-    //     'Malaysia',
-    //     'Others',
-    // ];
 
     // private $branches = [
     //     'Dhaka',
@@ -130,16 +112,20 @@ class DatabaseSeeder extends Seeder
             Permission::create(['name' => $permission]);
         };
 
+        foreach ($this->intakes as $intake) {
+            Intake::create(['name' => $intake]);
+        };
+
         foreach ($this->countries as $country) {
             Country::create(['name' => $country]);
         };
 
-        // foreach ($this->degrees as $degree) {
-        //     Degree::create(['name' => $degree]);
-        // };
-        // foreach ($this->subjects as $subject) {
-        //     Subject::create(['name' => $subject]);
-        // };
+        $this->call([
+            DegreeSeeder::class,
+            LanguageSeeder::class,
+        ]);
+
+        
        
 
         // foreach ($this->branches as $index => $branch) {

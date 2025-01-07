@@ -186,13 +186,13 @@
                 </a>
                 <ul id="academic-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="">
+                        <a href="{{ route('degree.index') }}">
                             <i class="bi bi-circle"></i><span>Degree</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
-                            <i class="bi bi-circle"></i><span>Subject</span>
+                        <a href="{{ route('language.index') }}">
+                            <i class="bi bi-circle"></i><span>Language</span>
                         </a>
                     </li>
                 </ul>

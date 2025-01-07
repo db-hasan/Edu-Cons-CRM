@@ -5,6 +5,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\LocationController;
+use App\Http\Controllers\DegreeController;
+use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\BranchController;
 use App\Http\Controllers\LeadController;
 use App\Http\Controllers\UploadController;
@@ -60,6 +62,18 @@ Route::group(['middleware'=>'isAdmin'],function(){
 
     Route::get('branch-index',[BranchController::class, 'indexBranch'])->name('branch.index');
     Route::get('branch-insert',[BranchController::class, 'createBranch'])->name('branch.create');
+
+    Route::get('degree-index',[DegreeController::class, 'indexDegree'])->name('degree.index');
+    Route::get('degree-insert',[DegreeController::class,'createDegree'])->name('degree.create');
+    Route::post('degree-insert',[DegreeController::class,'storeDegree'])->name('degree.store');
+    Route::get('degree-update',[DegreeController::class,'editDegree'])->name('degree.edit');
+    Route::put('degree-update',[DegreeController::class,'updateDegree'])->name('degree.update');
+
+    Route::get('language-index',[LanguageController::class, 'indexLanguage'])->name('language.index');
+    Route::get('language-insert',[LanguageController::class,'createLanguage'])->name('language.create');
+    Route::post('language-insert',[LanguageController::class,'storeLanguage'])->name('language.store');
+    Route::get('language-update',[LanguageController::class,'editLanguage'])->name('language.edit');
+    Route::put('language-update',[LanguageController::class,'updateLanguage'])->name('language.update');
 
     Route::get('university-index',[UniversityController::class, 'indexUniversity'])->name('university.index');
     Route::get('university-insert',[UniversityController::class, 'createUniversity'])->name('university.create');
