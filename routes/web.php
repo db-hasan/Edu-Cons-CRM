@@ -48,8 +48,8 @@ Route::group(['middleware'=>'isAdmin'],function(){
     Route::get('role-update/{id}',[RoleController::class,'editrole'])->name('role.edit');
     Route::put('role-update/{id}',[RoleController::class,'updaterole'])->name('role.update');
 
-    Route::get('country-index',[CountryController::class, 'indexCountry'])->name('country.index');
-    Route::get('country-insert',[CountryController::class, 'createCountry'])->name('country.create');
+    Route::get('country-index',[LocationController::class, 'indexCountry'])->name('country.index');
+    Route::get('country-insert',[LocationController::class, 'createCountry'])->name('country.create');
 
     Route::get('state-index',[LocationController::class, 'indexState'])->name('state.index');
     Route::get('state-insert',[LocationController::class, 'createState'])->name('state.create');
@@ -59,9 +59,15 @@ Route::group(['middleware'=>'isAdmin'],function(){
 
     Route::get('region-index',[BranchController::class, 'indexRegion'])->name('region.index');
     Route::get('region-insert',[BranchController::class, 'createRegion'])->name('region.create');
+    Route::post('region-insert',[BranchController::class,'storeRegion'])->name('region.store');
+    Route::get('region-update',[BranchController::class,'editRegion'])->name('region.edit');
+    Route::put('region-update',[BranchController::class,'updateRegion'])->name('region.update');
 
     Route::get('branch-index',[BranchController::class, 'indexBranch'])->name('branch.index');
     Route::get('branch-insert',[BranchController::class, 'createBranch'])->name('branch.create');
+    Route::post('branch-insert',[BranchController::class,'storeBranch'])->name('branch.store');
+    Route::get('branch-update',[BranchController::class,'editBranch'])->name('branch.edit');
+    Route::put('branch-update',[BranchController::class,'updateBranch'])->name('branch.update');
 
     Route::get('degree-index',[DegreeController::class, 'indexDegree'])->name('degree.index');
     Route::get('degree-insert',[DegreeController::class,'createDegree'])->name('degree.create');

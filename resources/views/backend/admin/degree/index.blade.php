@@ -22,30 +22,24 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Name</th>
+                        <th>Short Name</th>
+                        <th>Full Name</th>
                         <th>Status</th>
                         <th class="text-end">Acction</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>01</td>
-                        <td>Malaysia</td>
-                        <td>Active</td>
-                        <td class="d-flex justify-content-end">
-                            <a href="{{ route('degree.edit') }}" class="btn btn-primary mx-1"><i
-                                    class="bi bi-pencil-square"></i></a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>01</td>
-                        <td>Malaysia</td>
-                        <td>Active</td>
-                        <td class="d-flex justify-content-end">
-                            <a href="{{ route('degree.edit') }}" class="btn btn-primary mx-1"><i
-                                    class="bi bi-pencil-square"></i></a>
-                        </td>
-                    </tr>
+                    @foreach ($degrees as $item)
+                        <tr>
+                            <td>{{ $item->id }}</td>
+                            <td>{{ $item->id }}</td>
+                            <td>Active</td>
+                            <td class="d-flex justify-content-end">
+                                <a href="{{ route('degree.edit') }}" class="btn btn-primary mx-1"><i
+                                        class="bi bi-pencil-square"></i></a>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
 

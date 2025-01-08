@@ -12,7 +12,8 @@ use Session;
 class DegreeController extends Controller
 {
     public function indexDegree() {
-        return view('backend.admin.degree.index');
+        $degrees = Degree::all();
+        return view('backend.admin.degree.index', compact('degrees'));
     }
     
     public function createDegree() {

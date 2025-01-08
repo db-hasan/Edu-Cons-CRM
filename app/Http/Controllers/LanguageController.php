@@ -12,7 +12,8 @@ use Session;
 class LanguageController extends Controller
 {
     public function indexLanguage() {
-        return view('backend.admin.language.index');
+        $languages = Language::all();
+        return view('backend.admin.language.index', compact('languages'));
     }
     
     public function createLanguage() {

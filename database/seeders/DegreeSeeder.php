@@ -112,14 +112,6 @@ class DegreeSeeder extends Seeder
         "ElecCert"=> "Electrician Certification",
         "PlumbCert"=> "Plumbing Certification",
         "HVAC"   => "Heating, Ventilation, and Air Conditioning Technician",
-        
-        // Language and Miscellaneous
-        "TOEFL" => "Test of English as a Foreign Language",
-        "IELTS" => "International English Language Testing System",
-        "DELE"  => "Diplomas of Spanish as a Foreign Language",
-        "DALF"  => "Diploma in Advanced French",
-        "JLPT"  => "Japanese Language Proficiency Test",
-        "Goethe"=> "Goethe-Zertifikat (German Language Certification)"
     ];
 
     public function run(): void

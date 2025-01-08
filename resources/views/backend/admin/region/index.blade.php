@@ -3,7 +3,7 @@
     <main id="main" class="main">
         <div class="d-flex justify-content-between">
             <div class="pagetitle">
-                <h1>Language List</h1>
+                <h1>Region List</h1>
                 <nav>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
@@ -12,8 +12,8 @@
                 </nav>
             </div>
             <div class="text-end pt-2">
-                <a href="{{ route('language.create') }}" class="btn btn-primary"><i class="fas fa-plus-circle"></i>
-                    Add Language</a>
+                <a href="{{ route('region.create') }}" class="btn btn-primary"><i class="fas fa-plus-circle"></i>
+                    Add Region</a>
             </div>
         </div>
         <hr>
@@ -22,25 +22,23 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Short Name</th>
-                        <th>Full Name</th>
+                        <th>Country</th>
+                        <th>Region</th>
                         <th>Status</th>
                         <th class="text-end">Acction</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($languages as $item)
-                        <tr>
-                            <td>{{ $item->id }}</td>
-                            <td>{{ $item->short_name }}</td>
-                            <td>{{ $item->full_name }}</td>
-                            <td>Active</td>
-                            <td class="d-flex justify-content-end">
-                                <a href="{{ route('language.edit') }}" class="btn btn-primary mx-1"><i
-                                        class="bi bi-pencil-square"></i></a>
-                            </td>
-                        </tr>
-                    @endforeach
+                    <tr>
+                        <td>01</td>
+                        <td>Bangladesh</td>
+                        <td>North Bengal</td>
+                        <td>Active</td>
+                        <td class="d-flex justify-content-end">
+                            <a href="{{ route('region.edit') }}" class="btn btn-primary mx-1"><i
+                                    class="bi bi-pencil-square"></i></a>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
 

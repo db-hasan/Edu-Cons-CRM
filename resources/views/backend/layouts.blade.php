@@ -227,17 +227,12 @@
                 </a>
                 <ul id="brnach-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="">
-                            <i class="bi bi-circle"></i><span>Country</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="">
+                        <a href="{{ route('region.index') }}">
                             <i class="bi bi-circle"></i><span>Region</span>
                         </a>
                     </li>
                     <li>
-                        <a href="">
+                        <a href="{{ route('branch.index') }}">
                             <i class="bi bi-circle"></i><span>Branch</span>
                         </a>
                     </li>
