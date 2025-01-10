@@ -23,8 +23,12 @@
 
                 <div class="col-md-12 pb-3">
                     <label for="name" class="form-label">Role Name<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}"
-                        required>
+                    <select class="form-select" name="name">
+                        <option selected disabled>Select Role</option>
+                        @foreach ($rolenames as $rolename)
+                            <option value="{{ $rolename->name }}">{{ $rolename->name }}</option>
+                        @endforeach
+                    </select>
                     @error('name')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror

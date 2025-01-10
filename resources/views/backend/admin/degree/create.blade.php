@@ -18,7 +18,8 @@
                         Degree</a>
                 </div>
             </div>
-            <form method="post" action="" enctype="multipart/form-data" class="row g-3 p-3">
+            <form method="" action="" enctype="multipart/form-data" class="row g-3 p-3 needs-validation"
+                novalidate>
                 @csrf
 
                 <div class="col-md-12 pb-3">
@@ -28,6 +29,7 @@
                     @error('degree')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-12">

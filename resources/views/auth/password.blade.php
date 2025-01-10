@@ -95,7 +95,8 @@
 
                                 <div class="tab-pane fade pt-3" id="profile-change-password">
                                     <!-- Change Password Form -->
-                                    <form method="post" action="" enctype="multipart/form-data" class="row g-3 p-3">
+                                    <form method="post" action="" enctype="multipart/form-data"
+                                        class="row g-3 p-3 needs-validation" novalidate>
                                         @csrf
 
                                         <div class="row mb-3">
@@ -107,6 +108,7 @@
                                                 @error('old_password')
                                                     <span class="text-danger">{{ $message }}</span>
                                                 @enderror
+                                                <div class="invalid-feedback"></div>
                                             </div>
                                         </div>
 
@@ -119,6 +121,7 @@
                                                 @error('new_password')
                                                     <span class="text-danger">{{ $message }}</span>
                                                 @enderror
+                                                <div class="invalid-feedback"></div>
                                             </div>
                                         </div>
 
@@ -132,6 +135,7 @@
                                                 @error('new_password_confirmation')
                                                     <span class="text-danger">{{ $message }}</span>
                                                 @enderror
+                                                <div class="invalid-feedback"></div>
                                             </div>
                                         </div>
 

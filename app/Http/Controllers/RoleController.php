@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Spatie\Permission\Models\Permission;
 use Spatie\Permission\Models\Role;
 use Illuminate\Support\Facades\DB;
+use App\Models\RoleModel;
 use Exception;
 
 class RoleController extends Controller
@@ -20,8 +21,9 @@ class RoleController extends Controller
         return view('backend.admin.role.index',compact('roles'));
     }
     public function createrole() {
+        $rolenames = RoleModel::all();
         $permissions = Permission::all();
-        return view('backend.admin.role.create', compact('permissions'));
+        return view('backend.admin.role.create', compact('rolenames', 'permissions'));
     }
     
     public function storerole(Request $request)

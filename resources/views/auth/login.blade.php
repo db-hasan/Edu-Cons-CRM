@@ -20,18 +20,27 @@
                                         <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
                                         <p class="text-center small">Enter your Email & password to login</p>
                                     </div>
-                                    <form method="POST" action="{{ route('admin.login') }}" class="row g-3">
+                                    <form method="POST" action="{{ route('admin.login') }}"
+                                        class="row g-3 needs-validation" novalidate>
                                         @csrf
                                         @method('POST')
                                         <div class="col-md-12">
                                             <label for="email" class="form-label">Email</label>
                                             <input type="email" class="form-control" id="email" name="email"
                                                 required>
+                                            @error('email')
+                                                <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                            <div class="invalid-feedback"></div>
                                         </div>
                                         <div class="col-md-12">
                                             <label for="password" class="form-label">Password</label>
                                             <input type="password" class="form-control" id="password" name="password"
                                                 required>
+                                            @error('password')
+                                                <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                            <div class="invalid-feedback"></div>
                                         </div>
                                         <div class="col-12">
                                             <div class="form-check">

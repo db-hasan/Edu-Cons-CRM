@@ -18,7 +18,8 @@
                         Degree</a>
                 </div>
             </div>
-            <form method="post" action="" enctype="multipart/form-data" class="row g-3 p-3">
+            <form method="post" action="" enctype="multipart/form-data" class="row g-3 p-3 needs-validation"
+                novalidate>
                 @csrf
                 <div class="col-md-8 pb-3">
                     <label for="degree" class="form-label">Degree <span class="text-danger">*</span></label>
@@ -27,6 +28,7 @@
                     @error('degree')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="col-md-4">
                     <label for="status" class="form-label">Status<span class="text-danger">*</span></label>
@@ -37,6 +39,7 @@
                     @error('status')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-12">

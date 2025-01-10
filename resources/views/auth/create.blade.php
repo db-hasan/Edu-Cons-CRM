@@ -34,8 +34,7 @@
 
                 <div class="col-md-6">
                     <label for="roles" class="form-label">Role<span class="text-danger">*</span></label>
-                    {{-- <select class="form-control multiple" multiple name="roles[]"> --}}
-                    <select class="form-select" name="roles[]" required>
+                    <select class="form-select" name="roles" required>
                         <option selected disabled value="">Select Role</option>
                         @foreach ($roles as $role)
                             <option value="{{ $role }}">{{ $role }}</option>

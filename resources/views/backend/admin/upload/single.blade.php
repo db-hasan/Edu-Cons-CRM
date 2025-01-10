@@ -17,7 +17,8 @@
                         View lead</a>
                 </div>
             </div>
-            <form method="post" action="" enctype="multipart/form-data" class="row g-3 p-3">
+            <form method="post" action="" enctype="multipart/form-data" class="row g-3 p-3 needs-validation"
+                novalidate>
                 @csrf
 
                 <div class="col-md-6 pb-3">
@@ -30,6 +31,7 @@
                     @error('country_id')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="col-md-6 pb-3">
                     <label for="country_id" class="form-label">Consultant <span class="text-danger">*</span></label>
@@ -41,6 +43,7 @@
                     @error('country_id')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-md-6 pb-3">
@@ -53,6 +56,7 @@
                     @error('source_id')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-md-6 pb-3">
@@ -62,7 +66,9 @@
                     @error('name')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
+
                 <div class="col-md-6 pb-3">
                     <label for="number" class="form-label">Number<span class="text-danger">*</span></label>
                     <input type="number" class="form-control" id="number" name="number" value="{{ old('number') }}"
@@ -70,7 +76,9 @@
                     @error('number')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
+
                 <div class="col-md-6 pb-3">
                     <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
                     <input type="email" class="form-control" id="email" name="email" value="{{ old('email') }}"
@@ -78,6 +86,7 @@
                     @error('email')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-12">

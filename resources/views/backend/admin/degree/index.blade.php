@@ -32,7 +32,8 @@
                     @foreach ($degrees as $item)
                         <tr>
                             <td>{{ $item->id }}</td>
-                            <td>{{ $item->id }}</td>
+                            <td>{{ $item->short_name }}</td>
+                            <td>{{ $item->full_name }}</td>
                             <td>Active</td>
                             <td class="d-flex justify-content-end">
                                 <a href="{{ route('degree.edit') }}" class="btn btn-primary mx-1"><i

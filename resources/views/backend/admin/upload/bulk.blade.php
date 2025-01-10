@@ -27,16 +27,22 @@
                         </span>
                     </label>
                 </div>
-                <div class="row g-4">
+                <form method="post" action="" enctype="multipart/form-data" class="row g-4 needs-validation"
+                    novalidate>
                     <div class="col pb-3">
                         <label for="bulk" class="form-label">Please Upload Excel file<span
                                 class="text-danger">*</span></label>
                         <input type="file" class="form-control" name="bulk" required>
+                        @error('bulk')
+                            <span class="text-danger">{{ $message }}</span>
+                        @enderror
+                        <div class="invalid-feedback"></div>
                     </div>
+
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
 

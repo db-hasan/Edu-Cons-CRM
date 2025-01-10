@@ -130,13 +130,14 @@
                 </div>
 
                 <div class="d-none" id="update-university">
-                    <form method="post" action="" enctype="multipart/form-data" class="row g-3 p-3">
+                    <form method="post" action="" enctype="multipart/form-data" class="row g-3 p-3 needs-validation"
+                        novalidate>
                         @csrf
 
                         <div class="col-md-6 pb-3">
                             <label for="country_id" class="form-label">Country <span class="text-danger">*</span></label>
                             <select class="js-example-basic-single form-select" name="country_id" id="country_id"
-                                style="height: 45px;">
+                                style="height: 45px;" required>
                                 <option selected disabled>Select Country</option>
                                 @foreach ($countries as $key => $country)
                                     <option value="{{ $country->id }}">{{ $country->name }}</option>
@@ -183,7 +184,7 @@
                         <div class="col-md-6 pb-3">
                             <label for="scholarship" class="form-label">Scholarship<span
                                     class="text-danger">*</span></label>
-                            <textarea class="form-control" id="scholarship" rows="3"></textarea>
+                            <textarea class="form-control" id="scholarship" rows="3" required></textarea>
                             @error('scholarship')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
@@ -191,7 +192,7 @@
 
                         <div class="col-md-6 pb-3">
                             <label for="usp" class="form-label">USP<span class="text-danger">*</span></label>
-                            <textarea class="form-control" id="usp" rows="3"></textarea>
+                            <textarea class="form-control" id="usp" rows="3" required></textarea>
                             @error('usp')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror
@@ -200,7 +201,7 @@
                         <div class="col-md-12 pb-3">
                             <label for="uni_entry_requirement" class="form-label">Academic Entry Rrequirement<span
                                     class="text-danger">*</span></label>
-                            <textarea class="form-control" id="uni_entry_requirement" rows="3"></textarea>
+                            <textarea class="form-control" id="uni_entry_requirement" rows="3" required></textarea>
                             @error('uni_entry_requirement')
                                 <span class="text-danger">{{ $message }}</span>
                             @enderror

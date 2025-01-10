@@ -300,7 +300,7 @@
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ route('user.index') }}">
                     <i class="bi bi-people"></i>
-                    <span>User Manage</span>
+                    <span>Users</span>
                 </a>
             </li>
 

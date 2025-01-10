@@ -24,12 +24,8 @@
                 @method('PUT')
 
                 <div class="col-md-12 pb-3">
-                    <label for="name" class="form-label">Role Name<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="name" name="name" value="{{ $role->name }}"
-                        required>
-                    @error('name')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
+                    <label for="name" class="form-label">Role</label>
+                    <div class="px-2 py-2 bg-primary-subtle"><strong class="">{{ $role->name }}</strong></div>
                 </div>
 
                 <label class="form-label">Select Permission<span class="text-danger">*</span></label>

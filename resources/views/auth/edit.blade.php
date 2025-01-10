@@ -20,7 +20,7 @@
             </div>
 
             <form method="post" action="{{ route('user.update', $user->id) }}" enctype="multipart/form-data"
-                class="row g-3 p-3">
+                class="row g-3 p-3 needs-validation" novalidate>
                 @csrf
                 @method('PUT')
                 <div class="col-md-6 pb-3">
@@ -30,6 +30,7 @@
                     @error('name')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-md-6 pb-3">
@@ -39,6 +40,7 @@
                     @error('email')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-md-6 pb-3">
@@ -48,20 +50,16 @@
                     @error('number')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
 
-                <div class="col-md-6">
-                    <label for="roles" class="form-label">Role<span class="text-danger">*</span></label>
-                    {{-- <select class="form-control multiple" multiple name="roles[]"> --}}
-                    <select class="form-select" name="roles[]">
-                        @foreach ($roles as $role)
-                            <option value="{{ $role }}" {{ in_array($role, $userRole) ? 'selected' : '' }}>
-                                {{ $role }}</option>
+                <div class="col-md-3">
+                    <label class="form-label">Role<span class="text-danger">*</span></label>
+                    @if (!empty($user->getRoleNames()))
+                        @foreach ($user->getRoleNames() as $name)
+                            <div class="px-2 py-2 bg-primary-subtle">{{ $name }}</div>
                         @endforeach
-                    </select>
-                    @error('roles')
-                        <span class="text-danger">{{ $message }}</span>
-                    @enderror
+                    @endif
                 </div>
 
                 <div class="col-md-3">
@@ -73,6 +71,7 @@
                     @error('status')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-md-6 pb-3">
@@ -81,6 +80,7 @@
                     @error('new_password')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
                 <div class="col-md-6 pb-3">
                     <label for="new_password_confirmation" class="form-label">Confirm Password</label>
@@ -89,6 +89,7 @@
                     @error('new_password_confirmation')
                         <span class="text-danger">{{ $message }}</span>
                     @enderror
+                    <div class="invalid-feedback"></div>
                 </div>
 
                 <div class="col-12">

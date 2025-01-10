@@ -18,7 +18,8 @@
                         University</a>
                 </div>
             </div>
-            <form method="post" action="" enctype="multipart/form-data" class="row g-3 p-3">
+            <form method="post" action="" enctype="multipart/form-data" class="row g-3 p-3 needs-validation"
+                novalidate>
                 @csrf
 
                 <div class="col-md-6 pb-3">
