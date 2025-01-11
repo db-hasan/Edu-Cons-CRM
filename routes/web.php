@@ -58,6 +58,12 @@ Route::group(['middleware'=>'isAdmin'],function(){
     Route::get('region-manager-update',[RoleManageControler::class,'editRegionManager'])->name('region.manager.edit');
     Route::put('region-manager-update',[RoleManageControler::class,'updateRegionManager'])->name('region.manager.update');
 
+    Route::get('agent-manager-index',[RoleManageControler::class, 'indexAgentManager'])->name('agent.manager.index');
+    Route::get('agent-manager-insert',[RoleManageControler::class, 'createAgentManager'])->name('agent.manager.create');
+    Route::post('agent-manager-insert',[RoleManageControler::class,'storeAgentManager'])->name('agent.manager.store');
+    Route::get('agent-manager-update',[RoleManageControler::class,'editAgentManager'])->name('agent.manager.edit');
+    Route::put('agent-manager-update',[RoleManageControler::class,'updateAgentManager'])->name('agent.manager.update');
+
     Route::get('agent-assign-index',[RoleManageControler::class, 'indexAgentAssign'])->name('agent.assign.index');
     Route::get('agent-assign-insert',[RoleManageControler::class, 'createAgentAssign'])->name('agent.assign.create');
     Route::post('agent-assign-insert',[RoleManageControler::class,'storeAgentAssign'])->name('agent.assign.store');

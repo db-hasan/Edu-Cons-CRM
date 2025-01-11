@@ -18,17 +18,17 @@ class RoleManageControler extends Controller
 |--------------------------------------------------------------------------
 */
     public function indexCountryManager() {
-        return view('backend.admin.countryassign.index');
+        return view('backend.admin.consultant.countryassign.index');
     }
     
     public function createCountryManager() {
         $countries = Country::all();
-        return view('backend.admin.countryassign.create', compact('countries'));
+        return view('backend.admin.consultant.countryassign.create', compact('countries'));
     }
 
     public function editCountryManager() {
         $countries = Country::all();
-        return view('backend.admin.countryassign.edit', compact('countries'));
+        return view('backend.admin.consultant.countryassign.edit', compact('countries'));
     }
 
 
@@ -38,17 +38,17 @@ class RoleManageControler extends Controller
 |--------------------------------------------------------------------------
 */
     public function indexRegionManager() {
-        return view('backend.admin.regionassign.index');
+        return view('backend.admin.consultant.regionassign.index');
     }
     
     public function createRegionManager() {
         $countries = Country::all();
-        return view('backend.admin.regionassign.create', compact('countries'));
+        return view('backend.admin.consultant.regionassign.create', compact('countries'));
     }
 
     public function editRegionManager() {
         $countries = Country::all();
-        return view('backend.admin.regionassign.edit', compact('countries'));
+        return view('backend.admin.consultant.regionassign.edit', compact('countries'));
     }
 
 
@@ -58,18 +58,39 @@ class RoleManageControler extends Controller
 | Agent Manager assign start
 |--------------------------------------------------------------------------
 */
+    public function indexAgentManager() {
+        return view('backend.admin.consultant.agentmanager.index');
+    }
+    
+    public function createAgentManager() {
+        $countries = Country::all();
+        return view('backend.admin.consultant.agentmanager.create', compact('countries'));
+    }
+
+    public function editAgentManager() {
+        $countries = Country::all();
+        return view('backend.admin.consultant.agentmanager.edit', compact('countries'));
+    }
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Agent assign start
+|--------------------------------------------------------------------------
+*/
     public function indexAgentAssign() {
-        return view('backend.admin.agentassign.index');
+        return view('backend.admin.consultant.agentassign.index');
     }
     
     public function createAgentAssign() {
         $countries = Country::all();
-        return view('backend.admin.agentassign.create', compact('countries'));
+        return view('backend.admin.consultant.agentassign.create', compact('countries'));
     }
 
     public function editAgentAssign() {
         $countries = Country::all();
-        return view('backend.admin.agentassign.edit', compact('countries'));
+        return view('backend.admin.consultant.agentassign.edit', compact('countries'));
     }
 
 
@@ -79,17 +100,17 @@ class RoleManageControler extends Controller
 |--------------------------------------------------------------------------
 */
     public function indexBranchManager() {
-        return view('backend.admin.branchassign.index');
+        return view('backend.admin.consultant.branchassign.index');
     }
     
     public function createBranchManager() {
         $countries = Country::all();
-        return view('backend.admin.branchassign.create', compact('countries'));
+        return view('backend.admin.consultant.branchassign.create', compact('countries'));
     }
 
     public function editBranchManager() {
         $countries = Country::all();
-        return view('backend.admin.branchassign.edit', compact('countries'));
+        return view('backend.admin.consultant.branchassign.edit', compact('countries'));
     }
 
 
@@ -99,16 +120,16 @@ class RoleManageControler extends Controller
 |--------------------------------------------------------------------------
 */
     public function indexConsultantAssign() {
-        return view('backend.admin.consultandassign.index');
+        return view('backend.admin.consultant.consultantassign.index');
     }
     
     public function createConsultantAssign() {
         $countries = Country::all();
-        return view('backend.admin.consultandassign.create', compact('countries'));
+        return view('backend.admin.consultant.consultantassign.create', compact('countries'));
     }
 
     public function editConsultantAssign() {
         $countries = Country::all();
-        return view('backend.admin.consultandassign.edit', compact('countries'));
+        return view('backend.admin.consultant.consultantassign.edit', compact('countries'));
     }
 }

@@ -22,7 +22,7 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Region</th>
+                        <th>Agent Manager</th>
                         <th>Agent</th>
                         <th>Status</th>
                         <th class="text-end">Acction</th>

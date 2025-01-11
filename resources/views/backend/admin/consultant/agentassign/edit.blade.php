@@ -21,7 +21,7 @@
                 novalidate>
                 @csrf
                 <div class="col-md-6 pb-3">
-                    <label for="country_id" class="form-label">Region <span class="text-danger">*</span></label>
+                    <label for="country_id" class="form-label">Agent Manager <span class="text-danger">*</span></label>
                     <select class="js-example-basic-single form-select" name="country_id" id="country_id">
                         <option selected disabled>Select Country</option>
                         @foreach ($countries as $key => $country)

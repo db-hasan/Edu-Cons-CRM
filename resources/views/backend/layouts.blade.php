@@ -279,9 +279,6 @@
                 </ul>
             </li>
 
-
-
-
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#accounts-nav" data-bs-toggle="collapse"
                     href="#">
@@ -329,11 +326,12 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" data-bs-target="#settings-nav" data-bs-toggle="collapse"
+                <a class="nav-link collapsed" data-bs-target="#consultant-setting-nav" data-bs-toggle="collapse"
                     href="#">
-                    <i class="bi bi-gear"></i><span>Settings</span><i class="bi bi-chevron-down ms-auto"></i>
+                    <i class="bi bi-gear"></i><span>Consultant Settings</span><i
+                        class="bi bi-chevron-down ms-auto"></i>
                 </a>
-                <ul id="settings-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <ul id="consultant-setting-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
                         <a href="{{ route('country.manager.index') }}">
                             <i class="bi bi-circle"></i><span>Country Manager</span>
@@ -342,6 +340,11 @@
                     <li>
                         <a href="{{ route('region.manager.index') }}">
                             <i class="bi bi-circle"></i><span>Region Manager</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('agent.manager.index') }}">
+                            <i class="bi bi-circle"></i><span>Agent Manager</span>
                         </a>
                     </li>
                     <li>
