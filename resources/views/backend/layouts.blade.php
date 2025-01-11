@@ -262,18 +262,49 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('lead.index') }}">
-                    <i class="bi bi-gem"></i>
-                    <span>Lead</span>
+                <a class="nav-link collapsed" data-bs-target="#lead-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-gem"></i><span>Lead</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
+                <ul id="lead-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="{{ route('lead.index') }}">
+                            <i class="bi bi-circle"></i><span>Lead</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Trashed</span>
+                        </a>
+                    </li>
+                </ul>
             </li>
 
 
+
+
             <li class="nav-item">
-                <a class="nav-link collapsed" href="">
-                    <i class="bi bi-trash"></i>
-                    <span>Trashed</span>
+                <a class="nav-link collapsed" data-bs-target="#accounts-nav" data-bs-toggle="collapse"
+                    href="#">
+                    <i class="bi bi-bank"></i><span>Accounts</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
+                <ul id="accounts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Estimates</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Invoice</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Expenses</span>
+                        </a>
+                    </li>
+
+                </ul>
             </li>
 
             <li class="nav-item">
@@ -284,9 +315,9 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="">
-                    <i class="bi bi-bank"></i>
-                    <span> Accounts</span>
+                <a class="nav-link collapsed" href="{{ route('user.index') }}">
+                    <i class="bi bi-people"></i>
+                    <span>Users</span>
                 </a>
             </li>
 
@@ -298,11 +329,40 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('user.index') }}">
-                    <i class="bi bi-people"></i>
-                    <span>Users</span>
+                <a class="nav-link collapsed" data-bs-target="#settings-nav" data-bs-toggle="collapse"
+                    href="#">
+                    <i class="bi bi-gear"></i><span>Settings</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
+                <ul id="settings-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="{{ route('country.manager.index') }}">
+                            <i class="bi bi-circle"></i><span>Country Manager</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('region.manager.index') }}">
+                            <i class="bi bi-circle"></i><span>Region Manager</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('agent.assign.index') }}">
+                            <i class="bi bi-circle"></i><span>Agent Assign</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('branch.manager.index') }}">
+                            <i class="bi bi-circle"></i><span>Branch Manager</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('consultant.assign.index') }}">
+                            <i class="bi bi-circle"></i><span>Consultant Assign</span>
+                        </a>
+                    </li>
+                </ul>
             </li>
+
+
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ route('profle.update') }}">

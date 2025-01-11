@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\RoleManageControler;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\DegreeController;
@@ -12,9 +13,6 @@ use App\Http\Controllers\LeadController;
 use App\Http\Controllers\UploadController;
 use App\Http\Controllers\UniversityController;
 use App\Http\Controllers\UniversityDetailsController;
-
-
-
 
 
 
@@ -47,6 +45,37 @@ Route::group(['middleware'=>'isAdmin'],function(){
     Route::post('role-insert',[RoleController::class,'storerole'])->name('role.store');
     Route::get('role-update/{id}',[RoleController::class,'editrole'])->name('role.edit');
     Route::put('role-update/{id}',[RoleController::class,'updaterole'])->name('role.update');
+
+    Route::get('country-manager-index',[RoleManageControler::class, 'indexCountryManager'])->name('country.manager.index');
+    Route::get('country-manager-insert',[RoleManageControler::class, 'createCountryManager'])->name('country.manager.create');
+    Route::post('country-manager-insert',[RoleManageControler::class,'storeCountryManager'])->name('country.manager.store');
+    Route::get('country-manager-update',[RoleManageControler::class,'editCountryManager'])->name('country.manager.edit');
+    Route::put('country-manager-update',[RoleManageControler::class,'updateCountryManager'])->name('country.manager.update');
+
+    Route::get('region-manager-index',[RoleManageControler::class, 'indexRegionManager'])->name('region.manager.index');
+    Route::get('region-manager-insert',[RoleManageControler::class, 'createRegionManager'])->name('region.manager.create');
+    Route::post('region-manager-insert',[RoleManageControler::class,'storeRegionManager'])->name('region.manager.store');
+    Route::get('region-manager-update',[RoleManageControler::class,'editRegionManager'])->name('region.manager.edit');
+    Route::put('region-manager-update',[RoleManageControler::class,'updateRegionManager'])->name('region.manager.update');
+
+    Route::get('agent-assign-index',[RoleManageControler::class, 'indexAgentAssign'])->name('agent.assign.index');
+    Route::get('agent-assign-insert',[RoleManageControler::class, 'createAgentAssign'])->name('agent.assign.create');
+    Route::post('agent-assign-insert',[RoleManageControler::class,'storeAgentAssign'])->name('agent.assign.store');
+    Route::get('agent-assign-update',[RoleManageControler::class,'editAgentAssign'])->name('agent.assign.edit');
+    Route::put('agent-assign-update',[RoleManageControler::class,'updateAgentAssign'])->name('agent.assign.update');
+
+    Route::get('branch-manager-index',[RoleManageControler::class, 'indexBranchManager'])->name('branch.manager.index');
+    Route::get('branch-manager-insert',[RoleManageControler::class, 'createBranchManager'])->name('branch.manager.create');
+    Route::post('branch-manager-insert',[RoleManageControler::class,'storeBranchManager'])->name('branch.manager.store');
+    Route::get('branch-manager-update',[RoleManageControler::class,'editBranchManager'])->name('branch.manager.edit');
+    Route::put('branch-manager-update',[RoleManageControler::class,'updateBranchManager'])->name('branch.manager.update');
+
+    Route::get('consultant-assign-index',[RoleManageControler::class, 'indexConsultantAssign'])->name('consultant.assign.index');
+    Route::get('consultant-assign-insert',[RoleManageControler::class, 'createConsultantAssign'])->name('consultant.assign.create');
+    Route::post('consultant-assign-insert',[RoleManageControler::class,'storeConsultantAssign'])->name('consultant.assign.store');
+    Route::get('consultant-assign-update',[RoleManageControler::class,'editConsultantAssign'])->name('consultant.assign.edit');
+    Route::put('consultant-assign-update',[RoleManageControler::class,'updateConsultantAssign'])->name('consultant.assign.update');
+
 
     Route::get('country-index',[LocationController::class, 'indexCountry'])->name('country.index');
     Route::get('country-insert',[LocationController::class, 'createCountry'])->name('country.create');
