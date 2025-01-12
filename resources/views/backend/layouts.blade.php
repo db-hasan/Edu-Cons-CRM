@@ -365,6 +365,81 @@
                 </ul>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#admission-setting-nav" data-bs-toggle="collapse"
+                    href="#">
+                    <i class="bi bi-gear"></i><span>Admission Settings</span><i
+                        class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="admission-setting-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="{{ route('country.manager.index') }}">
+                            <i class="bi bi-circle"></i><span>Admission Manager</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('agent.assign.index') }}">
+                            <i class="bi bi-circle"></i><span>Team lead</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('agent.assign.index') }}">
+                            <i class="bi bi-circle"></i><span>Sr. Admission Officer</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#compliance-setting-nav" data-bs-toggle="collapse"
+                    href="#">
+                    <i class="bi bi-gear"></i><span>Compliance Settings</span><i
+                        class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="compliance-setting-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="{{ route('country.manager.index') }}">
+                            <i class="bi bi-circle"></i><span>Compliance Manager</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('agent.assign.index') }}">
+                            <i class="bi bi-circle"></i><span>Team lead</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('agent.assign.index') }}">
+                            <i class="bi bi-circle"></i><span>Sr. Compliance Officer</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#marketing-setting-nav" data-bs-toggle="collapse"
+                    href="#">
+                    <i class="bi bi-gear"></i><span>Marketing Settings</span><i
+                        class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="marketing-setting-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="{{ route('country.manager.index') }}">
+                            <i class="bi bi-circle"></i><span>Marketing Manager</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('agent.assign.index') }}">
+                            <i class="bi bi-circle"></i><span>Team lead</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('agent.assign.index') }}">
+                            <i class="bi bi-circle"></i><span>Sr. Marketing Officer</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
 
 
             <li class="nav-item">
