@@ -7,7 +7,7 @@
         <div class="d-flex align-items-center justify-content-between">
             <a href="" class="logo d-flex align-items-center">
                 {{-- <img src="{{ asset('images/logo.png') }}" alt=""> --}}
-                <span class="d-none d-lg-block">Soft Query</span>
+                <span class="d-none d-lg-block">Edu Consultancy</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div>
@@ -151,6 +151,8 @@
     <!-- ======= Sidebar ======= -->
     <aside id="sidebar" class="sidebar">
         <ul class="sidebar-nav" id="sidebar-nav">
+
+            <!-- ======= Dashboard =======-->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ route('admin.dashboard') }}">
                     <i class="bi bi-grid"></i>
@@ -513,7 +515,7 @@
     <footer class="footer">
         <div class="copyright text-center">
             &copy; Copyright <strong><span>Educational Consultancy</span></strong>. All Rights Reserved <strong><a
-                    href="" target="_blank"><span>Development by Soft Query</span></a></strong>
+                    href="https://softqry.com/" target="_blank"><span>Development by Soft Query</span></a></strong>
         </div>
     </footer>
     <!-- End Footer -->
