@@ -157,6 +157,8 @@
                     <span>Dashboard</span>
                 </a>
             </li>
+
+            <!-- ======= Location =======-->
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#location-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-crosshair"></i><span>Location</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -179,6 +181,8 @@
                     </li>
                 </ul>
             </li>
+
+            <!--======= Academic =======-->
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#academic-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-mortarboard-fill"></i><span>Academic</span><i
@@ -197,6 +201,8 @@
                     </li>
                 </ul>
             </li>
+
+            <!--======= University =======-->
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#university-nav" data-bs-toggle="collapse"
                     href="#">
@@ -221,6 +227,7 @@
                 </ul>
             </li>
 
+            <!--======= Branch =======-->
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#brnach-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-buildings"></i><span>Branch</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -238,6 +245,8 @@
                     </li>
                 </ul>
             </li>
+
+            <!--======= Upload =======-->
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#upload-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-cloud-arrow-up"></i><span>Upload</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -261,6 +270,7 @@
                 </ul>
             </li>
 
+            <!--======= Lead =======-->
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#lead-nav" data-bs-toggle="collapse" href="#">
                     <i class="bi bi-gem"></i><span>Lead</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -279,6 +289,37 @@
                 </ul>
             </li>
 
+            <!--======= Report =======-->
+            <li class="nav-item">
+                <a class="nav-link collapsed" data-bs-target="#report-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-bar-chart"></i><span>Report</span><i class="bi bi-chevron-down ms-auto"></i>
+                </a>
+                <ul id="report-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Consultant</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Admission</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Compliance</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <i class="bi bi-circle"></i><span>Marketing</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <!--======= Accounts =======-->
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#accounts-nav" data-bs-toggle="collapse"
                     href="#">
@@ -304,27 +345,29 @@
                 </ul>
             </li>
 
+            <!--======= Users =======-->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="">
-                    <i class="bi bi-bar-chart"></i>
-                    <span> Report</span>
+                <a class="nav-link collapsed" data-bs-target="#users-nav" data-bs-toggle="collapse" href="#">
+                    <i class="bi bi-people"></i><span>Users Settings</span><i class="bi bi-chevron-down ms-auto"></i>
                 </a>
+                <ul id="users-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+
+                    <li>
+                        <a href="{{ route('role.index') }}">
+                            <i class="bi bi-circle"></i><span>Permission</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="{{ route('user.index') }}">
+                            <i class="bi bi-circle"></i><span>Users Manage</span>
+                        </a>
+                    </li>
+
+                </ul>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('user.index') }}">
-                    <i class="bi bi-people"></i>
-                    <span>Users</span>
-                </a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ route('role.index') }}">
-                    <i class="bi bi-shield-lock"></i>
-                    <span>Permission</span>
-                </a>
-            </li>
-
+            <!--======= Consultant =======-->
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#consultant-setting-nav" data-bs-toggle="collapse"
                     href="#">
@@ -365,6 +408,7 @@
                 </ul>
             </li>
 
+            <!--======= Admission =======-->
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#admission-setting-nav" data-bs-toggle="collapse"
                     href="#">
@@ -390,6 +434,7 @@
                 </ul>
             </li>
 
+            <!--======= Compliance =======-->
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#compliance-setting-nav" data-bs-toggle="collapse"
                     href="#">
@@ -415,6 +460,7 @@
                 </ul>
             </li>
 
+            <!--======= Marketing =======-->
             <li class="nav-item">
                 <a class="nav-link collapsed" data-bs-target="#marketing-setting-nav" data-bs-toggle="collapse"
                     href="#">
@@ -440,8 +486,7 @@
                 </ul>
             </li>
 
-
-
+            <!--======= Password =======-->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ route('profle.update') }}">
                     <i class="bi bi-database-lock"></i>
@@ -449,6 +494,7 @@
                 </a>
             </li>
 
+            <!--======= logout =======-->
             <li class="nav-item">
                 <a class="nav-link collapsed" href="{{ route('logout') }}">
                     <i class="bi bi-box-arrow-in-right"></i>

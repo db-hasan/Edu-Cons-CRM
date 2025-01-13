@@ -9,10 +9,9 @@ use App\Models\Country;
 use Exception;
 use Session;
 
-class RoleManageControler extends Controller
+class ConsultantRoleManagController extends Controller
 {
-
-/*
+    /*
 |--------------------------------------------------------------------------
 | Country Manager assign start
 |--------------------------------------------------------------------------

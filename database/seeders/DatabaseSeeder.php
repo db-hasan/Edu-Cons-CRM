@@ -35,17 +35,28 @@ class DatabaseSeeder extends Seeder
     private $roleModeles = [
         'Superadmin',
         'Admin',
-        'Viewer',
-        'Account',
-        'Country',
-        'Region',
-        'Branch',
-        'Agent',
+        'Viewers',
+        'Accounts',
         'Data',
-        'Marketing',
+
+        'Country-Manager',
+        'Region-Manager',
+        'Branch-Manager',
         'Consultant',
-        'Admission',
-        'Compliance',
+        'Agent-Manager',
+        'Agent',
+
+        'Admission-Manager',
+        'Admission-Team-Lead',
+        'Sr.Admission-Officer',
+
+        'Compliance-Manager',
+        'Compliance-Team-Lead',
+        'Sr.Compliance-Officer',
+
+        'Marketing-Manager',
+        'Marketing-Team-Lead',
+        'Sr.Marketing-Officer',
     ];
 
     private $countries = [
