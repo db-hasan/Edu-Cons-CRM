@@ -419,17 +419,17 @@
                 </a>
                 <ul id="admission-setting-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="{{ route('country.manager.index') }}">
+                        <a href="{{ route('admission.manager.index') }}">
                             <i class="bi bi-circle"></i><span>Admission Manager</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('agent.assign.index') }}">
+                        <a href="{{ route('admission.team.lead.index') }}">
                             <i class="bi bi-circle"></i><span>Team lead</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('agent.assign.index') }}">
+                        <a href="{{ route('admission.officer.index') }}">
                             <i class="bi bi-circle"></i><span>Sr. Admission Officer</span>
                         </a>
                     </li>
@@ -445,17 +445,17 @@
                 </a>
                 <ul id="compliance-setting-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="{{ route('country.manager.index') }}">
+                        <a href="{{ route('compliance.manager.index') }}">
                             <i class="bi bi-circle"></i><span>Compliance Manager</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('agent.assign.index') }}">
+                        <a href="{{ route('compliance.team.lead.index') }}">
                             <i class="bi bi-circle"></i><span>Team lead</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('agent.assign.index') }}">
+                        <a href="{{ route('compliance.officer.index') }}">
                             <i class="bi bi-circle"></i><span>Sr. Compliance Officer</span>
                         </a>
                     </li>
@@ -471,17 +471,17 @@
                 </a>
                 <ul id="marketing-setting-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                     <li>
-                        <a href="{{ route('country.manager.index') }}">
+                        <a href="{{ route('marketing.manager.index') }}">
                             <i class="bi bi-circle"></i><span>Marketing Manager</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('agent.assign.index') }}">
+                        <a href="{{ route('marketing.team.lead.index') }}">
                             <i class="bi bi-circle"></i><span>Team lead</span>
                         </a>
                     </li>
                     <li>
-                        <a href="{{ route('agent.assign.index') }}">
+                        <a href="{{ route('marketing.officer.index') }}">
                             <i class="bi bi-circle"></i><span>Sr. Marketing Officer</span>
                         </a>
                     </li>
@@ -505,7 +505,7 @@
             </li>
         </ul>
     </aside>
-    <!-- End Sidebar-->
+    <!-- =======  End Sidebar ======= -->
 
     {{-- ------------content part-------------- --}}
     @yield('content')
@@ -518,7 +518,7 @@
                     href="https://softqry.com/" target="_blank"><span>Development by Soft Query</span></a></strong>
         </div>
     </footer>
-    <!-- End Footer -->
+    <!-- =======  End Footer =======  -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
