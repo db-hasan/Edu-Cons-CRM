@@ -113,10 +113,6 @@ Route::group(['middleware'=>'isAdmin'],function(){
 |--------------------------------------------------------------------------
 */
     Route::get('admission-manager-index',[AdmissionRoleManagController::class, 'indexAdmissionManager'])->name('admission.manager.index');
-    Route::get('admission-manager-insert',[AdmissionRoleManagController::class, 'createAdmissionManager'])->name('admission.manager.create');
-    Route::post('admission-manager-insert',[AdmissionRoleManagController::class,'storeAdmissionManager'])->name('admission.manager.store');
-    Route::get('admission-manager-update',[AdmissionRoleManagController::class,'editAdmissionManager'])->name('admission.manager.edit');
-    Route::put('admission-manager-update',[AdmissionRoleManagController::class,'updateAdmissionManager'])->name('admission.manager.update');
 
     Route::get('admission-team-lead-index',[AdmissionRoleManagController::class, 'indexAdmissionTeamLead'])->name('admission.team.lead.index');
     Route::get('admission-team-lead-insert',[AdmissionRoleManagController::class, 'createAdmissionTeamLead'])->name('admission.team.lead.create');
@@ -137,10 +133,6 @@ Route::group(['middleware'=>'isAdmin'],function(){
 |--------------------------------------------------------------------------
 */
     Route::get('compliance-manager-index',[ComplianceRoleManagController::class, 'indexComplianceManager'])->name('compliance.manager.index');
-    Route::get('compliance-manager-insert',[ComplianceRoleManagController::class, 'createComplianceManager'])->name('compliance.manager.create');
-    Route::post('compliance-manager-insert',[ComplianceRoleManagController::class,'storeComplianceManager'])->name('compliance.manager.store');
-    Route::get('compliance-manager-update',[ComplianceRoleManagController::class,'editComplianceManager'])->name('compliance.manager.edit');
-    Route::put('compliance-manager-update',[ComplianceRoleManagController::class,'updatecomplianceManager'])->name('compliance.manager.update');
 
     Route::get('compliance-team-lead-index',[ComplianceRoleManagController::class, 'indexComplianceTeamLead'])->name('compliance.team.lead.index');
     Route::get('compliance-team-lead-insert',[ComplianceRoleManagController::class, 'createComplianceTeamLead'])->name('compliance.team.lead.create');
@@ -161,10 +153,6 @@ Route::group(['middleware'=>'isAdmin'],function(){
 |--------------------------------------------------------------------------
 */
     Route::get('marketing-manager-index',[MarketingRoleManagController::class, 'indexMarketingManager'])->name('marketing.manager.index');
-    Route::get('marketing-manager-insert',[MarketingRoleManagController::class, 'createMarketingManager'])->name('marketing.manager.create');
-    Route::post('marketing-manager-insert',[MarketingRoleManagController::class,'storeMarketingManager'])->name('marketing.manager.store');
-    Route::get('marketing-manager-update',[MarketingRoleManagController::class,'editMarketingManager'])->name('marketing.manager.edit');
-    Route::put('marketing-manager-update',[MarketingRoleManagController::class,'updateMarketingManager'])->name('marketing.manager.update');
 
     Route::get('marketing-team-lead-index',[MarketingRoleManagController::class, 'indexMarketingTeamLead'])->name('marketing.team.lead.index');
     Route::get('marketing-team-lead-insert',[MarketingRoleManagController::class, 'createMarketingTeamLead'])->name('marketing.team.lead.create');

@@ -1,0 +1,49 @@
+@extends('backend.layouts')
+@section('content')
+    <main id="main" class="main">
+        <div class="d-flex justify-content-between">
+            <div class="pagetitle">
+                <h1>Marketing Team Lead List</h1>
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
+                        <li class="breadcrumb-item active">View</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="text-end pt-2">
+                <a href="{{ route('marketing.team.lead.create') }}" class="btn btn-primary"><i
+                        class="fas fa-plus-circle"></i>
+                    Add New</a>
+            </div>
+        </div>
+        <hr>
+        <div class="custom-scrollbar-table">
+            <table id="myTable" class="display" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Marketing Manager</th>
+                        <th>Team Lead</th>
+                        <th>Status</th>
+                        <th class="text-end">Acction</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>01</td>
+                        <td>Rony</td>
+                        <td>Hasan</td>
+                        <td>Active</td>
+                        <td class="d-flex justify-content-end">
+                            <a href="{{ route('marketing.team.lead.edit') }}" class="btn btn-primary mx-1"><i
+                                    class="bi bi-pencil-square"></i></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </main>
+    <script src="{{ asset('backend/js/jquery-3.7.1.min.js') }} "></script>
+@endsection
