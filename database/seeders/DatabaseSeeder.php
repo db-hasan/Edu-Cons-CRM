@@ -190,11 +190,12 @@ class DatabaseSeeder extends Seeder
         $this->call([
             DegreeSeeder::class,
             LanguageSeeder::class,
+            UserSeeder::class,
         ]);
-  
+
 
         $user = User::create([
-            'name' => 'Developer',
+            'name' => 'Super Admin',
             'number' => '01723629080',
             'email' => 'ahasan.jobs@gmail.com',
             'rolename' => 'Superadmin',
