@@ -14,6 +14,9 @@ use App\Models\Country;
 use App\Models\Degree;
 use App\Models\Language;
 use App\Models\Intake;
+use App\Models\CallStatus;
+use App\Models\Financial;
+use App\Models\Situation;
 
 class DatabaseSeeder extends Seeder
 {
@@ -116,6 +119,44 @@ class DatabaseSeeder extends Seeder
         "December",
     ];
 
+    private $callStatuses = [
+        "Will Visit",
+        "Follow UP",
+        "Assessment",
+        "Not Eligible",
+        "Not Interested",
+        "Other Country",
+        "No Answer",
+        "Busy",
+        "Switched Off",
+        "Wrong Number",
+        "Interested For Job Visa",
+        "Visited",
+        "Call Again",
+        "Reached",
+        "Unreachable",
+        "Decision Pending",
+        "Will Provide Document",
+        "Working with Other Agent",
+        "Visited",
+    ];
+
+    private $situations = [
+        "Potential",
+        "Semi Potential",
+        "Preparing",
+        "Not Potentioal",
+        "Only Think",
+        "Decided",
+    ];
+
+    private $financials = [
+        "Self Funded",
+        "Ready Fund",
+        "Need Bank Support",
+        "Not Eligible",
+    ];
+
     public function run(): void
     {
         foreach ($this->permissions as $permission) {
@@ -128,6 +169,18 @@ class DatabaseSeeder extends Seeder
 
         foreach ($this->intakes as $intake) {
             Intake::create(['name' => $intake]);
+        };
+
+        foreach ($this->callStatuses as $callStatus) {
+            CallStatus::create(['name' => $callStatus]);
+        };
+
+        foreach ($this->situations as $situation) {
+            Situation::create(['name' => $situation]);
+        };
+
+        foreach ($this->financials as $financial) {
+            Financial::create(['name' => $financial]);
         };
 
         foreach ($this->countries as $country) {
